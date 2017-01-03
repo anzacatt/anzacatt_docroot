@@ -1,0 +1,35 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+
+@import "init";
+@import "anzacatt_colors";
+@import "mixins";
+@import "fonts";
+
+/* Typographic rules */
+
+@import "typography";
+
+/* Global form elements */
+
+@import "forms";
+// Add any styles you wish to use here.
+// This file should be processed using SASS, and will generate
+// CSS files in the CSS folder.
+@import "components/global";
+@import "components/header";
+@import "components/breadcrumb";
+@import "components/footer";
+@import "components/layout";
+@import "components/page_bottom";
+@import "components/homepage";
+@import "components/landing_page";
+@import "print";

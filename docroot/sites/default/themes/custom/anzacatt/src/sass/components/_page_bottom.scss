@@ -1,0 +1,64 @@
+.region-bottom {
+  padding: $default-padding;
+  .block-webform {
+    padding: $default-padding;
+    max-width: 360px;
+    background-color: #DEF4F9;
+    border: 1px solid $form-border;
+    padding-top: 0;
+    @include breakpoint(mobile) {
+      max-width: 100%;
+    }
+    .block__title {
+      @include element-invisible;
+    }
+    form {
+      background-color: $form-background;
+    }
+    .form-item {
+      max-width: inherit;
+    }
+    .webform-component {
+      margin: 1em;
+      font-size: rem(13);
+      .form-textarea, .form-text {
+        background: #eff3f6;
+      }
+      label {
+        font-size: rem(13);
+      }
+    }
+    .webform-component--information-helpful {
+      background-color: #DEF4F9;
+      margin: 0;
+      padding-bottom: 1px;
+      font-family: $open-bold;
+    }
+    .webform-component-textarea {
+      width: inherit;
+    }
+    .form-actions {
+      text-align: right;
+      margin: 0;
+      padding: 1em;
+      .webform-submit {
+        font-size: rem(14);
+        font-family: $open-bold;
+        margin-right: 0;
+        color: black;
+        border: 1px solid $form-border;
+        box-shadow: none;
+        background-color: #F0F3F5;
+        &:hover {
+          background-color: #BEBEBE;
+        }
+      }
+    }
+    .webform-confirmation {
+      font-size: rem(13);
+    }
+    .links {
+      display: none;
+    }
+  }
+}

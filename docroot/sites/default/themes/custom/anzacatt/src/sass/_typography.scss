@@ -1,0 +1,229 @@
+// =========================================================
+// TYPOGRAPHY
+// =========================================================
+html {
+  font-size: ($base-font-size / 16) * 100%;
+  font-family: $open;
+}
+
+body {
+  color: $body-text;
+}
+
+
+/* Headings */
+
+%headings {
+  font-family: $header-font-family;
+  font-weight: normal;
+  line-height: 1.2em;
+  color: $heading-color;
+}
+
+
+/* Links */
+
+a {
+  color: $body-text;
+  &:hover {
+    text-decoration: none;
+    color: $color-primary;
+  }
+  &:visited {
+    color: $body-text;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+  &:active {
+    color: $body-text;
+  }
+  &.read-more {
+    font-family: $open-bold;
+    color: $color-green-dark;
+    &:hover {
+      color: $color-green-light;
+    }
+  }
+}
+
+.field-name-field-tags {
+  border-top: 0;
+  border-bottom: 0;
+  .field-item {
+    margin-right: 7px;
+    &:before {
+      content: '';
+    }
+    a {
+      border: 1px solid $color-green-dark;
+      color: $color-green-dark;
+      text-decoration: none;
+      padding: 7px;
+      display: inline-block;
+      margin-bottom: 7px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// =========================================================
+// GLOBAL HEADINGS
+// =========================================================
+// Declare heading styles globally.
+h1, h2, h3, h4, h5, h6 {
+  @extend %headings;
+}
+
+h1 {
+  font-size: rem(40);
+  margin-top: 0;
+  margin-bottom: rem(7);
+}
+
+h2 {
+  font-size: rem(26);
+}
+
+h3 {
+  font-size: rem(22);
+}
+
+h4 {
+  font-size: rem(18);
+}
+
+h5, h6 {
+  font-size: rem(16);
+}
+
+strong {
+  font-weight: normal;
+  font-family: $open-bold;
+}
+
+@mixin subtitle-text {
+  font-size: rem(23);
+  color: $heading-color;
+  font-weight: normal;
+  font-family: $open;
+  line-height: 1.4em;
+}
+
+.subheader {
+  @include subtitle-text;
+  padding-bottom: 17px;
+  border-bottom: 1px solid $color-green-grey;
+  margin-top: 0;
+  margin-bottom: rem(46);
+  .field {
+    font-weight: normal !important;
+    margin: 0;
+    .field-label {
+      font-weight: normal;
+    }
+    &.field-label-inline {
+      .field-label {
+        width: auto;
+      }
+    }
+  }
+}
+
+.field-name-field-tags {
+  .field-label {
+    font-weight: normal;
+    margin-right: rem(5);
+    &:after {
+      content: ':';
+      display: inline;
+    }
+  }
+}
+
+table {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 0;
+  width: 100%;
+  thead {
+    td {
+      font-family: $open-bold;
+      font-weight: normal;
+      font-size: rem(19);
+      border-color: transparent;
+    }
+  }
+  tr {
+    border-bottom: 1px solid #000000;
+  }
+  th {
+    font-family: $open-bold;
+    font-weight: normal;
+    font-size: rem(19);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+  }
+  td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+  }
+  tfoot {
+    td {
+      font-family: $open-bold;
+      font-weight: normal;
+      font-size: rem(19);
+    }
+  }
+}
+
+// =========================================================
+// BODY TEXT STYLES
+// =========================================================
+// Mixin to include body styles into wysiwyg but only inside body fields in default theme.
+@mixin body-text-syles {
+  /* Content List Styles */
+  ol {
+    list-style-type: decimal;
+    margin-left: 19px;
+  }
+  ul {
+    list-style-type: square;
+    margin-left: 15px;
+  }
+  /* Display image inline to the right */
+  p.img-float-right, img.img-float-right {
+    float: right;
+    margin: 5px 0 5px 5px;
+  }
+  /* Display image inline to the left */
+  p.img-float-left, img.img-float-left {
+    float: left;
+    margin: 0 5px 5px 5px;
+  }
+}
+
+// On default theme only implement these styles inside field-name-body.
+.field-name-body {
+  @include body-text-syles;
+}
+
+@mixin elegant-icon ($content) {
+  font-family: $elegant;
+  display: inline-block;
+  content: $content;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: rem(32);
+}

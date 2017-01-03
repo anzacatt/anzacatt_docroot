@@ -1,0 +1,196 @@
+// @file
+// Custom sass mixins
+//
+// Define the custom mixins for your project here.
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+  &:active, &:focus {
+    @include element-invisible-off;
+  }
+}
+
+@mixin noSpace {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin underlineOnHover {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin standard-button {
+  font-family: $open-bold;
+  background-color: $color-green-dark;
+  color: white;
+  margin-right: 0.5em;
+  font-size: rem(17);
+  padding: 10px 20px;
+  &:hover {
+    background: $color-green-light;
+  }
+  &:active {
+    background: $color-green-light;
+  }
+}
+
+@mixin messages-error {
+  margin: 1.5em 0;
+  padding: 10px 10px 10px 50px;
+  /* LTR */
+  background-position: 8px 8px;
+  /* LTR */
+  background-repeat: no-repeat;
+  border: 1px solid #ed541d;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACpElEQVR42rWWTUgbQRiGQ0Tx4MWDeFM8eBA9iKAoggiCoCiiIiL4L3oQV1CJB0UEf6iRYFpK7UniTw9VSqL2kvQsVDBpSZrtRo35czVNW3oprRf17exSl4yzu1ikAy9h59vvedhkMrMGAGoxknAk2w8MJ/WosXThiZkZt9jdLeglPjn5ATc3mhJNuNjbK0QbG3ExMICL/n6IfX0gcxB7ekDAELu6IHZ2IlJbi1hLS1BLogmPtbUhMTv7oMSamzUlqnByMxLT0/8STQkDj9TV4ZLj5OysrODl8jIu5Gs68dFR7JG6dWkJ0fFx+TpSX89IDMnwcHU1yKec12Yz3rlc4HkeLwjkXJpPip3U3+7vIx6P4ymph4eG5PlwTQ0lMdytlmBxMWKtrXLeT0zA5XTibvj9fjxfXETkb/3N/Dz2dneVuiTZtliU/rPSUsQ5ziuxZYG03IIlJdKKUPJjdRUAKMmzuTnskB/VYbdTtd9HR4g2NCi9Z2VliDY1BSnBaUEBzsrLqXyzWCiQ9HU5HA4afniIUFWV0hOqqMBpURErOM7NxWlhIZOvCwvA7S3Uxq+DA5AnZ3pO8vJYQSArC8c5Oeqx2Rj4udeLQH6+6v2B7GxW8DkjA0JmJpONwUHY7XZGIAgCzCYTeJUewmIFfqMRfEoKlQ2yJbza2oLWcLvdeDI2hk/3+iQWKzAYkJzNjg5srq9TwJ9OJ76YTNScx+ORJT66X1/grKyEbW2NgfPp6XKd/JMZySrHaQsSU1Oe+0/w3WpVgyu5HBlR6lc+H8gioevDwz6JrWwV5+3txyoSFk5DcOX1MnCyJ4Vwfb1zt1UY9SR8aioDpuppaVpwZbPTl+hHF04dOKzk8XBF8DgJC3/woU/W/EciOtELOWi8DDwp//215Q+p7kiKh2lQSAAAAABJRU5ErkJggg==');
+  color: #8c2e0b;
+}
+
+%pseudo-block {
+  content: "";
+  display: block;
+}
+
+@mixin breakpoint($class) {
+  @if $class==desktop {
+    @media (min-width: 980px) {
+      @content;
+    }
+  }
+  @else if $class==tablet {
+    @media (min-width: 720px) {
+      @content;
+    }
+  }
+  @else if $class==mobile {
+    @media (max-width: 420px) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Breakpoint mixin supports: desktop, tablet, mobile";
+  }
+}
+
+@function rem($pxval) {
+  @return ($pxval / $base-font-size) * 1rem;
+}
+
+// =========================================================
+// LISTING
+// Used on Provider Listing, Latest News..
+// =========================================================
+@mixin listing-page-header-subtitle {
+  @include subtitle-text;
+  margin-top: 29px;
+}
+
+@mixin listing-views-row {
+  padding-top: $default-padding;
+  padding-bottom: $default-padding;
+  border: 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid $color-green-grey;
+  &.views-row-first {
+    border-top: 1px solid $color-green-grey;
+  }
+}
+
+@mixin listing-views-node-field {
+  margin-top: 0;
+  margin-bottom: 12px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin listing-views-node-title-link {
+  font-size: rem(18);
+  font-weight: normal;
+  font-family: $open-bold;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin listing-views-node-date {
+  color: #6E6E6E;
+  font-family: $open-bold;
+  font-weight: normal;
+  font-size: rem(15);
+}
+
+@mixin blue-top-border {
+  border-top: 6px solid $color-blue-light;
+}
+
+@mixin views-exposed-widgets-search-field {
+  width: 100%;
+  border: 1px solid #000000;
+  display: table;
+  &:after {
+    display: none;
+  }
+  &>div {
+    display: table-cell;
+    vertical-align: top;
+    float: none;
+    padding: 0;
+  }
+  .views-widget-filter-search_api_views_fulltext {
+    width: 100%;
+    .form-item {
+      max-width: none;
+      input[type="text"] {
+        border: 0;
+        background-color: transparent;
+        width: 100%;
+        height: 48px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+  .views-submit-button {
+    input[type="submit"] {
+      margin: 0;
+      width: 48px;
+      height: 48px;
+      background-color: transparent;
+      background-position: center;
+      background-image: url('../images/svg/icon-search-large-black.svg');
+      background-repeat: no-repeat;
+      box-shadow: none;
+      border: 0;
+      color: transparent;
+      font-size: 0;
+    }
+  }
+}
