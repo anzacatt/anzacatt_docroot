@@ -43,7 +43,6 @@ Thumbs.db
 #########################
 bin
 build.properties
-vendor
 behat.local.yml
 .php-version
 
@@ -60,3 +59,4 @@ node_modules
 .dcr
 .dcr.yml
 .jscsrc
+build/vendor
