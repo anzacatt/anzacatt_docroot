@@ -1,23 +1,22 @@
 /**
- * @file
- * A JavaScript file for the theme.
- *
- * In order for this JavaScript to be loaded on pages, see the instructions in
- * the README.txt next to this file.
+ * Global variables.
  */
+var desktop_breakpoint = 1200;
+var large_tablet_breakpoint = 1024;
+var tablet_breakpoint = 768;
+var mobile_breakpoint = 420;
 
-// JavaScript should be made compatible with libraries other than jQuery by
-// wrapping it with an "anonymous closure". See:
-// - https://drupal.org/node/1446420
-// - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
+var desktop_column = 1170;
+
+/**
+ * govCMS general bootstrapping.
+ */
 (function($, Drupal, window, document, undefined) {
-  // To understand behaviors, see https://drupal.org/node/756722#behaviors
-  Drupal.behaviors.anzacatt = {
+
+  Drupal.behaviors.govcms_ui_kit = {
     attach: function(context, settings) {
-
-      // Object Fit Polyfill for IE.
+      // Object Fit Polyfill for IE. Used on News Teaser Images.
       objectFitImages();
-
     }
   };
 

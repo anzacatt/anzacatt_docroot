@@ -1,2 +1,0 @@
-# Anzacatt
-anzacatt govCMS theme
