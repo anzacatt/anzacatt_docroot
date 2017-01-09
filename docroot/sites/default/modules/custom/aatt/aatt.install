@@ -22,3 +22,63 @@ function aatt_install() {
     }
   }
 }
+
+/**
+ * Updates menu block position for the 'govcms_ui_kit' theme.
+ */
+function aatt_update_7001() {
+  require_once DRUPAL_ROOT . "/profiles/govcms/modules/custom/govcms_core/govcms_core.module";
+  require_once DRUPAL_ROOT . "/profiles/govcms/govcms.install";
+
+  salsa_helpers_add_block_to_region('menu_block', 'govcms_menu_block-sidebar', 'first_sidebar', -50, 'govcms_ui_kit');
+}
+
+/**
+ * Setting menu block title to 'In this section' for the 'govcms_ui_kit' theme.
+ */
+function aatt_update_7003() {
+  db_update('block')
+    ->fields(array('title' => t('In this section'), 'weight' => '-49'))
+    ->condition('delta', 'govcms_menu_block-sidebar', '=')
+    ->condition('theme', 'anzacatt', '=')
+    ->execute();
+}
+
+/**
+ * Setting Twitter block title to 'Latest tweets' for the 'govcms_ui_kit' theme.
+ */
+function aatt_update_7004() {
+  db_update('block')
+    ->fields(array('title' => t('In this section'), 'weight' => '-50'))
+    ->condition('module', 'twitter_block', '=')
+    ->condition('theme', 'anzacatt', '=')
+    ->execute();
+}
+
+
+/**
+ * Updates rich_text profile with Introduction class.
+ */
+function aatt_update_7006() {
+  $rich_text = db_query("SELECT * FROM {wysiwyg} WHERE format = 'rich_text'")->fetchAssoc();
+
+  $data = unserialize($rich_text['settings']);
+  $data['stylesSet'] = 'Introduction=p.introduction';
+  $data['buttons']['default']['Styles'] = 1;
+
+  db_update('wysiwyg')
+    ->fields(array('settings' => serialize($data)))
+    ->condition('format', 'rich_text', '=')
+    ->execute();
+}
+
+/**
+ * Moving block Footer Teaser for the 'govcms_ui_kit' theme.
+ */
+function aatt_update_7007() {
+  db_update('block')
+    ->fields(array('region' => 'sidebar_second', 'weight' => '-50', 'title' => t('Have you read...')))
+    ->condition('delta', 'footer_teaser-block', '=')
+    ->condition('theme', 'anzacatt', '=')
+    ->execute();
+}
