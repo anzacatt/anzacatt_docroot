@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the GovCMS UI Kit feature.
- */
-
-include_once 'govcms_ui_kit.features.inc';

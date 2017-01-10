@@ -1,5 +1,5 @@
 aname = Anzacatt Helpers module
 description = Anzacatt related customisations to run inside Acquia Dev environment
 package = Anzacatt
-version = 7.x-1.
+version = 7.x-1.0
 core = 7.x
