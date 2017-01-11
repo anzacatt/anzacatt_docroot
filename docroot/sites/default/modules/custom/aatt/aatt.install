@@ -130,3 +130,21 @@ function aatt_update_7008() {
     }
   }
 }
+
+/**
+ * Unlocking content types that will be removed [ANZACATT-8].
+ */
+function aatt_update_7009() {
+  $types_to_remove = [
+    'blog_article',
+    'media_release',
+    'news_article',
+  ];
+
+  foreach ($types_to_remove as $type_to_remove) {
+    db_update('node_type')
+      ->fields(array('custom' => 1, 'locked' => '0'))
+      ->condition('type', $type_to_remove, '=')
+      ->execute();
+  }
+}
