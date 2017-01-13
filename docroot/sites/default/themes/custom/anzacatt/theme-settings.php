@@ -8,7 +8,7 @@
 /**
  * Implements hook_system_theme_settings_alter().
  */
-function govcms_ui_kit_form_system_theme_settings_alter(&$form, $form_state) {
+function anzacatt_form_system_theme_settings_alter(&$form, $form_state) {
   $form['govcms_ui_kit_options'] = array(
     '#type' => 'fieldset',
     '#title' => t('govCMS UI Kit settings'),

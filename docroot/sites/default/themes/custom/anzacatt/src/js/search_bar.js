@@ -41,7 +41,7 @@
     return false;
   }
 
-  Drupal.behaviors.govcms_ui_kit_search = {
+  Drupal.behaviors.anzacatt_search = {
     attach: function(context, settings) {
       $widget = $('header .search-form-widget', context);
       if ($widget.length > 0) {
