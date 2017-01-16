@@ -13,13 +13,19 @@ function anzacatt_html_head_alter(&$head_elements) {
   $head_elements['viewport'] = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
-    '#attributes' => array('name' => 'viewport', 'content' => 'width=device-width, initial-scale=1'),
+    '#attributes' => array(
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1',
+    ),
   );
   // IE Latest Browser.
   $head_elements['ie_view'] = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
-    '#attributes' => array('http-equiv' => 'x-ua-compatible', 'content' => 'ie=edge'),
+    '#attributes' => array(
+      'http-equiv' => 'x-ua-compatible',
+      'content' => 'ie=edge',
+    ),
   );
 }
 
@@ -27,17 +33,20 @@ function anzacatt_html_head_alter(&$head_elements) {
  * Implements hook_js_alter().
  */
 function anzacatt_js_alter(&$javascript) {
-  $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'govcms_ui_kit') . '/vendor/jquery/jquery-3.1.1.min.js';
+  $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'anzacatt') . '/vendor/jquery/jquery-3.1.1.min.js';
 }
 
 /**
  * Implements hook_preprocess_html().
  */
 function anzacatt_preprocess_html(&$variables) {
-  drupal_add_js("(function(h) {h.className = h.className.replace('no-js', '') })(document.documentElement);", array('type' => 'inline', 'scope' => 'header'));
+  drupal_add_js("(function(h) {h.className = h.className.replace('no-js', '') })(document.documentElement);", array(
+    'type' => 'inline',
+    'scope' => 'header',
+  ));
   drupal_add_js('jQuery.extend(Drupal.settings, { "pathToTheme": "' . path_to_theme() . '" });', 'inline');
   // Drupal forms.js does not support new jQuery. Migrate library needed.
-  drupal_add_js(drupal_get_path('theme', 'govcms_ui_kit') . '/vendor/jquery/jquery-migrate-1.2.1.min.js');
+  drupal_add_js(drupal_get_path('theme', 'anzacatt') . '/vendor/jquery/jquery-migrate-1.2.1.min.js');
 }
 
 /**
@@ -53,7 +62,7 @@ function anzacatt_preprocess_field(&$variables) {
       }
     }
   }
-  if (theme_get_setting('govcms_ui_kit_override_image_styles') == 1) {
+  if (theme_get_setting('anzacatt_override_image_styles') == 1) {
     // Define custom image style for image banners on home page.
     if ($variables['element']['#field_name'] === 'field_slide_image') {
       if ($variables['items'][0]['#image_style'] === 'feature_article') {
@@ -80,7 +89,7 @@ function anzacatt_preprocess_field(&$variables) {
  * Implements hook_views_pre_render().
  */
 function anzacatt_views_pre_render(&$variables) {
-  if (theme_get_setting('govcms_ui_kit_override_image_styles') == 1) {
+  if (theme_get_setting('anzacatt_override_image_styles') == 1) {
     if ($variables->name === 'footer_teaser') {
       $len = count($variables->result);
       for ($i = 0; $i < $len; $i++) {
@@ -99,7 +108,7 @@ function anzacatt_views_pre_render(&$variables) {
  * Implements hook_image_styles_alter().
  */
 function anzacatt_image_styles_alter(&$styles) {
-  if (theme_get_setting('govcms_ui_kit_override_image_styles') == 1) {
+  if (theme_get_setting('anzacatt_override_image_styles') == 1) {
     $styles['govcms_ui_kit_banner'] = array(
       'label' => 'govCMS UI-KIT - Banner',
       'name' => 'govcms_ui_kit_banner',
