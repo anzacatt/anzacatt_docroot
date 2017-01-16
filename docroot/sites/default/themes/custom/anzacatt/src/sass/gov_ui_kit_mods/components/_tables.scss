@@ -1,0 +1,16 @@
+.content-table {
+  th, thead, tfoot {
+    font-size: 1em;
+    font-weight: bold;
+    color: $secondary_1;
+  }
+  th, thead {
+    border-bottom: solid 2px #6E6E6E;
+  }
+  tfoot {
+    border-top: solid 2px #6E6E6E;
+  }
+  tr {
+    border-top: 1px solid #CCCCCC;
+  }
+}

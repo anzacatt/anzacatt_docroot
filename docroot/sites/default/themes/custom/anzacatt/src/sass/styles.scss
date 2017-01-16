@@ -3,9 +3,10 @@
 @import '../../vendor/gov-au-ui-kit/assets/sass/variables';
 @import '../../vendor/gov-au-ui-kit/assets/sass/utils';
 @import '../../vendor/gov-au-ui-kit/assets/sass/vendor';
+@import 'variables';
+@import 'gov_ui_kit_mods/variables';
 @import '../../vendor/gov-au-ui-kit/assets/sass/components';
 // govCMS UI Kit.
-@import 'variables';
 @import 'mixins';
 @import 'page/header';
 @import 'page/navigation';
@@ -25,3 +26,8 @@
 @import 'page/search';
 @import 'page/news_media_landing';
 @import 'page/contact_form';
+@import 'gov_ui_kit_mods/components/_typography.scss';
+@import 'gov_ui_kit_mods/components/_tables.scss';
+@import 'gov_ui_kit_mods/components/_links.scss';
+@import 'gov_ui_kit_mods/page/_layout.scss';
+@import 'gov_ui_kit_mods/page/_form.scss';

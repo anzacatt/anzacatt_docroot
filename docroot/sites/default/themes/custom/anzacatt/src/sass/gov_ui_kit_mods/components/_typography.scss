@@ -1,0 +1,25 @@
+h1 {
+  font-size: rem(48);
+  color: #ffffff;
+}
+
+h2 {
+  font-size: rem(40);
+  color: $secondary_1;
+}
+
+h3 {
+  font-size: rem(26);
+  font-weight: $heading-font-weight;
+  color: $secondary_1;
+}
+
+h4, h5, h6 {
+  font-size: rem(18);
+  font-weight: $heading-font-weight;
+  color: $secondary_1;
+}
+
+html {
+  color: $secondary_1;
+}
