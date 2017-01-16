@@ -26,8 +26,8 @@
 @import 'page/search';
 @import 'page/news_media_landing';
 @import 'page/contact_form';
-@import 'gov_ui_kit_mods/components/_typography.scss';
-@import 'gov_ui_kit_mods/components/_tables.scss';
-@import 'gov_ui_kit_mods/components/_links.scss';
-@import 'gov_ui_kit_mods/page/_layout.scss';
-@import 'gov_ui_kit_mods/page/_form.scss';
+@import 'gov_ui_kit_mods/components/typography';
+@import 'gov_ui_kit_mods/components/tables';
+@import 'gov_ui_kit_mods/components/links';
+@import 'gov_ui_kit_mods/page/layout';
+@import 'gov_ui_kit_mods/page/form';
