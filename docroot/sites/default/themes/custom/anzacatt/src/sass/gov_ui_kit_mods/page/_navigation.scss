@@ -1,0 +1,6 @@
+.region-navigation {
+  background-color: $secondary_1;
+  .block-superfish ul.sf-menu>li>a:hover, .block-superfish ul.sf-menu>li>a:focus {
+    border-bottom-color: #6C357B;
+  }
+}

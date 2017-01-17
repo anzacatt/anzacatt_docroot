@@ -1,24 +1,19 @@
-/*
-Link styles
-
-Styling for types and classes of links.
-
-There are other link styles documented elsewhere (for example [tags in list styles](http://gov-au-ui-kit.apps.staging.digital.gov.au/section-list-styles.html)).
-
-Style guide: Link styles
-*/
-
-a:hover {
-  background: $secondary_2;
-  color: $neutral_1;
-}
-
+@include link-colours($secondary_1, $secondary_2, white);
 main>article {
-  @include link-colours($secondary_1, $secondary_2, $neutral_1);
+  @include link-colours($secondary_1, $secondary_2, white);
   @include button-colours($button-bg-colour, $button-bg-colour--hover, $button-bg-colour--active, $button-text-colour);
 }
 
 footer[role='contentinfo'] {
-  @include link-colours($secondary_1, $secondary_2, $neutral_1);
-  @include button-colours(transparent, $button-bg-colour--hover, $button-bg-colour--active, $button-bg-colour--hover, $button-text-colour);
+  @include link-colours($secondary_1, $secondary_2, white);
+  @include button-colours($primary_1, $button-bg-colour--hover, $button-bg-colour--active, $button-bg-colour--hover, $button-text-colour);
+}
+
+.header__inner .header__secondary-menu {
+  @include breakpoint(tablet) {
+    @include link-colours($secondary_1, $secondary_2, white);
+    a {
+      padding: 0 1px 0 1px;
+    }
+  }
 }
