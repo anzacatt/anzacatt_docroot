@@ -161,6 +161,23 @@ function anzacatt_image_styles_alter(&$styles) {
  * Implements hook_preprocess_node().
  */
 function anzacatt_preprocess_node(&$variables) {
+  // Adding theme suggestions for various view modes and content types.
+  $view_mode = $variables['view_mode'];
+  $content_type = $variables['type'];
+  $variables['theme_hook_suggestions'][] = 'node__' . $view_mode;
+  $variables['theme_hook_suggestions'][] = 'node__' . $view_mode . '_' . $content_type;
+
+  // Adding preprocess funtion suggestions for view mode and content type.
+  $view_mode_preprocess = 'anzacatt_preprocess_node_' . $view_mode . '_' . $content_type;
+  if (function_exists($view_mode_preprocess)) {
+    $view_mode_preprocess($variables);
+  }
+
+  $view_mode_preprocess = 'anzacatt_preprocess_node_' . $view_mode;
+  if (function_exists($view_mode_preprocess)) {
+    $view_mode_preprocess($variables);
+  }
+
   if ($variables['view_mode'] === 'teaser' || $variables['view_mode'] === 'compact') {
     // Apply thumbnail class to node teaser view if image exists.
     $has_thumb = !empty($variables['content']['field_thumbnail']);
@@ -241,4 +258,11 @@ function anzacatt_entity_info_alter(&$entity_info) {
     'label' => t('Listing'),
     'custom settings' => TRUE,
   );
+}
+
+/**
+ * Template preprocess for Event node type Listing view mode.
+ */
+function anzacatt_preprocess_node_listing_event(&$variables) {
+  $variables['view_more_link'] = l(t('Read more'), 'node/' . $variables['nid']);
 }
