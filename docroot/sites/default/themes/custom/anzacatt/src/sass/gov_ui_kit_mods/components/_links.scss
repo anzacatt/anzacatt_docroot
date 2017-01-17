@@ -12,5 +12,6 @@ footer[role='contentinfo'] {
 .header__inner .header__secondary-menu {
   @include breakpoint(tablet) {
     @include link-colours($secondary_1, $secondary_2, white);
+    padding: 0 1px 0 1px;
   }
 }
