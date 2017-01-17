@@ -40,6 +40,17 @@ function anzacatt_js_alter(&$javascript) {
  * Implements hook_preprocess_html().
  */
 function anzacatt_preprocess_html(&$variables) {
+  // Use the HTML hook to deny access to non-members.
+  $restrict_url = array(
+    'search'
+  );
+
+  if (user_is_anonymous()) {
+    if (in_array(arg(0), $restrict_url)) {
+      drupal_access_denied();
+    }
+  }
+
   drupal_add_js("(function(h) {h.className = h.className.replace('no-js', '') })(document.documentElement);", array(
     'type' => 'inline',
     'scope' => 'header',
