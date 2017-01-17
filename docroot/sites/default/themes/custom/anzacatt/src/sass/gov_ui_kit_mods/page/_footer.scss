@@ -1,0 +1,6 @@
+.region-footer {
+  background-color: $secondary_1;
+  .block-menu .content ul.menu>li>a, .block-menu-block .content ul.menu>li>a {
+    border-bottom: none;
+  }
+}
