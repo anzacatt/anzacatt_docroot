@@ -258,7 +258,7 @@ Usage:
 main > article .see-more::after, footer[role='contentinfo'] .see-more::after, .list-horizontal .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after, .primary-nav ul .see-more::after,
 .local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after,
 .hero-sml .see-more::after,
-.hero-med .see-more::after, .header__inner .header__secondary-menu .see-more::after, .content-body .content .see-more::after, .more-link .see-more::after, .region-footer .block-menu .content ul.menu > li .see-more::after, .region-footer .block-menu-block .content ul.menu > li .see-more::after, .bean-basic-content > .content .see-more::after, #block-views-slideshow-block .banner-description-holder h3 .see-more::after, #block-views-slideshow-block .banner-description-holder .field .see-more::after, .view-home-page-blog-articles .view-content .views-row h2 .see-more::after, .view-home-page-blog-articles .view-content .views-row .display .see-more::after, .view-latest-news .view-content .views-row h2 .see-more::after, .view-latest-news .view-content .views-row .display .see-more::after, body.not-front #content .view .view-content .views-row h2 .see-more::after, body.not-front #content .view .view-content .views-row .display .see-more::after, #block-menu-menu-quick-links ul.menu li .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display .see-more::after {
+.hero-med .see-more::after, .header__inner .header__secondary-menu .see-more::after, .content-body .content .see-more::after, .more-link .see-more::after, .region-footer .block-menu .content ul.menu > li .see-more::after, .region-footer .block-menu-block .content ul.menu > li .see-more::after, .bean-basic-content > .content .see-more::after, #block-views-slideshow-block .banner-description-holder h3 .see-more::after, #block-views-slideshow-block .banner-description-holder .field .see-more::after, .view-home-page-blog-articles .view-content .views-row h2 .see-more::after, .view-home-page-blog-articles .view-content .views-row .display .see-more::after, .view-latest-news .view-content .views-row h2 .see-more::after, .view-latest-news .view-content .views-row .display .see-more::after, body.not-front #content .view .view-content .views-row h2 .see-more::after, body.not-front #content .view .view-content .views-row .display .see-more::after, #block-menu-menu-quick-links ul.menu li .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display .see-more::after, .see-more::after {
   background-image: url("../latest/img/icons/arrow-right--aqua.svg");
 }
 
@@ -278,7 +278,7 @@ summary::before, .accordion--controls summary::before, .nav-toggle::before {
 main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
 .local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
-.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after {
+.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, a[rel~='external']::after {
   background-image: url("../latest/img/icons/external-link--aqua.svg");
 }
 
@@ -2077,7 +2077,7 @@ Style guide: Link styles.1 Hover links
 main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
 .local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
-.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after {
+.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, a[rel~='external']::after {
   content: '';
   position: absolute;
   display: inline;
@@ -7350,7 +7350,7 @@ html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-p
 }
 
 .region-navigation .block-superfish ul.sf-menu li.sfHover > a {
-  background-color: #142C3A;
+  background-color: transparent;
 }
 
 .region-navigation .block-superfish ul.sf-menu > li {
@@ -7371,7 +7371,7 @@ html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-p
 }
 
 .region-navigation .block-superfish ul.sf-menu > li.active-trail > a {
-  background-color: #1B3B4D;
+  background-color: #6C357B;
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > a {
@@ -7390,7 +7390,7 @@ html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-p
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > a:hover, .region-navigation .block-superfish ul.sf-menu > li > a:focus {
-  background-color: #142C3A;
+  background-color: transparent;
   border-bottom-color: white;
 }
 
@@ -7418,16 +7418,16 @@ html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-p
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > ul li a:hover, .region-navigation .block-superfish ul.sf-menu > li > ul li a:focus {
-  background-color: #142C3A;
+  background-color: transparent;
   border-bottom-color: white;
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > ul li.active-trail > a {
-  background-color: #1B3B4D;
+  background-color: #6C357B;
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > ul li.active-trail > a:hover, .region-navigation .block-superfish ul.sf-menu > li > ul li.active-trail > a:focus {
-  background-color: #142C3A;
+  background-color: transparent;
 }
 
 .mobile-nav {
@@ -7486,7 +7486,7 @@ html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-p
 
 .mobile-nav ul.links li.active a {
   color: white;
-  background-color: #1B3B4D;
+  background-color: #6C357B;
 }
 
 .mobile-nav ul.links li.active a:hover, .mobile-nav ul.links li.active a:focus {
@@ -10905,18 +10905,125 @@ html {
   border-top: 1px solid #CCCCCC;
 }
 
+color: #373854;
+a {
+  color: #373854;
+  text-decoration: none;
+  outline: none;
+  border-bottom: solid 1px #9e379f;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  transition-property: background-color, border-color, color;
+}
+
+a:hover, a:focus {
+  background-color: #9e379f;
+  color: white;
+}
+
+a[rel~='external'] {
+  display: inline;
+  position: relative;
+  margin-right: 1.6em;
+}
+
+a[rel~='external']:hover {
+  border-color: transparent;
+}
+
+a[rel~='external']::after {
+  background-size: 0.9em auto;
+}
+
 /*
-Link styles
+  See more link
 
-Styling for types and classes of links.
+  Use see more links at the end of [lists](section-list-styles.html),
+  to take the user to a index page of all items.
 
-There are other link styles documented elsewhere (for example [tags in list styles](http://gov-au-ui-kit.apps.staging.digital.gov.au/section-list-styles.html)).
+  Markup: <a class="see-more" href="#">See more</a>
 
-Style guide: Link styles
-*/
-a:hover {
-  background: #9e379f;
-  color: #313131;
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+.see-more {
+  display: inline-block;
+  position: relative;
+  margin-right: 1.6em;
+  font-weight: 700;
+  color: transparent;
+}
+
+.see-more::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1.2em;
+  display: block;
+  width: 1.2em;
+  height: 1.2em;
+  background-repeat: no-repeat;
+  background-position: right 0.4em;
+  background-size: 0.64em auto;
+}
+
+.see-more:hover, .see-more:focus {
+  color: white;
+}
+
+/*
+  Placeholder links (prototyping)
+
+  Use placeholder links (greyed out links) to show actions that users can't currently take.
+
+  Your content should explain why the action isn't available and when it will be.
+
+  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
+
+  Markup: <p><span class="placeholder-link">Draft news item</span></p>
+  <p><a href="#">News item</a><p>
+
+  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.3 Placeholder links
+  */
+span.placeholder-link {
+  color: rgba(55, 56, 84, 0.7);
+  border-bottom: none;
+  cursor: not-allowed;
+}
+
+span.placeholder-link:hover {
+  cursor: not-allowed;
 }
 
 main > article {
@@ -10991,7 +11098,7 @@ main > article a {
 
 main > article a:hover, main > article a:focus {
   background-color: #9e379f;
-  color: #313131;
+  color: white;
 }
 
 main > article a[rel~='external'] {
@@ -11030,7 +11137,7 @@ main > article .see-more::after {
 }
 
 main > article .see-more:hover, main > article .see-more:focus {
-  color: #313131;
+  color: white;
 }
 
 main > article span.placeholder-link {
@@ -11150,7 +11257,7 @@ footer[role='contentinfo'] a {
 
 footer[role='contentinfo'] a:hover, footer[role='contentinfo'] a:focus {
   background-color: #9e379f;
-  color: #313131;
+  color: white;
 }
 
 footer[role='contentinfo'] a[rel~='external'] {
@@ -11189,7 +11296,7 @@ footer[role='contentinfo'] .see-more::after {
 }
 
 footer[role='contentinfo'] .see-more:hover, footer[role='contentinfo'] .see-more:focus {
-  color: #313131;
+  color: white;
 }
 
 footer[role='contentinfo'] span.placeholder-link {
@@ -11208,7 +11315,7 @@ footer[role='contentinfo'] [role='button'],
 footer[role='contentinfo'] [type='submit'],
 footer[role='contentinfo'] [type='reset'],
 footer[role='contentinfo'] [type='button'] {
-  background-color: transparent;
+  background-color: #493267;
   color: transparent;
   border-color: transparent;
 }
@@ -11235,6 +11342,125 @@ footer[role='contentinfo'] [type='submit']:active,
 footer[role='contentinfo'] [type='reset']:active,
 footer[role='contentinfo'] [type='button']:active {
   background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .header__inner .header__secondary-menu {
+    color: #373854;
+    /*
+  See more link
+
+  Use see more links at the end of [lists](section-list-styles.html),
+  to take the user to a index page of all items.
+
+  Markup: <a class="see-more" href="#">See more</a>
+
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+    /*
+  Placeholder links (prototyping)
+
+  Use placeholder links (greyed out links) to show actions that users can't currently take.
+
+  Your content should explain why the action isn't available and when it will be.
+
+  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
+
+  Markup: <p><span class="placeholder-link">Draft news item</span></p>
+  <p><a href="#">News item</a><p>
+
+  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.3 Placeholder links
+  */
+  }
+  .header__inner .header__secondary-menu a {
+    color: #373854;
+    text-decoration: none;
+    outline: none;
+    border-bottom: solid 1px #9e379f;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.1s;
+    transition-property: background-color, border-color, color;
+  }
+  .header__inner .header__secondary-menu a:hover, .header__inner .header__secondary-menu a:focus {
+    background-color: #9e379f;
+    color: white;
+  }
+  .header__inner .header__secondary-menu a[rel~='external'] {
+    display: inline;
+    position: relative;
+    margin-right: 1.6em;
+  }
+  .header__inner .header__secondary-menu a[rel~='external']:hover {
+    border-color: transparent;
+  }
+  .header__inner .header__secondary-menu a[rel~='external']::after {
+    background-size: 0.9em auto;
+  }
+  .header__inner .header__secondary-menu .see-more {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.6em;
+    font-weight: 700;
+    color: transparent;
+  }
+  .header__inner .header__secondary-menu .see-more::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -1.2em;
+    display: block;
+    width: 1.2em;
+    height: 1.2em;
+    background-repeat: no-repeat;
+    background-position: right 0.4em;
+    background-size: 0.64em auto;
+  }
+  .header__inner .header__secondary-menu .see-more:hover, .header__inner .header__secondary-menu .see-more:focus {
+    color: white;
+  }
+  .header__inner .header__secondary-menu span.placeholder-link {
+    color: rgba(55, 56, 84, 0.7);
+    border-bottom: none;
+    cursor: not-allowed;
+  }
+  .header__inner .header__secondary-menu span.placeholder-link:hover {
+    cursor: not-allowed;
+  }
+  .header__inner .header__secondary-menu a {
+    padding: 0 1px 0 1px;
+  }
 }
 
 .content-body .content {
@@ -11301,14 +11527,14 @@ footer[role='contentinfo'] [type='button']:active {
   color: #373854;
   text-decoration: none;
   outline: none;
-  border-bottom: solid 1px #9e379f;
+  border-bottom: solid 1px #373854;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
   transition-property: background-color, border-color, color;
 }
 
 .content-body .content a:hover, .content-body .content a:focus {
-  background-color: #9e379f;
+  background-color: #373854;
   color: #313131;
 }
 
@@ -11373,5 +11599,13 @@ footer[role='contentinfo'] [type='button']:active {
 
 #content input[type="submit"]:hover {
   background-color: #9e379f;
+}
+
+.region-navigation {
+  background-color: #373854;
+}
+
+.region-navigation .block-superfish ul.sf-menu > li > a:hover, .region-navigation .block-superfish ul.sf-menu > li > a:focus {
+  border-bottom-color: #6C357B;
 }
 /*# sourceMappingURL=styles.css.map */
