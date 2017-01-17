@@ -96,7 +96,7 @@
     }
   }
 
-  Drupal.behaviors.govcms_ui_kit_sidebar = {
+  Drupal.behaviors.anzacatt_sidebar = {
     attach: function(context, settings) {
       $widget = $('#block-menu-block-govcms-menu-block-sidebar', context);
       if ($widget.length > 0) {

@@ -17,7 +17,7 @@ This theme was built for [Department of Finance](http://www.finance.gov.au/) by 
 
 ## Extending the theme
 
-govCMS is best used as a base theme when theme changes are only minor. Substantial changes may be best made by duplicating the `../govcms_ui_kit` folder and changing the stylesheets / scripts as necessary.
+govCMS is best used as a base theme when theme changes are only minor. Substantial changes may be best made by duplicating the `../anzacatt` folder and changing the stylesheets / scripts as necessary.
 
 ## Modifying the theme
 

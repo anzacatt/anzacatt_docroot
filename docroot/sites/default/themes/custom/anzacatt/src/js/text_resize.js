@@ -13,7 +13,7 @@
     return false;
   }
 
-  Drupal.behaviors.govcms_ui_kit_text_resize = {
+  Drupal.behaviors.anzacatt_text_resize = {
     attach: function(context, settings) {
       $widget = $('.block-govcms-text-resize', context);
       if ($widget.length > 0) {

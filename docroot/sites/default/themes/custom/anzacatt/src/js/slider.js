@@ -124,7 +124,7 @@
     afterUpdate: position_custom_controls
   };
 
-  Drupal.behaviors.govcms_ui_kit_slider = {
+  Drupal.behaviors.anzacatt_slider = {
     attach: function(context, settings) {
       $slider = $('.view-slideshow > div > ul', context);
       if ($slider.length > 0) {

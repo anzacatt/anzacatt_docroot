@@ -15,7 +15,7 @@
     return current_domain !== domain(url);
   }
 
-  Drupal.behaviors.govcms_ui_kit_external_links = {
+  Drupal.behaviors.anzacatt_external_links = {
     attach: function(context, settings) {
       // Get current domain.
       current_domain = domain(location.href);
@@ -76,7 +76,7 @@
     return false;
   }
 
-  Drupal.behaviors.govcms_ui_kit_menu = {
+  Drupal.behaviors.anzacatt_menu = {
     attach: function(context, settings) {
       $widget = $('#mobile-nav', context);
       if ($widget.length > 0) {
@@ -107,7 +107,7 @@ var desktop_column = 1170;
  */
 (function($, Drupal, window, document, undefined) {
 
-  Drupal.behaviors.govcms_ui_kit = {
+  Drupal.behaviors.anzacatt = {
     attach: function(context, settings) {
       // Object Fit Polyfill for IE. Used on News Teaser Images.
       objectFitImages();
@@ -160,7 +160,7 @@ var desktop_column = 1170;
     return false;
   }
 
-  Drupal.behaviors.govcms_ui_kit_search = {
+  Drupal.behaviors.anzacatt_search = {
     attach: function(context, settings) {
       $widget = $('header .search-form-widget', context);
       if ($widget.length > 0) {
@@ -274,7 +274,7 @@ var desktop_column = 1170;
     }
   }
 
-  Drupal.behaviors.govcms_ui_kit_sidebar = {
+  Drupal.behaviors.anzacatt_sidebar = {
     attach: function(context, settings) {
       $widget = $('#block-menu-block-govcms-menu-block-sidebar', context);
       if ($widget.length > 0) {
@@ -414,7 +414,7 @@ var desktop_column = 1170;
     afterUpdate: position_custom_controls
   };
 
-  Drupal.behaviors.govcms_ui_kit_slider = {
+  Drupal.behaviors.anzacatt_slider = {
     attach: function(context, settings) {
       $slider = $('.view-slideshow > div > ul', context);
       if ($slider.length > 0) {
@@ -453,7 +453,7 @@ var desktop_column = 1170;
     return false;
   }
 
-  Drupal.behaviors.govcms_ui_kit_text_resize = {
+  Drupal.behaviors.anzacatt_text_resize = {
     attach: function(context, settings) {
       $widget = $('.block-govcms-text-resize', context);
       if ($widget.length > 0) {
@@ -489,7 +489,7 @@ var desktop_column = 1170;
     $('head', doc).append($link);
   };
 
-  Drupal.behaviors.govcms_ui_kit_twitter_theme = {
+  Drupal.behaviors.anzacatt_twitter_theme = {
     attach: function(context, settings) {
       // Wait for twitter to load, then apply a custom style.
       var url = settings.basePath + settings.pathToTheme + "/dist/css/custom_twitter_theme.css";
@@ -542,7 +542,7 @@ var desktop_column = 1170;
     }
   }
 
-  Drupal.behaviors.govcms_ui_kit_webform = {
+  Drupal.behaviors.anzacatt_webform = {
     attach: function(context, settings) {
       // Flip the order of radio checkboxes with labels.
       // UI Kit styling only works if the label appears after.

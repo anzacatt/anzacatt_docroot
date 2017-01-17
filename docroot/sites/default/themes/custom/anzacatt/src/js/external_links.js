@@ -15,7 +15,7 @@
     return current_domain !== domain(url);
   }
 
-  Drupal.behaviors.govcms_ui_kit_external_links = {
+  Drupal.behaviors.anzacatt_external_links = {
     attach: function(context, settings) {
       // Get current domain.
       current_domain = domain(location.href);

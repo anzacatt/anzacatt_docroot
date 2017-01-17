@@ -34,7 +34,7 @@
       <div class="logo-wrapper">
         <?php if ($logo): ?>
           <?php
-            $logo_alt = theme_get_setting('govcms_ui_kit_header_logo_alt');
+            $logo_alt = theme_get_setting('anzacatt_header_logo_alt');
             $logo_alt = !empty($logo_alt) ? $logo_alt : variable_get('site_name', 'Home');
             $logo_img = theme_image(array(
               'path' => $logo,
@@ -42,7 +42,7 @@
               'attributes' => array('class' => array('header__logo-image')),
             ));
             $logo_class = array('header__logo');
-            if (empty(theme_get_setting('govcms_ui_kit_header_title'))) {
+            if (empty(theme_get_setting('anzacatt_header_title'))) {
               $logo_class[] = 'no-title';
             }
 
@@ -57,8 +57,8 @@
             ));
           ?>
         <?php endif; ?>
-        <?php if (theme_get_setting('govcms_ui_kit_header_title')): ?>
-          <div class="header-title"><?php print decode_entities(theme_get_setting('govcms_ui_kit_header_title')); ?></div>
+        <?php if (theme_get_setting('anzacatt_header_title')): ?>
+          <div class="header-title"><?php print decode_entities(theme_get_setting('anzacatt_header_title')); ?></div>
         <?php endif; ?>
       </div>
       <?php print render($page['header']); ?>
@@ -125,7 +125,7 @@
       <?php print $sidebar_second; ?>
     </aside>
   <?php endif; ?>
-  
+
   <div id="footer">
     <?php print render($page['footer']); ?>
   </div>

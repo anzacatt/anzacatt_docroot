@@ -21,7 +21,7 @@
     $('head', doc).append($link);
   };
 
-  Drupal.behaviors.govcms_ui_kit_twitter_theme = {
+  Drupal.behaviors.anzacatt_twitter_theme = {
     attach: function(context, settings) {
       // Wait for twitter to load, then apply a custom style.
       var url = settings.basePath + settings.pathToTheme + "/dist/css/custom_twitter_theme.css";

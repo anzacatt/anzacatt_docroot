@@ -8,42 +8,51 @@
 /**
  * Implements hook_html_head_alter().
  */
-function govcms_ui_kit_html_head_alter(&$head_elements) {
+function anzacatt_html_head_alter(&$head_elements) {
   // Mobile Viewport.
   $head_elements['viewport'] = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
-    '#attributes' => array('name' => 'viewport', 'content' => 'width=device-width, initial-scale=1'),
+    '#attributes' => array(
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1',
+    ),
   );
   // IE Latest Browser.
   $head_elements['ie_view'] = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
-    '#attributes' => array('http-equiv' => 'x-ua-compatible', 'content' => 'ie=edge'),
+    '#attributes' => array(
+      'http-equiv' => 'x-ua-compatible',
+      'content' => 'ie=edge',
+    ),
   );
 }
 
 /**
  * Implements hook_js_alter().
  */
-function govcms_ui_kit_js_alter(&$javascript) {
-  $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'govcms_ui_kit') . '/vendor/jquery/jquery-3.1.1.min.js';
+function anzacatt_js_alter(&$javascript) {
+  $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'anzacatt') . '/vendor/jquery/jquery-3.1.1.min.js';
 }
 
 /**
  * Implements hook_preprocess_html().
  */
-function govcms_ui_kit_preprocess_html(&$variables) {
-  drupal_add_js("(function(h) {h.className = h.className.replace('no-js', '') })(document.documentElement);", array('type' => 'inline', 'scope' => 'header'));
+function anzacatt_preprocess_html(&$variables) {
+  drupal_add_js("(function(h) {h.className = h.className.replace('no-js', '') })(document.documentElement);", array(
+    'type' => 'inline',
+    'scope' => 'header',
+  ));
   drupal_add_js('jQuery.extend(Drupal.settings, { "pathToTheme": "' . path_to_theme() . '" });', 'inline');
   // Drupal forms.js does not support new jQuery. Migrate library needed.
-  drupal_add_js(drupal_get_path('theme', 'govcms_ui_kit') . '/vendor/jquery/jquery-migrate-1.2.1.min.js');
+  drupal_add_js(drupal_get_path('theme', 'anzacatt') . '/vendor/jquery/jquery-migrate-1.2.1.min.js');
 }
 
 /**
  * Implements hook_preprocess_field().
  */
-function govcms_ui_kit_preprocess_field(&$variables) {
+function anzacatt_preprocess_field(&$variables) {
   // Bean 'Image and Text' field 'Link To' to show 'Read [title]' text.
   if ($variables['element']['#field_name'] === 'field_link_to' && $variables['element']['#bundle'] === 'image_and_text') {
     if (!empty($variables['items'][0]) && !empty($variables['element']['#object']->title)) {
@@ -53,7 +62,7 @@ function govcms_ui_kit_preprocess_field(&$variables) {
       }
     }
   }
-  if (theme_get_setting('govcms_ui_kit_override_image_styles') == 1) {
+  if (theme_get_setting('anzacatt_override_image_styles') == 1) {
     // Define custom image style for image banners on home page.
     if ($variables['element']['#field_name'] === 'field_slide_image') {
       if ($variables['items'][0]['#image_style'] === 'feature_article') {
@@ -79,8 +88,8 @@ function govcms_ui_kit_preprocess_field(&$variables) {
 /**
  * Implements hook_views_pre_render().
  */
-function govcms_ui_kit_views_pre_render(&$variables) {
-  if (theme_get_setting('govcms_ui_kit_override_image_styles') == 1) {
+function anzacatt_views_pre_render(&$variables) {
+  if (theme_get_setting('anzacatt_override_image_styles') == 1) {
     if ($variables->name === 'footer_teaser') {
       $len = count($variables->result);
       for ($i = 0; $i < $len; $i++) {
@@ -98,8 +107,8 @@ function govcms_ui_kit_views_pre_render(&$variables) {
 /**
  * Implements hook_image_styles_alter().
  */
-function govcms_ui_kit_image_styles_alter(&$styles) {
-  if (theme_get_setting('govcms_ui_kit_override_image_styles') == 1) {
+function anzacatt_image_styles_alter(&$styles) {
+  if (theme_get_setting('anzacatt_override_image_styles') == 1) {
     $styles['govcms_ui_kit_banner'] = array(
       'label' => 'govCMS UI-KIT - Banner',
       'name' => 'govcms_ui_kit_banner',
@@ -151,7 +160,7 @@ function govcms_ui_kit_image_styles_alter(&$styles) {
 /**
  * Implements hook_preprocess_node().
  */
-function govcms_ui_kit_preprocess_node(&$variables) {
+function anzacatt_preprocess_node(&$variables) {
   if ($variables['view_mode'] === 'teaser' || $variables['view_mode'] === 'compact') {
     // Apply thumbnail class to node teaser view if image exists.
     $has_thumb = !empty($variables['content']['field_thumbnail']);
@@ -171,7 +180,7 @@ function govcms_ui_kit_preprocess_node(&$variables) {
 /**
  * Implements theme_breadcrumb().
  */
-function govcms_ui_kit_breadcrumb($variables) {
+function anzacatt_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   $output = '';
 
@@ -188,7 +197,7 @@ function govcms_ui_kit_breadcrumb($variables) {
 /**
  * Implements hook_form_alter().
  */
-function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
+function anzacatt_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id === 'search_api_page_search_form_default_search') {
     // Global header form.
     $form['keys_1']['#attributes']['placeholder'] = t('Type search term here');
@@ -207,7 +216,7 @@ function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
 /**
  * Implements theme_preprocess_search_api_page_result().
  */
-function govcms_ui_kit_preprocess_search_api_page_result(&$variables) {
+function anzacatt_preprocess_search_api_page_result(&$variables) {
   // Strip out HTML tags from search results.
   $variables['snippet'] = strip_tags($variables['snippet']);
   // Remove the author / date from the result display.
@@ -217,9 +226,19 @@ function govcms_ui_kit_preprocess_search_api_page_result(&$variables) {
 /**
  * Implements theme_preprocess_search_result().
  */
-function govcms_ui_kit_preprocess_search_result(&$variables) {
+function anzacatt_preprocess_search_result(&$variables) {
   // Strip out HTML tags from search results (404 page).
   $variables['snippet'] = strip_tags($variables['snippet']);
   // Remove the author / date from the result display (404 page).
   $variables['info'] = '';
+}
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function anzacatt_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['listing'] = array(
+    'label' => t('Listing'),
+    'custom settings' => TRUE,
+  );
 }

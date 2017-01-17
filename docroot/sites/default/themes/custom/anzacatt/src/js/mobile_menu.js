@@ -41,7 +41,7 @@
     return false;
   }
 
-  Drupal.behaviors.govcms_ui_kit_menu = {
+  Drupal.behaviors.anzacatt_menu = {
     attach: function(context, settings) {
       $widget = $('#mobile-nav', context);
       if ($widget.length > 0) {
