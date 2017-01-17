@@ -167,7 +167,7 @@ function anzacatt_preprocess_node(&$variables) {
   $variables['theme_hook_suggestions'][] = 'node__' . $view_mode;
   $variables['theme_hook_suggestions'][] = 'node__' . $view_mode . '_' . $content_type;
 
-  // Adding preprocess funtion suggestions for view mode and content type.
+  // Adding preprocess function suggestions for view mode and content type.
   $view_mode_preprocess = 'anzacatt_preprocess_node_' . $view_mode . '_' . $content_type;
   if (function_exists($view_mode_preprocess)) {
     $view_mode_preprocess($variables);
