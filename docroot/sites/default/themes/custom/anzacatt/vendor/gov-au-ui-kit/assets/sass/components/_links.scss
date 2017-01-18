@@ -212,12 +212,14 @@ Style guide: Link styles.1 Hover links
   }
 }
 
+@include link-colours($secondary_1, $secondary_2, white);
+
 main > article {
-  @include link-colours($non-black, $light-aqua, $non-black);
+  @include link-colours($secondary_1, $secondary_2, white);
   @include button-colours($button-bg-colour, $button-bg-colour--hover, $button-bg-colour--active, $button-text-colour);
 }
 
 footer[role='contentinfo'] {
-  @include link-colours($non-black, $light-aqua, $non-black);
-  @include button-colours(transparent, $button-bg-colour--hover, $button-bg-colour--active, $button-bg-colour--hover, $button-text-colour);
+  @include link-colours($secondary_1, $secondary_2, white);
+  @include button-colours($primary_1, $button-bg-colour--hover, $button-bg-colour--active, $button-bg-colour--hover, $button-text-colour);
 }

@@ -232,9 +232,10 @@ h4 {
 }
 
 h1 {
-  font-size: rem(24);
+  font-size: rem(48);
   font-weight: $bold-font-weight;
   margin-bottom: $small-spacing;
+  color: $white;
 
   @include media($tablet) {
     font-size: rem(28);
@@ -254,10 +255,11 @@ h1 {
 }
 
 h2 {
-  font-size: rem(32);
+  font-size: rem(40);
   line-height: $small-leading;
   margin-top: $base-spacing;
   margin-bottom: 1em;
+  color: $secondary_1;
 
   @include media($tablet) {
     font-size: rem(40);
@@ -269,10 +271,11 @@ h2 {
 }
 
 h3 {
-  font-size: rem(24);
+  font-size: rem(26);
   font-weight: $heading-font-weight;
   margin-top: $medium-spacing + ($small-spacing / 3); // 38.133px; was 34.4px from Alz.
   margin-bottom: $small-spacing;
+  color: $secondary_1;
 
   @include media($tablet) {
     font-size: rem(26);
@@ -288,6 +291,7 @@ h5,
 h6 {
   font-size: rem(18);
   font-weight: $heading-font-weight;
+  color: $secondary_1;
 
   @include ie-lte(8) {
     font-size: 18px;
@@ -746,11 +750,10 @@ Style guide: Typography.9 Quotations
 */
 
 blockquote {
-  margin: $medium-spacing 0;
-  padding: $small-spacing ($base-spacing + $small-spacing);
-  background-color: $background-secondary-colour;
+  margin: 0;
+  padding: .8em 0;
+  background-color: transparent;
   font-family: $base-serif;
-  quotes: '\201C''\201D''\2018''\2019';
 
   &.pullquote {
     padding: 0;
@@ -777,27 +780,29 @@ blockquote {
     }
   }
 
-  &::before,
-  &::after {
-    display: block;
-    height: 0;
-    font-family: $base-serif;
-    font-size: rem(43);
-    color: $aqua;
+  p {
+    border-left: 5px solid $neutral_2;
+    // Replace the bottom margin with padding so the borders blend.
+    padding: 0.6em 2.4em .6em 2.4em;
+    margin-bottom: 0em;
+    &:last-of-type:not(:only-of-type) {
+      font-size: .8em;
+      &::before {
+        content: '\2014 -';
+      }
+    }
   }
-
-  &::before {
-    margin-left: -($small-spacing * 0.75);
-    padding-bottom: $tiny-spacing;
-    content: open-quote;
-  }
-
-  &::after {
-    margin-right: -($small-spacing * 0.75);
-    margin-top: -($small-spacing);
-    padding-bottom: $medium-spacing;
-    text-align: right;
-    content: close-quote;
+  p[style*="text-align: right"] {
+    border-left: none;
+    border-right: 5px solid $neutral_2;
+    &:last-of-type:not(:only-of-type) {
+      &::before {
+        content: none;
+      }
+      &::after {
+        content: ' \2014';
+      }
+    }
   }
 
   footer {

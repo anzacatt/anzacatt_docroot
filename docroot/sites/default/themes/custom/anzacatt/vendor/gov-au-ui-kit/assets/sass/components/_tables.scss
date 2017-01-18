@@ -49,6 +49,12 @@ table {
   width: 100%;
   border-collapse: collapse;
 
+  th, thead, tfoot {
+    font-size: 1em;
+    font-weight: bold;
+    color: $secondary_1;
+  }
+
   tr:nth-child(even) {
     background-color: $non-white;
   }
@@ -66,8 +72,16 @@ table {
     }
   }
 
-  thead {
-    border-bottom: solid 2px $grey;
+  th, thead {
+    border-bottom: solid 2px #6E6E6E;
+  }
+
+  tfoot {
+    border-top: solid 2px #6E6E6E;
+  }
+
+  tr {
+    border-top: 1px solid #CCCCCC;
   }
 }
 

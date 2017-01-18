@@ -276,3 +276,18 @@ form.webform-client-form {
     color: $neutral_1;
   }
 }
+
+// ANZACATT Customisation
+#content {
+  form input[type="text"], label {
+    color: $neutral_1;
+  }
+  input[type="submit"] {
+    font-size: rem(16);
+    color: #ffffff;
+    background-color: $secondary_1;
+    &:hover {
+      background-color: $secondary_2;
+    }
+  }
+}

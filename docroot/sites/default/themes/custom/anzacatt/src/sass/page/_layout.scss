@@ -5,6 +5,7 @@ html {
   &.large-fonts {
     font-size: $large-font-size;
   }
+  color: $secondary_1;
 }
 
 // =========================================================
@@ -51,7 +52,7 @@ html {
     margin-bottom: $default_padding;
   }
   .content {
-    @include link-colours($primary_1, $secondary_3, $neutral_1);
+    @include link-colours($secondary_1, $secondary_1, $neutral_1);
   }
 }
 
