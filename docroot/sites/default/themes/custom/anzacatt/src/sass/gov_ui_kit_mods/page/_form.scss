@@ -11,3 +11,24 @@
     }
   }
 }
+
+#search-api-page-search-form-site-search {
+  &>div {
+    display: flex;
+  }
+  div.form-type-textfield input {
+    placeholder: '';
+  }
+  input[type="submit"] {
+    margin-top: 1.375rem;
+    height: 2.4rem;
+    background: url(/sites/default/themes/custom/anzacatt/dist/images/svg/magnifying_glass.svg) no-repeat center;
+    width: 2.5rem;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    color: transparent;
+    border: 2px solid #bbbbbb;
+    border-left-width: 0;
+  }
+}
