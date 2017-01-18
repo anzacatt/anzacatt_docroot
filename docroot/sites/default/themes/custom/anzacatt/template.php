@@ -42,7 +42,8 @@ function anzacatt_js_alter(&$javascript) {
 function anzacatt_preprocess_html(&$variables) {
   // Use the HTML hook to deny access to non-members.
   $restrict_url = array(
-    'search'
+    'search',
+    'membersonly',
   );
 
   if (user_is_anonymous()) {
