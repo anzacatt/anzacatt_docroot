@@ -6,7 +6,6 @@
  */
 
 define('ANZACATT_MEMBERSONLY_VALUE', 'membersonly');
-define('ANZACATT_PUBLIC_VALUE', 'public');
 
 /**
  * Implements hook_pathauto_pattern_alter().
@@ -49,11 +48,14 @@ function anzacatt_admin_form_alter(&$form, &$form_state) {
   }
 }
 
+/**
+ * Submit handler for node forms.
+ */
 function anzacatt_admin_node_form_submit($form, &$form_state) {
   if (_anzacatt_admin_check_members_only_path_reset_required($form_state)) {
     $form_state['values']['path']['pathauto'] = 1;
   }
-  else if (_anzacatt_admin_check_public_path_reset_required($form_state)){
+  elseif (_anzacatt_admin_check_public_path_reset_required($form_state)) {
     // The form is public only but the URL alias still starts with
     // membersonly. Update the URL alias to remove it.
     $form_state['values']['path']['pathauto'] = 1;
@@ -69,8 +71,8 @@ function anzacatt_admin_node_form_submit($form, &$form_state) {
  * @return bool
  *   TRUE if the URL alias has to be reset or FALSE.
  */
-function _anzacatt_admin_check_members_only_path_reset_required($form_state) {
-  return _anzacatt_admin_node_is_members_only((object) $form_state['values']) && !strstr($form_state['values']['path']['alias'], ANZACATT_MEMBERSONLY_VALUE);
+function _anzacatt_admin_check_members_only_path_reset_required(array $form_state) {
+  return _anzacatt_admin_node_is_members_only((object) $form_state['values']) && substr($form_state['values']['path']['alias'], 0, strlen(ANZACATT_MEMBERSONLY_VALUE)) != ANZACATT_MEMBERSONLY_VALUE;
 }
 
 /**
@@ -82,8 +84,8 @@ function _anzacatt_admin_check_members_only_path_reset_required($form_state) {
  * @return bool
  *   TRUE if the URL alias has to be reset or FALSE.
  */
-function _anzacatt_admin_check_public_path_reset_required($form_state) {
-  return !_anzacatt_admin_node_is_members_only((object) $form_state['values']) && strstr($form_state['values']['path']['alias'], ANZACATT_MEMBERSONLY_VALUE);
+function _anzacatt_admin_check_public_path_reset_required(array $form_state) {
+  return !_anzacatt_admin_node_is_members_only((object) $form_state['values']) && substr($form_state['values']['path']['alias'], 0, strlen(ANZACATT_MEMBERSONLY_VALUE)) == ANZACATT_MEMBERSONLY_VALUE;
 }
 
 /**
