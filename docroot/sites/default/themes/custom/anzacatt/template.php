@@ -52,6 +52,10 @@ function anzacatt_preprocess_html(&$variables) {
     }
   }
 
+  // Adding rotating images to all pages.
+  $parliament_images = _anzacatt_prepare_parliament_images_array();
+  drupal_add_js($parliament_images, array('type' => 'setting'));
+
   drupal_add_js("(function(h) {h.className = h.className.replace('no-js', '') })(document.documentElement);", array(
     'type' => 'inline',
     'scope' => 'header',
@@ -59,6 +63,16 @@ function anzacatt_preprocess_html(&$variables) {
   drupal_add_js('jQuery.extend(Drupal.settings, { "pathToTheme": "' . path_to_theme() . '" });', 'inline');
   // Drupal forms.js does not support new jQuery. Migrate library needed.
   drupal_add_js(drupal_get_path('theme', 'anzacatt') . '/vendor/jquery/jquery-migrate-1.2.1.min.js');
+}
+
+function _anzacatt_prepare_parliament_images_array() {
+  $images = ['anzacatt' => ['parliament_images' => []]];
+  $results = views_get_view_result('parliamentary_image_urls', 'block');
+  foreach ($results as $result) {
+    $images['anzacatt']['parliament_images'][$result->field_field_parliament[0]['rendered']['#markup']][] = file_create_url($result->file_managed_uri);
+  }
+
+  return $images;
 }
 
 /**
