@@ -10,7 +10,7 @@ var desktop_column = 1170;
 /**
  * govCMS general bootstrapping.
  */
-(function ($, Drupal, window, document, undefined) {
+(function($, Drupal, window, document, undefined) {
 
   /**
    * Picks a random element of an array of anything.
@@ -26,14 +26,14 @@ var desktop_column = 1170;
   }
 
   Drupal.behaviors.anzacatt = {
-    attach: function (context, settings) {
+    attach: function(context, settings) {
       // Object Fit Polyfill for IE. Used on News Teaser Images.
       objectFitImages();
     }
   };
 
   Drupal.behaviors.anzacatt_parliament_images = {
-    attach: function (context, settings) {
+    attach: function(context, settings) {
       // Add random parliament images as header background.
       var parliamentaryImages = Drupal.settings.anzacatt.parliament_images;
       // Get parliaments from object keys.
@@ -58,7 +58,7 @@ var desktop_column = 1170;
 /**
  * External Link detector.
  */
-(function ($, Drupal, window, document, undefined) {
+(function($, Drupal, window, document, undefined) {
 
   var current_domain = '';
   var domainRe = /https?:\/\/((?:[\w\d-]+\.)+[\w\d]{2,})/i;
@@ -73,12 +73,12 @@ var desktop_column = 1170;
   }
 
   Drupal.behaviors.anzacatt_external_links = {
-    attach: function (context, settings) {
+    attach: function(context, settings) {
       // Get current domain.
       current_domain = domain(location.href);
 
       // Find all links and apply a rel if external.
-      $('a', context).each(function () {
+      $('a', context).each(function() {
         var $this = $(this);
         if (isExternalRegexClosure($this.attr('href'))) {
           $this.attr('rel', 'external');
@@ -92,7 +92,7 @@ var desktop_column = 1170;
 /**
  * Mobile Menu.
  */
-(function ($, Drupal, window, document, undefined) {
+(function($, Drupal, window, document, undefined) {
 
   var $widget = null;
   var $button = null;
@@ -133,7 +133,7 @@ var desktop_column = 1170;
   }
 
   Drupal.behaviors.anzacatt_menu = {
-    attach: function (context, settings) {
+    attach: function(context, settings) {
       $widget = $('#mobile-nav', context);
       if ($widget.length > 0) {
         $button = $('<button class="mobile-expand-menu" aria-controls="' + $widget.attr('id') + '" aria-expanded="false">Toggle menu navigation</button>');
@@ -160,7 +160,7 @@ var desktop_column = 1170;
 /**
  * govCMS general bootstrapping.
  */
-(function ($, Drupal, window, document, undefined) {
+(function($, Drupal, window, document, undefined) {
 
   /**
    * Picks a random element of an array of anything.
@@ -176,14 +176,14 @@ var desktop_column = 1170;
   }
 
   Drupal.behaviors.anzacatt = {
-    attach: function (context, settings) {
+    attach: function(context, settings) {
       // Object Fit Polyfill for IE. Used on News Teaser Images.
       objectFitImages();
     }
   };
 
   Drupal.behaviors.anzacatt_parliament_images = {
-    attach: function (context, settings) {
+    attach: function(context, settings) {
       // Add random parliament images as header background.
       var $images = Drupal.settings.anzacatt.parliament_images;
       var selectedImage = randomFrom($images);
@@ -197,7 +197,7 @@ var desktop_column = 1170;
 /**
  * Header Search Field.
  */
-(function ($, Drupal, window, document, undefined) {
+(function($, Drupal, window, document, undefined) {
 
   var $widget = null;
   var $button = null;
@@ -238,7 +238,7 @@ var desktop_column = 1170;
   }
 
   Drupal.behaviors.anzacatt_search = {
-    attach: function (context, settings) {
+    attach: function(context, settings) {
       $widget = $('header .search-form-widget', context);
       if ($widget.length > 0) {
         $button = $('<button class="mobile-expand-search" aria-controls="' + $widget.attr('id') + '" aria-expanded="false">Toggle search form</button>');
@@ -255,7 +255,7 @@ var desktop_column = 1170;
 /**
  * Side Bar Menu.
  */
-(function ($, Drupal, window, document, undefined) {
+(function($, Drupal, window, document, undefined) {
 
   var $widget = null;
   var is_menu_desktop = true;
@@ -280,7 +280,7 @@ var desktop_column = 1170;
 
   function add_toggle_buttons() {
     // Only add buttons to first level of menu items.
-    $widget.find('.menu-block-wrapper > ul > li').each(function (idx) {
+    $widget.find('.menu-block-wrapper > ul > li').each(function(idx) {
       var $list_item = $(this);
       var $sub_menu = $list_item.children('ul.menu');
       if ($sub_menu.length > 0) {
@@ -351,7 +351,7 @@ var desktop_column = 1170;
   }
 
   Drupal.behaviors.anzacatt_sidebar = {
-    attach: function (context, settings) {
+    attach: function(context, settings) {
       $widget = $('#block-menu-block-govcms-menu-block-sidebar', context);
       if ($widget.length > 0) {
         add_toggle_buttons();
@@ -367,7 +367,7 @@ var desktop_column = 1170;
  * Home page slider.
  * An implementation of the Owl Carousel with custom controls.
  */
-(function ($, Drupal, window, document, undefined) {
+(function($, Drupal, window, document, undefined) {
 
   function slider_responsive() {
     var w = window.innerWidth || document.documentElement.clientWidth;
@@ -490,7 +490,7 @@ var desktop_column = 1170;
   };
 
   Drupal.behaviors.anzacatt_slider = {
-    attach: function (context, settings) {
+    attach: function(context, settings) {
       $slider = $('.view-slideshow > div > ul', context);
       if ($slider.length > 0) {
         // Slider only initialized if more than 1 item present.
@@ -515,7 +515,7 @@ var desktop_column = 1170;
 /**
  * Text Resize.
  */
-(function ($, Drupal, window, document, undefined) {
+(function($, Drupal, window, document, undefined) {
 
   function increase_font() {
     $('html').addClass('large-fonts').trigger('font-size-change');
@@ -528,7 +528,7 @@ var desktop_column = 1170;
   }
 
   Drupal.behaviors.anzacatt_text_resize = {
-    attach: function (context, settings) {
+    attach: function(context, settings) {
       $widget = $('.block-govcms-text-resize', context);
       if ($widget.length > 0) {
         $widget.find('.font-large').unbind('click', increase_font).bind('click', increase_font);
@@ -545,12 +545,12 @@ var desktop_column = 1170;
  * Based on https://github.com/kevinburke/customize-twitter-1.1
  * with an additional load event to trigger a resize of the module.
  */
-(function ($, Drupal, window, document, undefined) {
+(function($, Drupal, window, document, undefined) {
 
-  var embedCss = function (frame, doc, url) {
+  var embedCss = function(frame, doc, url) {
     var $link = $('<link href="' + url + '" rel="stylesheet" type="text/css" />');
 
-    $link.on('load', function () {
+    $link.on('load', function() {
       // Force twitter frame height update.
       var outer_height = frame.frameElement.clientHeight;
       var inner_height = frame.document.body.children[0].clientHeight;
@@ -563,12 +563,12 @@ var desktop_column = 1170;
   };
 
   Drupal.behaviors.anzacatt_twitter_theme = {
-    attach: function (context, settings) {
+    attach: function(context, settings) {
       // Wait for twitter to load, then apply a custom style.
       var url = settings.basePath + settings.pathToTheme + "/dist/css/custom_twitter_theme.css";
 
-      twttr.ready(function () {
-        twttr.events.bind('loaded', function (event) {
+      twttr.ready(function() {
+        twttr.events.bind('loaded', function(event) {
           // Inject a custom stylesheet into the twitter frame.
           for (var i = 0; i < frames.length; i++) {
             var frame = frames[i];
@@ -592,7 +592,7 @@ var desktop_column = 1170;
 /**
  * Webform.js
  */
-(function ($, Drupal, window, document, undefined) {
+(function($, Drupal, window, document, undefined) {
 
   var $grid_components = null;
   var is_overflowing = null;
@@ -615,10 +615,10 @@ var desktop_column = 1170;
   }
 
   Drupal.behaviors.anzacatt_webform = {
-    attach: function (context, settings) {
+    attach: function(context, settings) {
       // Flip the order of radio checkboxes with labels.
       // UI Kit styling only works if the label appears after.
-      $('.webform-grid-option > .form-type-radio', context).each(function () {
+      $('.webform-grid-option > .form-type-radio', context).each(function() {
         var $this = $(this);
         $this.append($this.children('label'));
       });
@@ -634,4 +634,3 @@ var desktop_column = 1170;
   };
 
 })(jQuery, Drupal, this, this.document);
-
