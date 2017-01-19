@@ -103,11 +103,21 @@ body.not-front #content {
       padding: 10px 20px;
     }
   }
-  .views-exposed-form {
-    margin: 10px auto;
-    width: 100%;
-    select {
-      border: 1px solid $neutral_3;
+}
+
+.views-exposed-form {
+  margin: 10px auto;
+  width: 100%;
+  select {
+    border: 1px solid $neutral_3;
+  }
+  @include breakpoint(mobile) {
+    input[type="submit"] {
+      width: 100%;
+    }
+    .views-exposed-widget {
+      float: none;
+      width: 100%;
     }
   }
 }

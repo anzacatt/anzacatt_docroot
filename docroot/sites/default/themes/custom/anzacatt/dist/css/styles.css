@@ -8749,7 +8749,7 @@ form.webform-client-form .webform-next {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid transparent;
+  border-top: 10px solid #FFFFFF;
 }
 
 @media screen and (min-width: 768px) {
@@ -10038,13 +10038,23 @@ body.not-front #content .view .pager {
   padding: 10px 20px;
 }
 
-.view-content .views-exposed-form {
+.views-exposed-form {
   margin: 10px auto;
   width: 100%;
 }
 
-.view-content .views-exposed-form select {
+.views-exposed-form select {
   border: 1px solid #bbbbbb;
+}
+
+@media (max-width: 420px) {
+  .views-exposed-form input[type="submit"] {
+    width: 100%;
+  }
+  .views-exposed-form .views-exposed-widget {
+    float: none;
+    width: 100%;
+  }
 }
 
 .view-members tr td:nth-child(0) {
@@ -10061,14 +10071,10 @@ body.not-front #content .view .pager {
   border: 1px solid #bbbbbb;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .view-members .views-exposed-form select {
     min-width: 500px;
   }
-}
-
-.view-members .views-exposed-form .views-widget-filter-field_member_type_tid {
-  width: 70%;
 }
 
 .region-sidebar-first .block {
