@@ -43,10 +43,10 @@ var desktop_column = 1170;
       // Get random image for the selected parliament.
       var selectedImage = randomFrom(parliamentaryImages[randomParliament]);
       /*** test-code ***/
-      // console.log(parliamentaryImages);
-      // console.log(parliaments);
-      // console.log(selectedImage);
-      // console.log(randomParliament);
+      console.log(parliamentaryImages);
+      console.log(parliaments);
+      console.log(selectedImage);
+      console.log(randomParliament);
       /*** end-test-code ***/
       var element = $('#page .content-header');
       element.attr('style', 'background-image: url(' + selectedImage + ')');
