@@ -10,6 +10,7 @@ $listing_component_image_height: rem(275px);
 $form_width: rem(540px);
 $mobile_expand_search_width: rem(35px);
 // govCMS UI Kit Colours.
+$primary: #493267;
 $primary_1: #224A61;
 $primary_2: darken($primary_1, 6.5%); // #193748;
 $primary_3: darken($primary_1, 5%); // #1b3c4e original:(#143D52);
@@ -19,6 +20,7 @@ $secondary_3: $light-aqua; // #5BCBE3
 $neutral_1: $non-black; // #313131
 $neutral_2: $grey; // #717171
 $neutral_3: $light-grey; // #BEBEBE
+$background: #F0F1F5;
 $neutral_4: $non-white; // #F0F3F5
 $main_menu_hover: #142C3A;
 $main_menu_active: #1B3B4D;

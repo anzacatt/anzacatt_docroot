@@ -81,3 +81,43 @@ body.not-front #content {
     }
   }
 }
+
+.view-content {
+  overflow-x: auto;
+  .views-table {
+    min-width: 600px;
+    th {
+      border: none;
+      white-space: nowrap;
+    }
+    tr.odd {
+      background-color: $background;
+    }
+    tr.even {
+      background-color: transparent;
+    }
+    tr.even, tr.odd {
+      border-bottom: $light-grey;
+    }
+    th, td {
+      padding: 10px 20px;
+    }
+  }
+}
+
+.views-exposed-form {
+  margin: 10px auto;
+  width: 100%;
+  select {
+    border: 1px solid $neutral_3;
+  }
+  @include breakpoint(mobile) {
+    input[type="submit"] {
+      width: 100%;
+    }
+    .views-exposed-widget {
+      float: none;
+      width: 100%;
+    }
+  }
+}

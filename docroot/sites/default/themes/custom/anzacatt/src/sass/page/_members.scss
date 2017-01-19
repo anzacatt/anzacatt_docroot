@@ -1,0 +1,24 @@
+// =========================================================
+// MEMBERS
+// The default style for members listing and member profiles.
+// =========================================================
+.view-members {
+  tr {
+    td:nth-child(0) {
+      white-space: nowrap;
+    }
+  }
+  .views-exposed-form {
+    margin: 10px auto;
+    width: 100%;
+    select {
+      width: 100%;
+      border: 1px solid $neutral_3;
+    }
+    @include breakpoint(tablet) {
+      select {
+        min-width: 500px;
+      }
+    }
+  }
+}
