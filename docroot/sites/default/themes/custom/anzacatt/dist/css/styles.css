@@ -7530,7 +7530,7 @@ html.large-fonts {
 #content [type='submit']:active,
 #content [type='reset']:active,
 #content [type='button']:active {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 body.not-front #content .content-header {
@@ -7576,6 +7576,24 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
   .hero-med body.not-front #content .content-header .content-header-inner .site-title {
     font-size: 3rem;
   }
+}
+
+body #content .content-header, body #content .content-header * {
+  position: relative;
+  color: white;
+}
+
+body #content .content-header:before {
+  opacity: 0.5;
+  -moz-opacity: 0.5;
+  -webkit-opacity: 50%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #9e379f !important;
 }
 
 .content-body > .messages {
@@ -7983,7 +8001,7 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
 }
 
 .region-sidebar-second > .block {
-  border-top: 1px solid #9B9B9B;
+  border-top: 1px solid #9b9b9b;
 }
 
 .region-sidebar-second > .block:nth-child(3n+1) {
@@ -7995,7 +8013,7 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
 }
 
 .region-sidebar-second > .block:nth-child(3n+3) {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .more-link {
@@ -8152,7 +8170,7 @@ a[rel~='external']::after {
 #content [type='button'] {
   background-color: #373854;
   color: white;
-  border-color: #10505F;
+  border-color: #10505f;
 }
 
 #content button:hover, #content button:focus,
@@ -8166,7 +8184,7 @@ a[rel~='external']::after {
 #content [type='reset']:focus,
 #content [type='button']:hover,
 #content [type='button']:focus {
-  background-color: #10505F;
+  background-color: #10505f;
   color: white;
 }
 
@@ -8176,7 +8194,7 @@ a[rel~='external']::after {
 #content [type='submit']:active,
 #content [type='reset']:active,
 #content [type='button']:active {
-  background-color: #0C3C47;
+  background-color: #0c3c47;
 }
 
 .region-footer {
@@ -8822,8 +8840,12 @@ ul.tabs.primary {
   height: 1.875rem;
 }
 
-.content-header .breadcrumbs--inverted ul li a {
+.content-header .breadcrumbs--inverted ul li a, .content-header .breadcrumbs--inverted ul li a:active, .content-header .breadcrumbs--inverted ul li a:visited, .content-header .breadcrumbs--inverted ul li a:hover, .content-header .breadcrumbs--inverted ul li a:link {
   white-space: nowrap;
+  text-decoration: underline;
+  background: none;
+  background-color: transparent;
+  border-bottom: none;
 }
 
 .content-header .breadcrumbs--inverted ul li:not(:last-child) {
