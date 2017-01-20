@@ -22,3 +22,20 @@
     }
   }
 }
+
+.page-node {
+  .region-content {
+    .node-member-profile {
+      h1 {
+        color: $secondary_1;
+      }
+      @include breakpoint(tablet) {
+        .field-name-field-image {
+          float: right;
+          margin-left: 20px;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
