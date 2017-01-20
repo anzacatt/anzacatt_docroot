@@ -69,7 +69,7 @@ function _anzacatt_prepare_parliament_images_array() {
   $images = ['anzacatt' => ['parliament_images' => []]];
   $results = views_get_view_result('parliamentary_image_urls', 'block');
   foreach ($results as $result) {
-    $images['anzacatt']['parliament_images'][$result->field_field_parliament[0]['rendered']['#markup']][] = file_create_url($result->file_managed_uri);
+    $images['anzacatt']['parliament_images'][$result->field_field_parliament[0]['rendered']['#markup']][] = image_style_url('govcms_ui_kit_banner', $result->file_managed_uri);
   }
 
   return $images;
