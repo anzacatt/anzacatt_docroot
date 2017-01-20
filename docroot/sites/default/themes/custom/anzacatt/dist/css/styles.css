@@ -7591,16 +7591,18 @@ body #content .content-header, body #content .content-header * {
 }
 
 body #content .content-header:before {
-  opacity: 0.5;
-  -moz-opacity: 0.5;
-  -webkit-opacity: 50%;
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #9e379f !important;
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(73, 48, 104, 0.67) 0%, rgba(159, 49, 161, 0.67) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54493068', endColorstr='#549f31a1', GradientType=1);
+  /* IE6-9 */
 }
 
 .content-body > .messages {
