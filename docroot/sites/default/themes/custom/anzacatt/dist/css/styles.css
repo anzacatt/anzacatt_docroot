@@ -7313,6 +7313,11 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   background-image: url(../images/svg/mobile_search_close_hover.svg);
 }
 
+.content-header {
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
 .region-navigation {
   background-color: #493267;
 }
