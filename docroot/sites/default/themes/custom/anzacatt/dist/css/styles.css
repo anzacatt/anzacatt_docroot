@@ -7316,6 +7316,8 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 .content-header {
   background-position-x: 50%;
   background-position-y: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .region-navigation {
