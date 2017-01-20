@@ -47,7 +47,12 @@ function anzacatt_preprocess_html(&$variables) {
   );
 
   if (user_is_anonymous()) {
-    if (in_array(arg(0), $restrict_url)) {
+    $menu_object = menu_get_object();
+    if (!empty($menu_object->path['alias'])) {
+      $menu_object_alias = explode("/", $menu_object->path['alias']);
+    }
+
+    if (in_array(arg(0), $restrict_url) || in_array($menu_object_alias[0], $restrict_url)) {
       drupal_access_denied();
     }
   }
