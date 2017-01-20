@@ -5,6 +5,8 @@
  * template.php
  */
 
+define('ANZACATT_MEMBERSONLY_VALUE', 'membersonly');
+
 /**
  * Implements hook_html_head_alter().
  */
@@ -47,12 +49,23 @@ function anzacatt_preprocess_html(&$variables) {
   );
 
   if (user_is_anonymous()) {
+    $access = TRUE;
     $menu_object = menu_get_object();
     if (!empty($menu_object->path['alias'])) {
       $menu_object_alias = explode("/", $menu_object->path['alias']);
     }
 
     if (in_array(arg(0), $restrict_url) || in_array($menu_object_alias[0], $restrict_url)) {
+      $access = FALSE;
+    }
+
+    // Fallback if nothing matched by URL, check if the field members only
+    // requires private access.
+    if (!empty($menu_object->field_member_only_access) && $menu_object->field_member_only_access[$menu_object->language][0]['value'] == ANZACATT_MEMBERSONLY_VALUE) {
+      $access = FALSE;
+    }
+
+    if (!$access) {
       drupal_access_denied();
     }
   }
