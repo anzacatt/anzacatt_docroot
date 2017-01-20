@@ -34,27 +34,27 @@
       <div class="logo-wrapper">
         <?php if ($logo): ?>
           <?php
-            $logo_alt = theme_get_setting('anzacatt_header_logo_alt');
-            $logo_alt = !empty($logo_alt) ? $logo_alt : variable_get('site_name', 'Home');
-            $logo_img = theme_image(array(
-              'path' => $logo,
-              'alt' => $logo_alt,
-              'attributes' => array('class' => array('header__logo-image')),
-            ));
-            $logo_class = array('header__logo');
-            if (empty(theme_get_setting('anzacatt_header_title'))) {
-              $logo_class[] = 'no-title';
-            }
+          $logo_alt = theme_get_setting('anzacatt_header_logo_alt');
+          $logo_alt = !empty($logo_alt) ? $logo_alt : variable_get('site_name', 'Home');
+          $logo_img = theme_image(array(
+            'path' => $logo,
+            'alt' => $logo_alt,
+            'attributes' => array('class' => array('header__logo-image')),
+          ));
+          $logo_class = array('header__logo');
+          if (empty(theme_get_setting('anzacatt_header_title'))) {
+            $logo_class[] = 'no-title';
+          }
 
-            print l($logo_img, $front_page, array(
-              'html' => TRUE,
-              'attributes' => array(
-                'id' => 'logo',
-                'title' => t('Back to Homepage'),
-                'rel' => 'home',
-                'class' => $logo_class,
-              ),
-            ));
+          print l($logo_img, $front_page, array(
+            'html' => TRUE,
+            'attributes' => array(
+              'id' => 'logo',
+              'title' => t('Back to Homepage'),
+              'rel' => 'home',
+              'class' => $logo_class,
+            ),
+          ));
           ?>
         <?php endif; ?>
         <?php if (theme_get_setting('anzacatt_header_title')): ?>
@@ -70,8 +70,8 @@
   <?php print render($page['navigation']); ?>
   <nav class="mobile-nav" id="mobile-nav">
     <?php
-      $menu = menu_navigation_links('main-menu');
-      print theme('links__main_menu', array('links' => $menu));
+    $menu = menu_navigation_links('main-menu');
+    print theme('links__main_menu', array('links' => $menu));
     ?>
   </nav>
 </div>
@@ -79,9 +79,9 @@
 <div id="page">
 
   <?php
-    // Render the sidebars to see if there's anything in them.
-    $sidebar_first  = render($page['sidebar_first']);
-    $sidebar_second = render($page['sidebar_second']);
+  // Render the sidebars to see if there's anything in them.
+  $sidebar_first = render($page['sidebar_first']);
+  $sidebar_second = render($page['sidebar_second']);
   ?>
 
   <?php print render($page['highlighted']); ?>
