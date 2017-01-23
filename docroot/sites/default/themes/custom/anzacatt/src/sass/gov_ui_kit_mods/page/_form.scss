@@ -10,17 +10,28 @@
   }
   div.form-type-textfield input {
     placeholder: '';
+    width: rem(266px);
+    @include breakpoint(tablet) {
+      width: rem(310px);
+    }
+    height: 50px;
+    border: 1px solid $neutral_3;
+    border-right: 0px;
   }
   input[type="submit"] {
     margin-top: 1.375rem;
-    height: 2.4rem;
+    height: rem(50px);
     background: url(../images/svg/magnifying_glass.svg) no-repeat center;
-    width: 2.5rem;
+    width: rem(50px);
     text-indent: 100%;
     overflow: hidden;
     white-space: nowrap;
     color: transparent;
-    border: 2px solid #bbbbbb;
-    border-left-width: 0;
+    border: 1px solid $neutral_3;
+    position: absolute;
+    left: rem(265px);
+    @include breakpoint(tablet) {
+      left: rem(260px);
+    }
   }
 }

@@ -11808,19 +11808,36 @@ footer[role='contentinfo'] [type='button']:active {
 
 #search-api-page-search-form-site-search div.form-type-textfield input {
   placeholder: '';
+  width: 16.625rem;
+  height: 50px;
+  border: 1px solid #bbbbbb;
+  border-right: 0px;
+}
+
+@media (min-width: 768px) {
+  #search-api-page-search-form-site-search div.form-type-textfield input {
+    width: 19.375rem;
+  }
 }
 
 #search-api-page-search-form-site-search input[type="submit"] {
   margin-top: 1.375rem;
-  height: 2.4rem;
+  height: 3.125rem;
   background: url(../images/svg/magnifying_glass.svg) no-repeat center;
-  width: 2.5rem;
+  width: 3.125rem;
   text-indent: 100%;
   overflow: hidden;
   white-space: nowrap;
   color: transparent;
-  border: 2px solid #bbbbbb;
-  border-left-width: 0;
+  border: 1px solid #bbbbbb;
+  position: absolute;
+  left: 16.5625rem;
+}
+
+@media (min-width: 768px) {
+  #search-api-page-search-form-site-search input[type="submit"] {
+    left: 16.25rem;
+  }
 }
 
 .region-navigation {
