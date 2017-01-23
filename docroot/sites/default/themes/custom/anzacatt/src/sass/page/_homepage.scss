@@ -27,8 +27,6 @@
         position: relative;
         color: white;
         background-color: $secondary_1;
-        padding-top: rem(19px);
-        padding-bottom: rem(25px);
         margin-bottom: rem(25px);
         background-position-x: 50%;
         background-position-y: 50%;
@@ -36,8 +34,6 @@
         background-repeat: no-repeat;
         @include breakpoint(tablet) {
           height: rem(235px);
-          padding-top: rem(40px);
-          padding-bottom: rem(40px);
           margin-bottom: rem(80px);
         }
         .entity-bean {
