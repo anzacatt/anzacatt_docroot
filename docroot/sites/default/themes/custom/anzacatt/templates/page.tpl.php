@@ -127,7 +127,9 @@
   <?php endif; ?>
 
   <div id="footer">
-    <?php print render($page['footer']); ?>
+    <div class="footer-inner-wrapper">
+      <?php print render($page['footer']); ?>
+    </div>
   </div>
 </div>
 <?php print render($page['bottom']); ?>
