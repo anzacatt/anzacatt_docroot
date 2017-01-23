@@ -8907,7 +8907,7 @@ ul.tabs.primary {
   box-sizing: content-box;
 }
 
-.front .gov-front-layout > .panel-pane > .pane-content {
+.front .gov-front-layout .pane-bean-panels .pane-content {
   position: relative;
   color: white;
   background-color: #373854;
@@ -8921,7 +8921,7 @@ ul.tabs.primary {
 }
 
 @media (min-width: 768px) {
-  .front .gov-front-layout > .panel-pane > .pane-content {
+  .front .gov-front-layout .pane-bean-panels .pane-content {
     height: 14.6875rem;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -8929,7 +8929,7 @@ ul.tabs.primary {
   }
 }
 
-.front .gov-front-layout > .panel-pane > .pane-content .entity-bean {
+.front .gov-front-layout .pane-bean-panels .pane-content .entity-bean {
   max-width: 73.125rem;
   margin-left: auto;
   margin-right: auto;
@@ -8940,12 +8940,12 @@ ul.tabs.primary {
   background-color: transparent;
 }
 
-.front .gov-front-layout > .panel-pane > .pane-content * {
+.front .gov-front-layout .pane-bean-panels .pane-content * {
   position: relative;
   color: white;
 }
 
-.front .gov-front-layout > .panel-pane > .pane-content:before {
+.front .gov-front-layout .pane-bean-panels .pane-content:before {
   content: "";
   position: absolute;
   top: 0;

@@ -42,7 +42,7 @@ var desktop_column = 1170;
       var randomParliament = randomFrom(parliaments);
       // Get random image for the selected parliament.
       var selectedImage = randomFrom(parliamentaryImages[randomParliament]);
-      var element = $('#page .content-header, .front .gov-front-layout > .panel-pane > .pane-content');
+      var element = $('#page .content-header, .front .gov-front-layout .pane-bean-panels .pane-content');
       element.attr('style', 'background-image: url(' + selectedImage + ')');
     }
   }

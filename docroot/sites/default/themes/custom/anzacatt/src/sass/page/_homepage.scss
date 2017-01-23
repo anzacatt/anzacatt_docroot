@@ -21,8 +21,8 @@
       @include center-column($desktop_column);
     }
   }
-  .gov-front-layout> {
-    .panel-pane> {
+  .gov-front-layout {
+    .pane-bean-panels {
       .pane-content {
         position: relative;
         color: white;
