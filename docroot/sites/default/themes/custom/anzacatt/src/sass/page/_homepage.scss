@@ -21,6 +21,53 @@
       @include center-column($desktop_column);
     }
   }
+  .gov-front-layout> {
+    .panel-pane> {
+      .pane-content {
+        position: relative;
+        color: white;
+        background-color: $secondary_1;
+        padding-top: rem(19px);
+        padding-bottom: rem(25px);
+        margin-bottom: rem(25px);
+        background-position-x: 50%;
+        background-position-y: 50%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        @include breakpoint(tablet) {
+          height: rem(235px);
+          padding-top: rem(40px);
+          padding-bottom: rem(40px);
+          margin-bottom: rem(80px);
+        }
+        .entity-bean {
+          @include center-column($desktop_column);
+          color: white;
+          background-color: transparent;
+        }
+      }
+      .pane-content * {
+        position: relative;
+        color: white;
+      }
+      .pane-content:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: -moz-linear-gradient(left, rgba(73, 48, 104, 0.67) 0%, rgba(159, 49, 161, 0.67) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, rgba(73, 48, 104, 0.67) 0%, rgba(159, 49, 161, 0.67) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, rgba(73, 48, 104, 0.67) 0%, rgba(159, 49, 161, 0.67) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#54493068', endColorstr='#549f31a1', GradientType=1);
+        /* IE6-9 */
+      }
+    }
+  }
 }
 
 // =========================================================
@@ -60,7 +107,7 @@
   }
   .view-content {
     position: relative;
-    background-color: #0B3B46;
+    background-color: #0b3b46;
     &>ul {
       padding: 0;
       margin-bottom: 0;
@@ -139,7 +186,7 @@
     @include breakpoint(tablet) {
       position: relative;
       box-sizing: border-box;
-      background-color: #0B3B46;
+      background-color: #0b3b46;
       padding: rem(45px);
       padding-top: rem(85px);
       max-width: rem(524px);

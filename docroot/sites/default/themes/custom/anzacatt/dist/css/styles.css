@@ -8907,6 +8907,59 @@ ul.tabs.primary {
   box-sizing: content-box;
 }
 
+.front .gov-front-layout > .panel-pane > .pane-content {
+  position: relative;
+  color: white;
+  background-color: #373854;
+  padding-top: 1.1875rem;
+  padding-bottom: 1.5625rem;
+  margin-bottom: 1.5625rem;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .front .gov-front-layout > .panel-pane > .pane-content {
+    height: 14.6875rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.front .gov-front-layout > .panel-pane > .pane-content .entity-bean {
+  max-width: 73.125rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+  color: white;
+  background-color: transparent;
+}
+
+.front .gov-front-layout > .panel-pane > .pane-content * {
+  position: relative;
+  color: white;
+}
+
+.front .gov-front-layout > .panel-pane > .pane-content:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(73, 48, 104, 0.67) 0%, rgba(159, 49, 161, 0.67) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#54493068', endColorstr='#549f31a1', GradientType=1);
+  /* IE6-9 */
+}
+
 .bean-basic-content {
   background-color: #f0f3f5;
 }
@@ -9081,7 +9134,7 @@ ul.tabs.primary {
 
 #block-views-slideshow-block .view-content {
   position: relative;
-  background-color: #0B3B46;
+  background-color: #0b3b46;
 }
 
 #block-views-slideshow-block .view-content > ul {
@@ -9432,7 +9485,7 @@ ul.tabs.primary {
   #block-views-slideshow-block .banner-description-panel {
     position: relative;
     box-sizing: border-box;
-    background-color: #0B3B46;
+    background-color: #0b3b46;
     padding: 2.8125rem;
     padding-top: 5.3125rem;
     max-width: 32.75rem;
