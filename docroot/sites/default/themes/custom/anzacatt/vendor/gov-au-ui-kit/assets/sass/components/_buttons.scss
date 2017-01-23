@@ -58,16 +58,18 @@ Style guide: Buttons.1 Creating buttons
   [type='button'] {
     background-color: $bg-colour;
     color: $text-colour;
-    border-color: $bg-colour--hover;
+    border-color: $bg-colour;
 
     &:hover,
     &:focus {
       background-color: $bg-colour--hover;
       color: $text-colour--hover;
+      border-color: $bg-colour--hover;
     }
 
     &:active {
       background-color: $bg-colour--active;
+      border-color: $bg-colour--active;
     }
   }
 }
