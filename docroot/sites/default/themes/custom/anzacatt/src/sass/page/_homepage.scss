@@ -6,16 +6,12 @@
     @include visually-hidden;
   }
   .gov-front-left {
-    padding-top: rem(40px);
-    padding-bottom: rem(108px);
     background-color: $neutral_4;
     .panel-pane {
       @include center-column($desktop_column);
     }
   }
   .gov-front-right {
-    padding-top: rem(40px);
-    padding-bottom: rem(108px);
     background-color: $neutral_4;
     .panel-pane {
       @include center-column($desktop_column);

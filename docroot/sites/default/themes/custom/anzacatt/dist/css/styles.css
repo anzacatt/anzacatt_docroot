@@ -258,7 +258,7 @@ Usage:
 main > article .see-more::after, footer[role='contentinfo'] .see-more::after, .list-horizontal .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after, .primary-nav ul .see-more::after,
 .local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after,
 .hero-sml .see-more::after,
-.hero-med .see-more::after, .header__inner .header__secondary-menu .see-more::after, .content-body .content .see-more::after, .more-link .see-more::after, .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li .see-more::after, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li .see-more::after, .bean-basic-content > .content .see-more::after, #block-views-slideshow-block .banner-description-holder h3 .see-more::after, #block-views-slideshow-block .banner-description-holder .field .see-more::after, .view-home-page-blog-articles .view-content .views-row h2 .see-more::after, .view-home-page-blog-articles .view-content .views-row .display .see-more::after, .view-latest-news .view-content .views-row h2 .see-more::after, .view-latest-news .view-content .views-row .display .see-more::after, body.not-front #content .view .view-content .views-row h2 .see-more::after, body.not-front #content .view .view-content .views-row .display .see-more::after, #block-menu-menu-quick-links ul.menu li .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display .see-more::after, .see-more::after {
+.hero-med .see-more::after, .header__inner .header__secondary-menu .see-more::after, .content-body .content .see-more::after, .more-link .see-more::after, .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li .see-more::after, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li .see-more::after, .bean-basic-content > .content .see-more::after, #block-views-slideshow-block .banner-description-holder h3 .see-more::after, #block-views-slideshow-block .banner-description-holder .field .see-more::after, .view-home-page-blog-articles .view-content .views-row h2 .see-more::after, .view-home-page-blog-articles .view-content .views-row .display .see-more::after, .view-latest-news .view-content .views-row h2 .see-more::after, .view-latest-news .view-content .views-row .display .see-more::after, body.not-front #content .view .view-content .views-row h2 .see-more::after, body.not-front #content .view .view-content .views-row .display .see-more::after, #block-menu-menu-quick-links ul.menu li .see-more::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu li .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display .see-more::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 .see-more::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display .see-more::after, .see-more::after {
   background-image: url("../latest/img/icons/arrow-right--aqua.svg");
 }
 
@@ -278,7 +278,7 @@ summary::before, .accordion--controls summary::before, .nav-toggle::before {
 main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
 .local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
-.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, a[rel~='external']::after {
+.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, a[rel~='external']::after {
   background-image: url("../latest/img/icons/external-link--aqua.svg");
 }
 
@@ -2077,7 +2077,7 @@ Style guide: Link styles.1 Hover links
 main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
 .local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
-.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, a[rel~='external']::after {
+.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, a[rel~='external']::after {
   content: '';
   position: absolute;
   display: inline;
@@ -8910,8 +8910,6 @@ ul.tabs.primary {
 }
 
 .front .gov-front-left {
-  padding-top: 2.5rem;
-  padding-bottom: 6.75rem;
   background-color: #f0f3f5;
 }
 
@@ -8925,8 +8923,6 @@ ul.tabs.primary {
 }
 
 .front .gov-front-right {
-  padding-top: 2.5rem;
-  padding-bottom: 6.75rem;
   background-color: #f0f3f5;
 }
 
@@ -10401,12 +10397,12 @@ body.not-front #content .view .pager {
   width: 100% !important;
 }
 
-#block-menu-menu-quick-links {
+#block-menu-menu-quick-links, .gov-front-layout .pane-menu-menu-quick-links {
   padding-top: 2.75rem;
   padding-bottom: 2.75rem;
 }
 
-#block-menu-menu-quick-links h2, #block-menu-menu-quick-links .display {
+#block-menu-menu-quick-links h2, #block-menu-menu-quick-links .display, .gov-front-layout .pane-menu-menu-quick-links h2, .gov-front-layout .pane-menu-menu-quick-links .display {
   max-width: 73.125rem;
   margin-left: auto;
   margin-right: auto;
@@ -10419,7 +10415,7 @@ body.not-front #content .view .pager {
   margin-top: 0;
 }
 
-#block-menu-menu-quick-links > .content {
+#block-menu-menu-quick-links > .content, #block-menu-menu-quick-links > .pane-content, .gov-front-layout .pane-menu-menu-quick-links > .content, .gov-front-layout .pane-menu-menu-quick-links > .pane-content {
   max-width: 73.125rem;
   margin-left: auto;
   margin-right: auto;
@@ -10428,25 +10424,25 @@ body.not-front #content .view .pager {
   box-sizing: content-box;
 }
 
-#block-menu-menu-quick-links ul.menu {
+#block-menu-menu-quick-links ul.menu, .gov-front-layout .pane-menu-menu-quick-links ul.menu {
   padding: 0;
   margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
-  #block-menu-menu-quick-links ul.menu {
+  #block-menu-menu-quick-links ul.menu, .gov-front-layout .pane-menu-menu-quick-links ul.menu {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
-  #block-menu-menu-quick-links ul.menu::after {
+  #block-menu-menu-quick-links ul.menu::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu::after {
     clear: both;
     content: "";
     display: table;
   }
 }
 
-#block-menu-menu-quick-links ul.menu li {
+#block-menu-menu-quick-links ul.menu li, .gov-front-layout .pane-menu-menu-quick-links ul.menu li {
   list-style: none;
   margin: 0;
   background-color: #373854;
@@ -10513,48 +10509,48 @@ body.not-front #content .view .pager {
 }
 
 @media (min-width: 768px) {
-  #block-menu-menu-quick-links ul.menu li {
+  #block-menu-menu-quick-links ul.menu li, .gov-front-layout .pane-menu-menu-quick-links ul.menu li {
     float: left;
     display: block;
     margin-right: 2.7461357194%;
     width: 31.502576187%;
   }
-  #block-menu-menu-quick-links ul.menu li:last-child {
+  #block-menu-menu-quick-links ul.menu li:last-child, .gov-front-layout .pane-menu-menu-quick-links ul.menu li:last-child {
     margin-right: 0;
   }
 }
 
 @media (min-width: 1200px) {
-  #block-menu-menu-quick-links ul.menu li {
+  #block-menu-menu-quick-links ul.menu li, .gov-front-layout .pane-menu-menu-quick-links ul.menu li {
     float: left;
     display: block;
     margin-right: 2.7461357194%;
     width: 22.9403982104%;
   }
-  #block-menu-menu-quick-links ul.menu li:last-child {
+  #block-menu-menu-quick-links ul.menu li:last-child, .gov-front-layout .pane-menu-menu-quick-links ul.menu li:last-child {
     margin-right: 0;
   }
 }
 
 @media (min-width: 768px) {
-  #block-menu-menu-quick-links ul.menu li:nth-child(3n) {
+  #block-menu-menu-quick-links ul.menu li:nth-child(3n), .gov-front-layout .pane-menu-menu-quick-links ul.menu li:nth-child(3n) {
     margin-right: 0;
   }
 }
 
 @media (min-width: 1200px) {
-  #block-menu-menu-quick-links ul.menu li:nth-child(3n) {
+  #block-menu-menu-quick-links ul.menu li:nth-child(3n), .gov-front-layout .pane-menu-menu-quick-links ul.menu li:nth-child(3n) {
     margin-right: 2.7461357194%;
   }
 }
 
 @media (min-width: 1200px) {
-  #block-menu-menu-quick-links ul.menu li:nth-child(4n) {
+  #block-menu-menu-quick-links ul.menu li:nth-child(4n), .gov-front-layout .pane-menu-menu-quick-links ul.menu li:nth-child(4n) {
     margin-right: 0;
   }
 }
 
-#block-menu-menu-quick-links ul.menu li a {
+#block-menu-menu-quick-links ul.menu li a, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a {
   color: white;
   text-decoration: none;
   outline: none;
@@ -10564,26 +10560,26 @@ body.not-front #content .view .pager {
   transition-property: background-color, border-color, color;
 }
 
-#block-menu-menu-quick-links ul.menu li a:hover, #block-menu-menu-quick-links ul.menu li a:focus {
+#block-menu-menu-quick-links ul.menu li a:hover, #block-menu-menu-quick-links ul.menu li a:focus, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a:hover, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a:focus {
   background-color: #f0f3f5;
   color: #313131;
 }
 
-#block-menu-menu-quick-links ul.menu li a[rel~='external'] {
+#block-menu-menu-quick-links ul.menu li a[rel~='external'], .gov-front-layout .pane-menu-menu-quick-links ul.menu li a[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-#block-menu-menu-quick-links ul.menu li a[rel~='external']:hover {
+#block-menu-menu-quick-links ul.menu li a[rel~='external']:hover, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a[rel~='external']:hover {
   border-color: transparent;
 }
 
-#block-menu-menu-quick-links ul.menu li a[rel~='external']::after {
+#block-menu-menu-quick-links ul.menu li a[rel~='external']::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a[rel~='external']::after {
   background-size: 0.9em auto;
 }
 
-#block-menu-menu-quick-links ul.menu li .see-more {
+#block-menu-menu-quick-links ul.menu li .see-more, .gov-front-layout .pane-menu-menu-quick-links ul.menu li .see-more {
   display: inline-block;
   position: relative;
   margin-right: 1.6em;
@@ -10591,7 +10587,7 @@ body.not-front #content .view .pager {
   color: transparent;
 }
 
-#block-menu-menu-quick-links ul.menu li .see-more::after {
+#block-menu-menu-quick-links ul.menu li .see-more::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu li .see-more::after {
   content: '';
   position: absolute;
   top: 0;
@@ -10604,21 +10600,21 @@ body.not-front #content .view .pager {
   background-size: 0.64em auto;
 }
 
-#block-menu-menu-quick-links ul.menu li .see-more:hover, #block-menu-menu-quick-links ul.menu li .see-more:focus {
+#block-menu-menu-quick-links ul.menu li .see-more:hover, #block-menu-menu-quick-links ul.menu li .see-more:focus, .gov-front-layout .pane-menu-menu-quick-links ul.menu li .see-more:hover, .gov-front-layout .pane-menu-menu-quick-links ul.menu li .see-more:focus {
   color: #313131;
 }
 
-#block-menu-menu-quick-links ul.menu li span.placeholder-link {
+#block-menu-menu-quick-links ul.menu li span.placeholder-link, .gov-front-layout .pane-menu-menu-quick-links ul.menu li span.placeholder-link {
   color: rgba(255, 255, 255, 0.7);
   border-bottom: none;
   cursor: not-allowed;
 }
 
-#block-menu-menu-quick-links ul.menu li span.placeholder-link:hover {
+#block-menu-menu-quick-links ul.menu li span.placeholder-link:hover, .gov-front-layout .pane-menu-menu-quick-links ul.menu li span.placeholder-link:hover {
   cursor: not-allowed;
 }
 
-#block-menu-menu-quick-links ul.menu li a[rel~='external']::after {
+#block-menu-menu-quick-links ul.menu li a[rel~='external']::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a[rel~='external']::after {
   background-image: url(../images/svg/external-link--white.svg) !important;
 }
 
@@ -10888,47 +10884,210 @@ body.not-front #content .view .pager {
   }
 }
 
-#block-govcms-social-links-services {
-  background-color: #392751;
+.gov-front-layout .pane-footer-teaser {
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
 }
 
-#block-govcms-social-links-services .inner-wrapper {
+.gov-front-layout .pane-footer-teaser > h2, .gov-front-layout .pane-footer-teaser > .display {
   max-width: 73.125rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   box-sizing: content-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-  padding-top: 2.375rem;
-  padding-bottom: 2.375rem;
+  color: #493267;
+  font-size: 1.875rem;
+  font-weight: 300;
+  margin-top: 0;
 }
 
-#block-govcms-social-links-services .inner-wrapper h2, #block-govcms-social-links-services .inner-wrapper .display {
-  margin: 0;
-  margin-right: 0.625rem;
+.gov-front-layout .pane-footer-teaser .pane-content {
+  max-width: 73.125rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+}
+
+@media (min-width: 768px) {
+  .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row {
+  box-sizing: border-box;
+  position: relative;
+  padding: 1.875rem;
+  margin-bottom: 1.875rem;
+  height: calc(100% - 1.875rem);
+  background-color: white;
+  padding: 0;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row {
+    float: left;
+    display: block;
+    margin-right: 2.7461357194%;
+    width: 31.502576187%;
+  }
+  .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row:last-child {
+    margin-right: 0;
+  }
+}
+
+.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  color: #373854;
+  /*
+  See more link
+
+  Use see more links at the end of [lists](section-list-styles.html),
+  to take the user to a index page of all items.
+
+  Markup: <a class="see-more" href="#">See more</a>
+
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+  /*
+  Placeholder links (prototyping)
+
+  Use placeholder links (greyed out links) to show actions that users can't currently take.
+
+  Your content should explain why the action isn't available and when it will be.
+
+  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
+
+  Markup: <p><span class="placeholder-link">Draft news item</span></p>
+  <p><a href="#">News item</a><p>
+
+  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.3 Placeholder links
+  */
+  margin-top: 0;
+}
+
+.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a {
+  color: #373854;
+  text-decoration: none;
+  outline: none;
+  border-bottom: solid 1px #7bb3ff;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  transition-property: background-color, border-color, color;
+}
+
+.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a:hover, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a:hover, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a:focus, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a:focus {
+  background-color: #7bb3ff;
+  color: #313131;
+}
+
+.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a[rel~='external'], .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a[rel~='external'] {
   display: inline;
-  font-size: 1rem;
+  position: relative;
+  margin-right: 1.6em;
 }
 
-#block-govcms-social-links-services .inner-wrapper .content {
-  display: inline;
+.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a[rel~='external']:hover, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a[rel~='external']:hover {
+  border-color: transparent;
 }
 
-#block-govcms-social-links-services .inner-wrapper .content a {
-  margin-right: 0.625rem;
+.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a[rel~='external']::after {
+  background-size: 0.9em auto;
+}
+
+.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 .see-more, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display .see-more {
   display: inline-block;
-  vertical-align: middle;
+  position: relative;
+  margin-right: 1.6em;
+  font-weight: 700;
+  color: transparent;
 }
 
-#block-govcms-social-links-services .inner-wrapper .content a img {
-  float: left;
+.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 .see-more::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display .see-more::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1.2em;
+  display: block;
+  width: 1.2em;
+  height: 1.2em;
+  background-repeat: no-repeat;
+  background-position: right 0.4em;
+  background-size: 0.64em auto;
+}
+
+.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 .see-more:hover, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display .see-more:hover, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 .see-more:focus, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display .see-more:focus {
+  color: #313131;
+}
+
+.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 span.placeholder-link, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display span.placeholder-link {
+  color: rgba(55, 56, 84, 0.7);
+  border-bottom: none;
+  cursor: not-allowed;
+}
+
+.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 span.placeholder-link:hover, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display span.placeholder-link:hover {
+  cursor: not-allowed;
+}
+
+.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .field-name-field-description {
+  color: #313131;
+}
+
+@media (min-width: 768px) {
+  .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 #content .search-form {
