@@ -1,379 +1,5 @@
 @charset "UTF-8";
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700';
-/*
-Colours
-
-A basic palette of colours that are clear and accessible.
-
-We are finalising the colours &mdash; for help <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">log a GitHub issue</a>.
-
-Style guide: Colours
-*/
-/*
-Colours palette
-
-Lighter and darker versions are percentage variations of the original colours (Sass variables are provided for reference).
-
-<div class="guide-colour-examples">
-  <div class="guide-colour">
-    <div class="swatch bg-non-black"></div>
-    <p class="text"><strong>Non-black</strong><br/>
-      <small>$non-black<br/>#313131</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-grey"></div>
-    <p class="text"><strong>Grey</strong><br/>
-      <small>$grey<br/> #717171</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-light-grey"></div>
-    <p class="text"><strong>Light-grey</strong><br/>
-      <small>$light-grey<br/> #BEBEBE</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-non-white"></div>
-    <p class="text"><strong>Non-white</strong><br/>
-      <small>$non-white<br/> #F0F3F5</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-darker-aqua"></div>
-    <p class="text"><strong>Darker-aqua</strong><br/>
-      <small>$darker-aqua<br/> #115361</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-dark-aqua"></div>
-    <p class="text"><strong>Dark-aqua</strong><br/>
-      <small>$dark-aqua<br/> #146577</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-aqua"></div>
-    <p class="text"><strong>Aqua</strong><br/>
-      <small>$aqua<br/> #18788D</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-light-aqua"></div>
-    <p class="text"><strong>Light-aqua</strong><br/>
-      <small>$light-aqua<br/> #5BCBE3</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-lighter-aqua"></div>
-    <p class="text"><strong>Lighter-aqua</strong><br/>
-      <small>$lighter-aqua<br/> #5BCBE3</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-dark-navy"></div>
-    <p class="text"><strong>Dark-navy</strong><br/>
-      <small>$dark-navy<br/> #152D3B</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-navy"></div>
-    <p class="text"><strong>Navy</strong><br/>
-      <small>$navy<br/> #224A61</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-maroon"></div>
-    <p class="text"><strong>Maroon</strong><br/>
-      <small>$maroon<br/> #880E48</small></p>
-  </div>
-</div>
-
-
-Style guide: Colours.1 Colours palette
-*/
-/*
-Contextual colours palette
-
-These colours are reserved to help show specific changes in status.
-
-<div class="guide-colour-examples">
-  <div class="guide-colour">
-    <div class="swatch bg-success-green"></div>
-    <p class="text"><strong>Success-green</strong><br/>
-      <small>$success-colour<br/> #007554</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-light-green"></div>
-    <p class="text"><strong>Light-green</strong><br/>
-      <small>$light-green<br/> #e6efc2</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-error-red"></div>
-    <p class="text"><strong>Error-red</strong><br/>
-      <small>$error-colour<br/> #cc0000</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-light-red"></div>
-    <p class="text"><strong>Light-red</strong><br/>
-      <small>$light-red<br/> #f9dede</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-warning-yellow"></div>
-    <p class="text"><strong>Warning-yellow</strong><br/>
-      <small>$warning-colour<br/> #f9c642</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-light-yellow"></div>
-    <p class="text"><strong>Light-yellow</strong><br/>
-      <small>$light-yellow<br/> #fdf7dc</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-info-blue"></div>
-    <p class="text"><strong>Info-blue</strong><br/>
-      <small>$info-colour<br/> #00Bfe9</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-light-blue"></div>
-    <p class="text"><strong>Light-blue</strong><br/>
-      <small>$light-blue<br/> #e8f5fa</small></p>
-  </div>
-</div>
-
-Style guide: Colours.2 Contextual colours palette
-*/
-/*
-Accessibility
-
-The <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">recommended colour contrast ratio</a> for text and interactive elements should be at least 4.5:1.
-
-### Accessible combinations
-<p class="guide-colour-block bg-non-black">non-white on non-black<span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-grey">white on grey <span class="invert">AA</span></p>
-<p class="guide-colour-block bg-light-grey">non-black on light-grey <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-non-white">non-black on non-white <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-white">non-black on white <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-darker-aqua">non-white on darker-aqua <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-dark-aqua">non-white on dark-aqua <span class="invert">AA</span></p>
-<p class="guide-colour-block bg-aqua">white on aqua <span class="invert">AA</span></p>
-<p class="guide-colour-block bg-light-aqua">non-black on light-aqua <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-dark-navy">non-white on dark-navy <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-navy">non-white on navy <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-maroon">white on maroon <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-error-red">white on error-red  <span class="invert">AA</span></p>
-<p class="guide-colour-block bg-light-red">error-red on light-red <span class="invert">AA</span></p>
-<p class="guide-colour-block bg-success-green">white on success-green <span class="invert">AA</span></p>
-<p class="guide-colour-block bg-light-green">success-green on light-green <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-light-yellow">non-black on light-yellow <span class="invert">AA</span></p>
-<p class="guide-colour-block bg-light-blue">non-black on light-blue <span class="invert">AA</span></p>
-
-<details open data-label="colour-accessibility" aria-expanded="false">
-  <summary>Accessibility &amp; browser testing</summary>
-  <div class="accordion-panel">
-  <strong>Passed</strong>:
-    <ul>
-      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-    </ul>
-  <strong>Untested</strong>:
-    <ul>
-      <li>WCAG:AA manual</li>
-      <li>Browser support &mdash; automated and manual</li>
-    </ul>
-  </div>
-</details>
-
-Style guide: Colours.3 Accessibility
-*/
-/*
-IE Conditionals
-
-Based on implementation by govuk_frontend_toolkit
-https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss
-
-The base css you write should be for mobile. You can
-then add desktop styles on top.
-
-Usage:
-
-  div.columns {
-    border: 1px solid;
-
-    @include media($desktop){
-      width: 30%;
-      float: left;
-    }
-    @include ie-lte(8) {
-      something to fix visual bugs in old IE
-    }
-    @include ie(6) {
-      padding: 0;
-    }
-  }
-*/
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-.visuallyhidden,
-.is-visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-/*
-  Warning/notification regarding feature support
-*/
-.ua-notification {
-  display: block;
-  padding: 0.8em;
-  text-align: center;
-  background-color: #f9c642;
-  color: #313131;
-  font-size: rem(17);
-  margin-bottom: 0;
-}
-
-.list-small a, .primary-nav ul ul ul ul a,
-.local-nav ul ul ul ul a, [class^='breadcrumbs'] ul li:not(:last-child) {
-  background-image: url("../latest/img/icons/arrow-right.svg");
-}
-
-[class^='breadcrumbs'][class$='--inverted'] ul li:not(:last-child) {
-  background-image: url("../latest/img/icons/arrow-right--white.svg");
-}
-
-main > article .see-more::after, footer[role='contentinfo'] .see-more::after, .list-horizontal .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after, .primary-nav ul .see-more::after,
-.local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after,
-.hero-sml .see-more::after,
-.hero-med .see-more::after, .header__inner .header__secondary-menu .see-more::after, .content-body .content .see-more::after, .more-link .see-more::after, .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li .see-more::after, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li .see-more::after, .bean-basic-content > .content .see-more::after, #block-views-slideshow-block .banner-description-holder h3 .see-more::after, #block-views-slideshow-block .banner-description-holder .field .see-more::after, .view-home-page-blog-articles .view-content .views-row h2 .see-more::after, .view-home-page-blog-articles .view-content .views-row .display .see-more::after, .view-latest-news .view-content .views-row h2 .see-more::after, .view-latest-news .view-content .views-row .display .see-more::after, body.not-front #content .view .view-content .views-row h2 .see-more::after, body.not-front #content .view .view-content .views-row .display .see-more::after, #block-menu-menu-quick-links ul.menu li .see-more::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu li .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display .see-more::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 .see-more::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display .see-more::after, .see-more::after {
-  background-image: url("../latest/img/icons/arrow-right--aqua.svg");
-}
-
-.govau--header .nav-toggle::before {
-  background-image: url("../latest/img/icons/bars.svg");
-}
-
-.govau--header .nav-toggle.active::before {
-  background-image: url("../latest/img/icons/close.svg");
-}
-
-.accordion-button::before,
-summary::before, .accordion--controls summary::before, .nav-toggle::before {
-  background-image: url("../latest/img/icons/chevron-down--navy.svg");
-}
-
-main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
-.local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
-.hero-sml a[rel~='external']::after,
-.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, a[rel~='external']::after {
-  background-image: url("../latest/img/icons/external-link--aqua.svg");
-}
-
-.icon-chevron::before {
-  border-style: solid;
-  border-width: 0.25em 0.25em 0 0;
-  content: '';
-  display: inline-block;
-  height: 0.5em;
-  left: 0.15em;
-  position: relative;
-  vertical-align: top;
-  width: 0.5em;
-  transition: -webkit-transform 300ms linear;
-  transition: transform 300ms linear;
-  transition: transform 300ms linear, -webkit-transform 300ms linear;
-}
-
-.icon-chevron.top::before {
-  top: 0.75em;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.icon-chevron.right::before {
-  left: 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.icon-chevron.bottom::before {
-  top: 0.5em;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-}
-
-.icon-chevron.left::before {
-  left: 0.25em;
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
-}
-
-@media print {
-  *,
-  *::before,
-  *::after,
-  *::first-letter,
-  *::first-line {
-    background: transparent;
-    color: #000;
-    box-shadow: none;
-    text-shadow: none;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-  a[href^='#']::after,
-  a[href^='javascript:']::after {
-    content: '';
-  }
-  pre,
-  blockquote {
-    border: 1px solid #bbbbbb;
-    page-break-inside: avoid;
-  }
-  thead {
-    display: table-header-group;
-  }
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100%;
-  }
-  p,
-  h2,
-  .display,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2, .display,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-
 /*! responsive-nav.js 1.0.39 by @viljamis */
 .nav-collapse ul {
   margin: 0;
@@ -909,6 +535,281 @@ html {
 
 *, *::after, *::before {
   box-sizing: inherit;
+}
+
+/*
+Colours
+
+A basic palette of colours that are clear and accessible.
+
+We are finalising the colours &mdash; for help <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">log a GitHub issue</a>.
+
+Style guide: Colours
+*/
+/*
+IE Conditionals
+
+Based on implementation by govuk_frontend_toolkit
+https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss
+
+The base css you write should be for mobile. You can
+then add desktop styles on top.
+
+Usage:
+
+  div.columns {
+    border: 1px solid;
+
+    @include media($desktop){
+      width: 30%;
+      float: left;
+    }
+    @include ie-lte(8) {
+      something to fix visual bugs in old IE
+    }
+    @include ie(6) {
+      padding: 0;
+    }
+  }
+*/
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden,
+.is-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+  Warning/notification regarding feature support
+*/
+.ua-notification {
+  display: block;
+  padding: 0.8em;
+  text-align: center;
+  background-color: #f9c642;
+  color: #313131;
+  font-size: 1.0625rem;
+  margin-bottom: 0;
+}
+
+/*
+Grid
+
+This framework uses <a href="http://bourbon.io/" rel="external">Bourbon</a> and <a href="http://neat.bourbon.io/" rel="external">Neat</a> to create a consistent 16 column responsive grid layout with good defaults.
+
+Bourbon is a <a href="http://sass-lang.com/" rel="external">SASS</a> mixin library (it provides little styling). Neat is a flexible grid framework.
+
+Avoid mixing this layout with other grid layouts.
+
+<p class="callout"><strong>Grid classes?</strong> There are no non-semantic grid classes with which to set block elements. This is intentional. If you need to add to or customise the grid system see below.</p>
+
+Primary content is always contained in 12 columns. This allows for seamless introduction of a sidebar/side navigation.
+
+The grid unit proportions, gutters and spacing are defined in `_grid-settings.scss`.
+
+If you need an element not defined here you are probably not the only one &mdash; please <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">log a GitHub issue</a> so we can provide it for everyone.
+
+***
+
+This guidance is in part adapted from <a href="http://govuk-elements.herokuapp.com" rel="external">GOV.UK elements</a> under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="external">Open Government Licence v3.0</a>, and <a href="https://standards.usa.gov/getting-started/" rel="external">18F Draft US Web Design Standards</a> under <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode" rel="external">CC0 1.0 Universal</a>.
+
+Style guide: Grid
+*/
+/*
+Responsive breakpoints
+
+This framework has a mobile-first default layout of 4 columns, and adds 3 breakpoints for grid layout on larger screens:
+
+- Default: 4 columns
+- Mobile: 8 columns, 420px minimum
+- Tablet: 12 columns, 768px minimum
+- Desktop: 16 columns, 1200px minimum
+
+If you give an element a modified grid setting consider the implications for all breakpoints. The Digital Service Standard recommends you <a href="https://www.dto.gov.au/standard/6-consistent-and-responsive/" rel="external">build using mobile first design principles</a>.
+
+Please also consider the [font size](section-typography.html#kssref-typography-2-headings-body-copy-1-breakpoints) at different breakpoints.
+
+```
+$mobile: new-breakpoint(min-width 420px 8);
+$tablet: new-breakpoint(min-width 768px 12);
+$desktop: new-breakpoint(min-width $max-width 16);
+```
+
+Style guide: Grid.3 Breakpoints
+*/
+/*
+Helpers
+
+Style guide: Grid.4 Helpers
+*/
+/*
+Omega Reset
+
+When applying grid-columns to responsive layouts you may find yourself needing to reset the [omega properties applied by Neat](http://thoughtbot.github.io/neat-docs/latest/#omega):
+
+```
+.grid-item {
+  @include span-columns(2 of 4);
+  @include omega(2n);
+
+  @include media($desktop) {
+    @include omega-reset(2n);
+    @include span-columns(4 of 12);
+    @include omega(3n);
+  }
+}
+```
+
+Style guide: Grid.4 Helpers.1 Font stacks
+*/
+/*
+Debugging
+
+Turn on the visual grid to help debugging:
+
+```
+$visual-grid: true;
+```
+
+See the example <a href="http://neat.bourbon.io/examples/" rel="external">Bourbon Neat working grid layout</a>.
+
+Style guide: Grid.4 Helpers.2 Debugging
+*/
+.list-small a, .primary-nav ul ul ul ul a,
+.local-nav ul ul ul ul a, [class^='breadcrumbs'] ul li:not(:last-child) {
+  background-image: url("../latest/img/icons/arrow-right.svg");
+}
+
+[class^='breadcrumbs'][class$='--inverted'] ul li:not(:last-child) {
+  background-image: url("../latest/img/icons/arrow-right--white.svg");
+}
+
+.list-horizontal .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, footer[role='contentinfo'] .footer-top nav .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after, .primary-nav ul .see-more::after,
+.local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after,
+.hero-sml .see-more::after,
+.hero-med .see-more::after, .see-more::after, .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li .see-more::after, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li .see-more::after, #block-views-slideshow-block .banner-description-holder h3 .see-more::after, #block-views-slideshow-block .banner-description-holder .field .see-more::after, #block-menu-menu-quick-links ul.menu li .see-more::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu li .see-more::after {
+  background-image: url("../latest/img/icons/arrow-right--aqua.svg");
+}
+
+.govau--header .nav-toggle::before {
+  background-image: url("../latest/img/icons/bars.svg");
+}
+
+.govau--header .nav-toggle.active::before {
+  background-image: url("../latest/img/icons/close.svg");
+}
+
+.accordion-button::before,
+summary::before, .accordion--controls summary::before, .nav-toggle::before {
+  background-image: url("../latest/img/icons/chevron-down--navy.svg");
+}
+
+.list-horizontal .tags a[rel~='external']:not(.no-style)::after, .list-vertical .tags a[rel~='external']:not(.no-style)::after, .list-vertical--thirds .tags a[rel~='external']:not(.no-style)::after, .list-vertical--fourths .tags a[rel~='external']:not(.no-style)::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']:not(.no-style)::after, .list-small .tags a[rel~='external']:not(.no-style)::after, .list-highlighted .tags a[rel~='external']:not(.no-style)::after, .primary-nav ul a[rel~='external']:not(.no-style)::after,
+.local-nav ul a[rel~='external']:not(.no-style)::after, [class^='breadcrumbs'] a[rel~='external']:not(.no-style)::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']:not(.no-style)::after, .skip-to a[rel~='external']:not(.no-style)::after, [class^='controls'] a[rel~='external']:not(.no-style)::after, .govau--header a[rel~='external']:not(.no-style)::after, .prerelease-govau--header a[rel~='external']:not(.no-style)::after, .hero a[rel~='external']:not(.no-style)::after,
+.hero-sml a[rel~='external']:not(.no-style)::after,
+.hero-med a[rel~='external']:not(.no-style)::after, a[rel~='external']:not(.no-style)::after, .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a[rel~='external']:not(.no-style)::after, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a[rel~='external']:not(.no-style)::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']:not(.no-style)::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']:not(.no-style)::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']:not(.no-style)::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a[rel~='external']:not(.no-style)::after {
+  background-image: url("../latest/img/icons/external-link--aqua.svg");
+}
+
+.icon-chevron::before {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.5em;
+  left: 0.15em;
+  position: relative;
+  vertical-align: top;
+  width: 0.5em;
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear;
+}
+
+.icon-chevron.top::before {
+  top: 0.75em;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.icon-chevron.right::before {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.icon-chevron.bottom::before {
+  top: 0.5em;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.icon-chevron.left::before {
+  left: 0.25em;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+@media print {
+  *,
+  *::before,
+  *::after,
+  *::first-letter,
+  *::first-line {
+    background: transparent;
+    color: #000;
+    box-shadow: none;
+    text-shadow: none;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: '';
+  }
+  pre,
+  blockquote {
+    border: 1px solid #bbbbbb;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100%;
+  }
+  p,
+  h2,
+  .display,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2, .display,
+  h3 {
+    page-break-after: avoid;
+  }
 }
 
 /*
@@ -2045,39 +1946,10 @@ There are other link styles documented elsewhere (for example [tags in list styl
 
 Style guide: Link styles
 */
-/*
-Hover, focus & external links
-
-The `:hover` and `:focus` styles are identical.
-
-Inverted colour versions of `:hover` and `:focus` are created using `@mixin link-colours` where required (eg in the page header). The `_buttons.scss` partial includes a similar mixin: `@mixin button-colours`.
-
-Link to external sites using `rel="external"`.
-
-Markup: templates/basic-links.hbs
-
-<details open data-label="basic-links-accessibility" aria-expanded="false">
-  <summary>Accessibility &amp; browser testing</summary>
-  <div class="accordion-panel">
-  <strong>Passed</strong>:
-    <ul>
-      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-    </ul>
-  <strong>Untested</strong>:
-    <ul>
-      <li>WCAG:AA manual</li>
-      <li>Browser support &mdash; automated and manual</li>
-    </ul>
-  </div>
-</details>
-
-Style guide: Link styles.1 Hover links
-*/
-main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
-.local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
-.hero-sml a[rel~='external']::after,
-.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, a[rel~='external']::after {
+.list-horizontal .tags a[rel~='external']:not(.no-style)::after, .list-vertical .tags a[rel~='external']:not(.no-style)::after, .list-vertical--thirds .tags a[rel~='external']:not(.no-style)::after, .list-vertical--fourths .tags a[rel~='external']:not(.no-style)::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']:not(.no-style)::after, .list-small .tags a[rel~='external']:not(.no-style)::after, .list-highlighted .tags a[rel~='external']:not(.no-style)::after, .primary-nav ul a[rel~='external']:not(.no-style)::after,
+.local-nav ul a[rel~='external']:not(.no-style)::after, [class^='breadcrumbs'] a[rel~='external']:not(.no-style)::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']:not(.no-style)::after, .skip-to a[rel~='external']:not(.no-style)::after, [class^='controls'] a[rel~='external']:not(.no-style)::after, .govau--header a[rel~='external']:not(.no-style)::after, .prerelease-govau--header a[rel~='external']:not(.no-style)::after, .hero a[rel~='external']:not(.no-style)::after,
+.hero-sml a[rel~='external']:not(.no-style)::after,
+.hero-med a[rel~='external']:not(.no-style)::after, a[rel~='external']:not(.no-style)::after, .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a[rel~='external']:not(.no-style)::after, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a[rel~='external']:not(.no-style)::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']:not(.no-style)::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']:not(.no-style)::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']:not(.no-style)::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a[rel~='external']:not(.no-style)::after {
   content: '';
   position: absolute;
   display: inline;
@@ -2100,328 +1972,6 @@ main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='ext
 
 .local-nav ul ul ul ul .placeholder-link {
   padding-left: 2.4em;
-}
-
-main > article {
-  color: #313131;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
-}
-
-main > article a {
-  color: #313131;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #5bcbe3;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
-}
-
-main > article a:hover, main > article a:focus {
-  background-color: #5bcbe3;
-  color: #313131;
-}
-
-main > article a[rel~='external'] {
-  display: inline;
-  position: relative;
-  margin-right: 1.6em;
-}
-
-main > article a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-main > article a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-main > article .see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: transparent;
-}
-
-main > article .see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
-}
-
-main > article .see-more:hover, main > article .see-more:focus {
-  color: #313131;
-}
-
-main > article span.placeholder-link {
-  color: rgba(49, 49, 49, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-main > article span.placeholder-link:hover {
-  cursor: not-allowed;
-}
-
-main > article button,
-main > article .button,
-main > article [role='button'],
-main > article [type='submit'],
-main > article [type='reset'],
-main > article [type='button'] {
-  background-color: transparent;
-  color: #fff;
-  border-color: transparent;
-}
-
-main > article button:hover, main > article button:focus,
-main > article .button:hover,
-main > article .button:focus,
-main > article [role='button']:hover,
-main > article [role='button']:focus,
-main > article [type='submit']:hover,
-main > article [type='submit']:focus,
-main > article [type='reset']:hover,
-main > article [type='reset']:focus,
-main > article [type='button']:hover,
-main > article [type='button']:focus {
-  background-color: transparent;
-  color: #fff;
-  border-color: transparent;
-}
-
-main > article button:active,
-main > article .button:active,
-main > article [role='button']:active,
-main > article [type='submit']:active,
-main > article [type='reset']:active,
-main > article [type='button']:active {
-  background-color: transparent;
-  border-color: transparent;
-}
-
-footer[role='contentinfo'] {
-  color: #313131;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
-}
-
-footer[role='contentinfo'] a {
-  color: #313131;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #5bcbe3;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
-}
-
-footer[role='contentinfo'] a:hover, footer[role='contentinfo'] a:focus {
-  background-color: #5bcbe3;
-  color: #313131;
-}
-
-footer[role='contentinfo'] a[rel~='external'] {
-  display: inline;
-  position: relative;
-  margin-right: 1.6em;
-}
-
-footer[role='contentinfo'] a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-footer[role='contentinfo'] a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-footer[role='contentinfo'] .see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: transparent;
-}
-
-footer[role='contentinfo'] .see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
-}
-
-footer[role='contentinfo'] .see-more:hover, footer[role='contentinfo'] .see-more:focus {
-  color: #313131;
-}
-
-footer[role='contentinfo'] span.placeholder-link {
-  color: rgba(49, 49, 49, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-footer[role='contentinfo'] span.placeholder-link:hover {
-  cursor: not-allowed;
-}
-
-footer[role='contentinfo'] button,
-footer[role='contentinfo'] .button,
-footer[role='contentinfo'] [role='button'],
-footer[role='contentinfo'] [type='submit'],
-footer[role='contentinfo'] [type='reset'],
-footer[role='contentinfo'] [type='button'] {
-  background-color: transparent;
-  color: transparent;
-  border-color: transparent;
-}
-
-footer[role='contentinfo'] button:hover, footer[role='contentinfo'] button:focus,
-footer[role='contentinfo'] .button:hover,
-footer[role='contentinfo'] .button:focus,
-footer[role='contentinfo'] [role='button']:hover,
-footer[role='contentinfo'] [role='button']:focus,
-footer[role='contentinfo'] [type='submit']:hover,
-footer[role='contentinfo'] [type='submit']:focus,
-footer[role='contentinfo'] [type='reset']:hover,
-footer[role='contentinfo'] [type='reset']:focus,
-footer[role='contentinfo'] [type='button']:hover,
-footer[role='contentinfo'] [type='button']:focus {
-  background-color: transparent;
-  color: #fff;
-  border-color: transparent;
-}
-
-footer[role='contentinfo'] button:active,
-footer[role='contentinfo'] .button:active,
-footer[role='contentinfo'] [role='button']:active,
-footer[role='contentinfo'] [type='submit']:active,
-footer[role='contentinfo'] [type='reset']:active,
-footer[role='contentinfo'] [type='button']:active {
-  background-color: transparent;
-  border-color: transparent;
 }
 
 /*
@@ -2550,93 +2100,44 @@ Style guide: List styles.4 Highlighted word style
 }
 
 .list-horizontal .tags, .list-vertical .tags, .list-vertical--thirds .tags, .list-vertical--fourths .tags, footer[role='contentinfo'] .footer-top nav .tags, .list-small .tags, .list-highlighted .tags {
-  color: transparent;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   color: #6e6e6e;
 }
 
-.list-horizontal .tags a, .list-vertical .tags a, .list-vertical--thirds .tags a, .list-vertical--fourths .tags a, footer[role='contentinfo'] .footer-top nav .tags a, .list-small .tags a, .list-highlighted .tags a {
-  color: transparent;
+.list-horizontal .tags a:not(.no-style), .list-vertical .tags a:not(.no-style), .list-vertical--thirds .tags a:not(.no-style), .list-vertical--fourths .tags a:not(.no-style), footer[role='contentinfo'] .footer-top nav .tags a:not(.no-style), .list-small .tags a:not(.no-style), .list-highlighted .tags a:not(.no-style) {
+  color: #18788d;
   text-decoration: none;
   outline: none;
-  border-bottom: solid 1px #000000;
+  border-bottom: solid 1px #5bcbe3;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
   transition-property: background-color, border-color, color;
 }
 
-.list-horizontal .tags a:hover, .list-vertical .tags a:hover, .list-vertical--thirds .tags a:hover, .list-vertical--fourths .tags a:hover, footer[role='contentinfo'] .footer-top nav .tags a:hover, .list-small .tags a:hover, .list-highlighted .tags a:hover, .list-horizontal .tags a:focus, .list-vertical .tags a:focus, .list-vertical--thirds .tags a:focus, .list-vertical--fourths .tags a:focus, footer[role='contentinfo'] .footer-top nav .tags a:focus, .list-small .tags a:focus, .list-highlighted .tags a:focus {
-  background-color: #000000;
-  color: #373854;
+.list-horizontal .tags a:not(.no-style):hover, .list-vertical .tags a:not(.no-style):hover, .list-vertical--thirds .tags a:not(.no-style):hover, .list-vertical--fourths .tags a:not(.no-style):hover, footer[role='contentinfo'] .footer-top nav .tags a:not(.no-style):hover, .list-small .tags a:not(.no-style):hover, .list-highlighted .tags a:not(.no-style):hover, .list-horizontal .tags a:not(.no-style):focus, .list-vertical .tags a:not(.no-style):focus, .list-vertical--thirds .tags a:not(.no-style):focus, .list-vertical--fourths .tags a:not(.no-style):focus, footer[role='contentinfo'] .footer-top nav .tags a:not(.no-style):focus, .list-small .tags a:not(.no-style):focus, .list-highlighted .tags a:not(.no-style):focus {
+  background-color: #5bcbe3;
+  color: #313131;
 }
 
-.list-horizontal .tags a[rel~='external'], .list-vertical .tags a[rel~='external'], .list-vertical--thirds .tags a[rel~='external'], .list-vertical--fourths .tags a[rel~='external'], footer[role='contentinfo'] .footer-top nav .tags a[rel~='external'], .list-small .tags a[rel~='external'], .list-highlighted .tags a[rel~='external'] {
+.list-horizontal .tags a:not(.no-style)[rel~='external'], .list-vertical .tags a:not(.no-style)[rel~='external'], .list-vertical--thirds .tags a:not(.no-style)[rel~='external'], .list-vertical--fourths .tags a:not(.no-style)[rel~='external'], footer[role='contentinfo'] .footer-top nav .tags a:not(.no-style)[rel~='external'], .list-small .tags a:not(.no-style)[rel~='external'], .list-highlighted .tags a:not(.no-style)[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-.list-horizontal .tags a[rel~='external']:hover, .list-vertical .tags a[rel~='external']:hover, .list-vertical--thirds .tags a[rel~='external']:hover, .list-vertical--fourths .tags a[rel~='external']:hover, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']:hover, .list-small .tags a[rel~='external']:hover, .list-highlighted .tags a[rel~='external']:hover {
+.list-horizontal .tags a:not(.no-style)[rel~='external']:hover, .list-vertical .tags a:not(.no-style)[rel~='external']:hover, .list-vertical--thirds .tags a:not(.no-style)[rel~='external']:hover, .list-vertical--fourths .tags a:not(.no-style)[rel~='external']:hover, footer[role='contentinfo'] .footer-top nav .tags a:not(.no-style)[rel~='external']:hover, .list-small .tags a:not(.no-style)[rel~='external']:hover, .list-highlighted .tags a:not(.no-style)[rel~='external']:hover {
   border-color: transparent;
 }
 
-.list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after {
+.list-horizontal .tags a:not(.no-style)[rel~='external']::after, .list-vertical .tags a:not(.no-style)[rel~='external']::after, .list-vertical--thirds .tags a:not(.no-style)[rel~='external']::after, .list-vertical--fourths .tags a:not(.no-style)[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a:not(.no-style)[rel~='external']::after, .list-small .tags a:not(.no-style)[rel~='external']::after, .list-highlighted .tags a:not(.no-style)[rel~='external']::after {
   background-size: 0.9em auto;
+}
+
+.list-horizontal .tags a:not(.no-style).active, .list-vertical .tags a:not(.no-style).active, .list-vertical--thirds .tags a:not(.no-style).active, .list-vertical--fourths .tags a:not(.no-style).active, footer[role='contentinfo'] .footer-top nav .tags a:not(.no-style).active, .list-small .tags a:not(.no-style).active, .list-highlighted .tags a:not(.no-style).active {
+  color: #18788d;
+}
+
+.list-horizontal .tags a:not(.no-style).active:hover, .list-vertical .tags a:not(.no-style).active:hover, .list-vertical--thirds .tags a:not(.no-style).active:hover, .list-vertical--fourths .tags a:not(.no-style).active:hover, footer[role='contentinfo'] .footer-top nav .tags a:not(.no-style).active:hover, .list-small .tags a:not(.no-style).active:hover, .list-highlighted .tags a:not(.no-style).active:hover, .list-horizontal .tags a:not(.no-style).active:focus, .list-vertical .tags a:not(.no-style).active:focus, .list-vertical--thirds .tags a:not(.no-style).active:focus, .list-vertical--fourths .tags a:not(.no-style).active:focus, footer[role='contentinfo'] .footer-top nav .tags a:not(.no-style).active:focus, .list-small .tags a:not(.no-style).active:focus, .list-highlighted .tags a:not(.no-style).active:focus {
+  color: #313131;
 }
 
 .list-horizontal .tags .see-more, .list-vertical .tags .see-more, .list-vertical--thirds .tags .see-more, .list-vertical--fourths .tags .see-more, footer[role='contentinfo'] .footer-top nav .tags .see-more, .list-small .tags .see-more, .list-highlighted .tags .see-more {
@@ -2644,7 +2145,7 @@ Style guide: List styles.4 Highlighted word style
   position: relative;
   margin-right: 1.6em;
   font-weight: 700;
-  color: transparent;
+  color: #18788d;
 }
 
 .list-horizontal .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, footer[role='contentinfo'] .footer-top nav .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after {
@@ -2661,11 +2162,11 @@ Style guide: List styles.4 Highlighted word style
 }
 
 .list-horizontal .tags .see-more:hover, .list-vertical .tags .see-more:hover, .list-vertical--thirds .tags .see-more:hover, .list-vertical--fourths .tags .see-more:hover, footer[role='contentinfo'] .footer-top nav .tags .see-more:hover, .list-small .tags .see-more:hover, .list-highlighted .tags .see-more:hover, .list-horizontal .tags .see-more:focus, .list-vertical .tags .see-more:focus, .list-vertical--thirds .tags .see-more:focus, .list-vertical--fourths .tags .see-more:focus, footer[role='contentinfo'] .footer-top nav .tags .see-more:focus, .list-small .tags .see-more:focus, .list-highlighted .tags .see-more:focus {
-  color: #373854;
+  color: #313131;
 }
 
 .list-horizontal .tags span.placeholder-link, .list-vertical .tags span.placeholder-link, .list-vertical--thirds .tags span.placeholder-link, .list-vertical--fourths .tags span.placeholder-link, footer[role='contentinfo'] .footer-top nav .tags span.placeholder-link, .list-small .tags span.placeholder-link, .list-highlighted .tags span.placeholder-link {
-  color: transparent;
+  color: rgba(24, 120, 141, 0.7);
   border-bottom: none;
   cursor: not-allowed;
 }
@@ -2688,12 +2189,12 @@ Style guide: List styles.4 Highlighted word style
 
 .list-horizontal .tags a, .list-vertical .tags a, .list-vertical--thirds .tags a, .list-vertical--fourths .tags a, footer[role='contentinfo'] .footer-top nav .tags a, .list-small .tags a, .list-highlighted .tags a {
   padding: 2px 0.4em;
-  border: 1px solid transparent;
+  border: 1px solid #18788d;
   border-radius: 2px;
 }
 
 .list-horizontal .tags a:hover, .list-vertical .tags a:hover, .list-vertical--thirds .tags a:hover, .list-vertical--fourths .tags a:hover, footer[role='contentinfo'] .footer-top nav .tags a:hover, .list-small .tags a:hover, .list-highlighted .tags a:hover, .list-horizontal .tags a:focus, .list-vertical .tags a:focus, .list-vertical--thirds .tags a:focus, .list-vertical--fourths .tags a:focus, footer[role='contentinfo'] .footer-top nav .tags a:focus, .list-small .tags a:focus, .list-highlighted .tags a:focus {
-  border-color: #000000;
+  border-color: #5bcbe3;
 }
 
 .list-horizontal .meta, .list-vertical .meta, .list-vertical--thirds .meta, .list-vertical--fourths .meta, footer[role='contentinfo'] .footer-top nav .meta, .list-small .meta, .list-highlighted .meta {
@@ -2961,7 +2462,7 @@ Style guide: List styles.4 Highlighted word style
 }
 
 .list-small span {
-  color: #373854;
+  color: #313131;
   text-decoration: none;
   border-bottom: 1px solid;
 }
@@ -3369,71 +2870,14 @@ Style guide: Navigation.6 Footer navigation
 
 .primary-nav ul,
 .local-nav ul {
-  color: #373854;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.primary-nav ul a,
-.local-nav ul a {
-  color: #373854;
+.primary-nav ul a:not(.no-style),
+.local-nav ul a:not(.no-style) {
+  color: #313131;
   text-decoration: none;
   outline: none;
   border-bottom: solid 1px #def4f9;
@@ -3442,28 +2886,39 @@ Style guide: Navigation.6 Footer navigation
   transition-property: background-color, border-color, color;
 }
 
-.primary-nav ul a:hover, .primary-nav ul a:focus,
-.local-nav ul a:hover,
-.local-nav ul a:focus {
+.primary-nav ul a:not(.no-style):hover, .primary-nav ul a:not(.no-style):focus,
+.local-nav ul a:not(.no-style):hover,
+.local-nav ul a:not(.no-style):focus {
   background-color: #def4f9;
-  color: #373854;
+  color: #313131;
 }
 
-.primary-nav ul a[rel~='external'],
-.local-nav ul a[rel~='external'] {
+.primary-nav ul a:not(.no-style)[rel~='external'],
+.local-nav ul a:not(.no-style)[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-.primary-nav ul a[rel~='external']:hover,
-.local-nav ul a[rel~='external']:hover {
+.primary-nav ul a:not(.no-style)[rel~='external']:hover,
+.local-nav ul a:not(.no-style)[rel~='external']:hover {
   border-color: transparent;
 }
 
-.primary-nav ul a[rel~='external']::after,
-.local-nav ul a[rel~='external']::after {
+.primary-nav ul a:not(.no-style)[rel~='external']::after,
+.local-nav ul a:not(.no-style)[rel~='external']::after {
   background-size: 0.9em auto;
+}
+
+.primary-nav ul a:not(.no-style).active,
+.local-nav ul a:not(.no-style).active {
+  color: #313131;
+}
+
+.primary-nav ul a:not(.no-style).active:hover, .primary-nav ul a:not(.no-style).active:focus,
+.local-nav ul a:not(.no-style).active:hover,
+.local-nav ul a:not(.no-style).active:focus {
+  color: #313131;
 }
 
 .primary-nav ul .see-more,
@@ -3472,7 +2927,7 @@ Style guide: Navigation.6 Footer navigation
   position: relative;
   margin-right: 1.6em;
   font-weight: 700;
-  color: transparent;
+  color: #18788d;
 }
 
 .primary-nav ul .see-more::after,
@@ -3492,12 +2947,12 @@ Style guide: Navigation.6 Footer navigation
 .primary-nav ul .see-more:hover, .primary-nav ul .see-more:focus,
 .local-nav ul .see-more:hover,
 .local-nav ul .see-more:focus {
-  color: #373854;
+  color: #313131;
 }
 
 .primary-nav ul span.placeholder-link,
 .local-nav ul span.placeholder-link {
-  color: rgba(55, 56, 84, 0.7);
+  color: rgba(49, 49, 49, 0.7);
   border-bottom: none;
   cursor: not-allowed;
 }
@@ -3616,63 +3071,6 @@ Style guide: Navigation.6 Footer navigation
 }
 
 [class^='breadcrumbs'] {
-  color: #373854;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   display: none;
   width: 100%;
   margin: 0;
@@ -3680,33 +3078,41 @@ Style guide: Navigation.6 Footer navigation
   color: #313131;
 }
 
-[class^='breadcrumbs'] a {
-  color: #373854;
+[class^='breadcrumbs'] a:not(.no-style) {
+  color: #313131;
   text-decoration: none;
   outline: none;
-  border-bottom: solid 1px #000000;
+  border-bottom: solid 1px #5bcbe3;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
   transition-property: background-color, border-color, color;
 }
 
-[class^='breadcrumbs'] a:hover, [class^='breadcrumbs'] a:focus {
-  background-color: #000000;
-  color: #373854;
+[class^='breadcrumbs'] a:not(.no-style):hover, [class^='breadcrumbs'] a:not(.no-style):focus {
+  background-color: #5bcbe3;
+  color: #313131;
 }
 
-[class^='breadcrumbs'] a[rel~='external'] {
+[class^='breadcrumbs'] a:not(.no-style)[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-[class^='breadcrumbs'] a[rel~='external']:hover {
+[class^='breadcrumbs'] a:not(.no-style)[rel~='external']:hover {
   border-color: transparent;
 }
 
-[class^='breadcrumbs'] a[rel~='external']::after {
+[class^='breadcrumbs'] a:not(.no-style)[rel~='external']::after {
   background-size: 0.9em auto;
+}
+
+[class^='breadcrumbs'] a:not(.no-style).active {
+  color: #313131;
+}
+
+[class^='breadcrumbs'] a:not(.no-style).active:hover, [class^='breadcrumbs'] a:not(.no-style).active:focus {
+  color: #313131;
 }
 
 [class^='breadcrumbs'] .see-more {
@@ -3714,7 +3120,7 @@ Style guide: Navigation.6 Footer navigation
   position: relative;
   margin-right: 1.6em;
   font-weight: 700;
-  color: transparent;
+  color: #18788d;
 }
 
 [class^='breadcrumbs'] .see-more::after {
@@ -3731,11 +3137,11 @@ Style guide: Navigation.6 Footer navigation
 }
 
 [class^='breadcrumbs'] .see-more:hover, [class^='breadcrumbs'] .see-more:focus {
-  color: #373854;
+  color: #313131;
 }
 
 [class^='breadcrumbs'] span.placeholder-link {
-  color: rgba(55, 56, 84, 0.7);
+  color: rgba(49, 49, 49, 0.7);
   border-bottom: none;
   cursor: not-allowed;
 }
@@ -3773,94 +3179,45 @@ Style guide: Navigation.6 Footer navigation
 }
 
 [class^='breadcrumbs'][class$='--inverted'] {
-  color: #000000;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   background-color: transparent;
   color: #fff;
 }
 
-[class^='breadcrumbs'][class$='--inverted'] a {
-  color: #000000;
+[class^='breadcrumbs'][class$='--inverted'] a:not(.no-style) {
+  color: #fff;
   text-decoration: none;
   outline: none;
-  border-bottom: solid 1px #000000;
+  border-bottom: solid 1px #fff;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
   transition-property: background-color, border-color, color;
 }
 
-[class^='breadcrumbs'][class$='--inverted'] a:hover, [class^='breadcrumbs'][class$='--inverted'] a:focus {
-  background-color: #000000;
-  color: #373854;
+[class^='breadcrumbs'][class$='--inverted'] a:not(.no-style):hover, [class^='breadcrumbs'][class$='--inverted'] a:not(.no-style):focus {
+  background-color: #fff;
+  color: #313131;
 }
 
-[class^='breadcrumbs'][class$='--inverted'] a[rel~='external'] {
+[class^='breadcrumbs'][class$='--inverted'] a:not(.no-style)[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-[class^='breadcrumbs'][class$='--inverted'] a[rel~='external']:hover {
+[class^='breadcrumbs'][class$='--inverted'] a:not(.no-style)[rel~='external']:hover {
   border-color: transparent;
 }
 
-[class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after {
+[class^='breadcrumbs'][class$='--inverted'] a:not(.no-style)[rel~='external']::after {
   background-size: 0.9em auto;
+}
+
+[class^='breadcrumbs'][class$='--inverted'] a:not(.no-style).active {
+  color: #fff;
+}
+
+[class^='breadcrumbs'][class$='--inverted'] a:not(.no-style).active:hover, [class^='breadcrumbs'][class$='--inverted'] a:not(.no-style).active:focus {
+  color: #313131;
 }
 
 [class^='breadcrumbs'][class$='--inverted'] .see-more {
@@ -3868,7 +3225,7 @@ Style guide: Navigation.6 Footer navigation
   position: relative;
   margin-right: 1.6em;
   font-weight: 700;
-  color: transparent;
+  color: #18788d;
 }
 
 [class^='breadcrumbs'][class$='--inverted'] .see-more::after {
@@ -3885,11 +3242,11 @@ Style guide: Navigation.6 Footer navigation
 }
 
 [class^='breadcrumbs'][class$='--inverted'] .see-more:hover, [class^='breadcrumbs'][class$='--inverted'] .see-more:focus {
-  color: #373854;
+  color: #313131;
 }
 
 [class^='breadcrumbs'][class$='--inverted'] span.placeholder-link {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.7);
   border-bottom: none;
   cursor: not-allowed;
 }
@@ -3943,94 +3300,45 @@ Markup: templates/skip-link.hbs
 Style guide: Navigation.7 Skip links
 */
 .skip-to {
-  color: #373854;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   position: relative;
   z-index: 99;
 }
 
-.skip-to a {
-  color: #373854;
+.skip-to a:not(.no-style) {
+  color: #313131;
   text-decoration: none;
   outline: none;
-  border-bottom: solid 1px #000000;
+  border-bottom: solid 1px #5bcbe3;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
   transition-property: background-color, border-color, color;
 }
 
-.skip-to a:hover, .skip-to a:focus {
-  background-color: #000000;
-  color: #373854;
+.skip-to a:not(.no-style):hover, .skip-to a:not(.no-style):focus {
+  background-color: #5bcbe3;
+  color: #313131;
 }
 
-.skip-to a[rel~='external'] {
+.skip-to a:not(.no-style)[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-.skip-to a[rel~='external']:hover {
+.skip-to a:not(.no-style)[rel~='external']:hover {
   border-color: transparent;
 }
 
-.skip-to a[rel~='external']::after {
+.skip-to a:not(.no-style)[rel~='external']::after {
   background-size: 0.9em auto;
+}
+
+.skip-to a:not(.no-style).active {
+  color: #313131;
+}
+
+.skip-to a:not(.no-style).active:hover, .skip-to a:not(.no-style).active:focus {
+  color: #313131;
 }
 
 .skip-to .see-more {
@@ -4038,7 +3346,7 @@ Style guide: Navigation.7 Skip links
   position: relative;
   margin-right: 1.6em;
   font-weight: 700;
-  color: transparent;
+  color: #18788d;
 }
 
 .skip-to .see-more::after {
@@ -4055,11 +3363,11 @@ Style guide: Navigation.7 Skip links
 }
 
 .skip-to .see-more:hover, .skip-to .see-more:focus {
-  color: #373854;
+  color: #313131;
 }
 
 .skip-to span.placeholder-link {
-  color: rgba(55, 56, 84, 0.7);
+  color: rgba(49, 49, 49, 0.7);
   border-bottom: none;
   cursor: not-allowed;
 }
@@ -4521,95 +3829,46 @@ footer[role='contentinfo'] .footer-top nav li h4 {
 }
 
 [class^='controls'] {
-  color: #000000;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   padding: 0.4em 0;
   background-color: #021620;
   color: #fff;
 }
 
-[class^='controls'] a {
-  color: #000000;
+[class^='controls'] a:not(.no-style) {
+  color: #fff;
   text-decoration: none;
   outline: none;
-  border-bottom: solid 1px #000000;
+  border-bottom: solid 1px #fff;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
   transition-property: background-color, border-color, color;
 }
 
-[class^='controls'] a:hover, [class^='controls'] a:focus {
-  background-color: #000000;
+[class^='controls'] a:not(.no-style):hover, [class^='controls'] a:not(.no-style):focus {
+  background-color: #fff;
   color: #021620;
 }
 
-[class^='controls'] a[rel~='external'] {
+[class^='controls'] a:not(.no-style)[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-[class^='controls'] a[rel~='external']:hover {
+[class^='controls'] a:not(.no-style)[rel~='external']:hover {
   border-color: transparent;
 }
 
-[class^='controls'] a[rel~='external']::after {
+[class^='controls'] a:not(.no-style)[rel~='external']::after {
   background-size: 0.9em auto;
+}
+
+[class^='controls'] a:not(.no-style).active {
+  color: #fff;
+}
+
+[class^='controls'] a:not(.no-style).active:hover, [class^='controls'] a:not(.no-style).active:focus {
+  color: #021620;
 }
 
 [class^='controls'] .see-more {
@@ -4617,7 +3876,7 @@ footer[role='contentinfo'] .footer-top nav li h4 {
   position: relative;
   margin-right: 1.6em;
   font-weight: 700;
-  color: transparent;
+  color: #18788d;
 }
 
 [class^='controls'] .see-more::after {
@@ -4638,7 +3897,7 @@ footer[role='contentinfo'] .footer-top nav li h4 {
 }
 
 [class^='controls'] span.placeholder-link {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.7);
   border-bottom: none;
   cursor: not-allowed;
 }
@@ -4836,63 +4095,6 @@ footer[role='contentinfo'] .footer-top nav li h4 {
 }
 
 .govau--header {
-  color: #000000;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   position: relative;
   padding: 1.2em 0 4.8em;
   padding-bottom: 1.2em;
@@ -4901,33 +4103,41 @@ footer[role='contentinfo'] .footer-top nav li h4 {
   color: #fff;
 }
 
-.govau--header a {
-  color: #000000;
+.govau--header a:not(.no-style) {
+  color: #fff;
   text-decoration: none;
   outline: none;
-  border-bottom: solid 1px #000000;
+  border-bottom: solid 1px #fff;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
   transition-property: background-color, border-color, color;
 }
 
-.govau--header a:hover, .govau--header a:focus {
-  background-color: #000000;
-  color: #373854;
+.govau--header a:not(.no-style):hover, .govau--header a:not(.no-style):focus {
+  background-color: #fff;
+  color: #313131;
 }
 
-.govau--header a[rel~='external'] {
+.govau--header a:not(.no-style)[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-.govau--header a[rel~='external']:hover {
+.govau--header a:not(.no-style)[rel~='external']:hover {
   border-color: transparent;
 }
 
-.govau--header a[rel~='external']::after {
+.govau--header a:not(.no-style)[rel~='external']::after {
   background-size: 0.9em auto;
+}
+
+.govau--header a:not(.no-style).active {
+  color: #fff;
+}
+
+.govau--header a:not(.no-style).active:hover, .govau--header a:not(.no-style).active:focus {
+  color: #313131;
 }
 
 .govau--header .see-more {
@@ -4935,7 +4145,7 @@ footer[role='contentinfo'] .footer-top nav li h4 {
   position: relative;
   margin-right: 1.6em;
   font-weight: 700;
-  color: transparent;
+  color: #18788d;
 }
 
 .govau--header .see-more::after {
@@ -4952,11 +4162,11 @@ footer[role='contentinfo'] .footer-top nav li h4 {
 }
 
 .govau--header .see-more:hover, .govau--header .see-more:focus {
-  color: #373854;
+  color: #313131;
 }
 
 .govau--header span.placeholder-link {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.7);
   border-bottom: none;
   cursor: not-allowed;
 }
@@ -5035,63 +4245,6 @@ footer[role='contentinfo'] .footer-top nav li h4 {
 }
 
 .prerelease-govau--header {
-  color: #000000;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   position: relative;
   padding: 1.6em 0 4.8em;
   padding-bottom: 1.2em;
@@ -5104,33 +4257,41 @@ footer[role='contentinfo'] .footer-top nav li h4 {
   /* Note: do not use variables in above IE filter. */
 }
 
-.prerelease-govau--header a {
-  color: #000000;
+.prerelease-govau--header a:not(.no-style) {
+  color: #fff;
   text-decoration: none;
   outline: none;
-  border-bottom: solid 1px #000000;
+  border-bottom: solid 1px #fff;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
   transition-property: background-color, border-color, color;
 }
 
-.prerelease-govau--header a:hover, .prerelease-govau--header a:focus {
-  background-color: #000000;
-  color: #373854;
+.prerelease-govau--header a:not(.no-style):hover, .prerelease-govau--header a:not(.no-style):focus {
+  background-color: #fff;
+  color: #313131;
 }
 
-.prerelease-govau--header a[rel~='external'] {
+.prerelease-govau--header a:not(.no-style)[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-.prerelease-govau--header a[rel~='external']:hover {
+.prerelease-govau--header a:not(.no-style)[rel~='external']:hover {
   border-color: transparent;
 }
 
-.prerelease-govau--header a[rel~='external']::after {
+.prerelease-govau--header a:not(.no-style)[rel~='external']::after {
   background-size: 0.9em auto;
+}
+
+.prerelease-govau--header a:not(.no-style).active {
+  color: #fff;
+}
+
+.prerelease-govau--header a:not(.no-style).active:hover, .prerelease-govau--header a:not(.no-style).active:focus {
+  color: #313131;
 }
 
 .prerelease-govau--header .see-more {
@@ -5138,7 +4299,7 @@ footer[role='contentinfo'] .footer-top nav li h4 {
   position: relative;
   margin-right: 1.6em;
   font-weight: 700;
-  color: transparent;
+  color: #18788d;
 }
 
 .prerelease-govau--header .see-more::after {
@@ -5155,11 +4316,11 @@ footer[role='contentinfo'] .footer-top nav li h4 {
 }
 
 .prerelease-govau--header .see-more:hover, .prerelease-govau--header .see-more:focus {
-  color: #373854;
+  color: #313131;
 }
 
 .prerelease-govau--header span.placeholder-link {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.7);
   border-bottom: none;
   cursor: not-allowed;
 }
@@ -5306,72 +4467,15 @@ footer[role='contentinfo'] .footer-top nav li h4 {
 .hero,
 .hero-sml,
 .hero-med {
-  color: #313131;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   padding: 3.2em 0;
   margin-bottom: 0;
   background-color: #f0f3f5;
   color: #043751;
 }
 
-.hero a,
-.hero-sml a,
-.hero-med a {
+.hero a:not(.no-style),
+.hero-sml a:not(.no-style),
+.hero-med a:not(.no-style) {
   color: #313131;
   text-decoration: none;
   outline: none;
@@ -5381,33 +4485,47 @@ footer[role='contentinfo'] .footer-top nav li h4 {
   transition-property: background-color, border-color, color;
 }
 
-.hero a:hover, .hero a:focus,
-.hero-sml a:hover,
-.hero-sml a:focus,
-.hero-med a:hover,
-.hero-med a:focus {
+.hero a:not(.no-style):hover, .hero a:not(.no-style):focus,
+.hero-sml a:not(.no-style):hover,
+.hero-sml a:not(.no-style):focus,
+.hero-med a:not(.no-style):hover,
+.hero-med a:not(.no-style):focus {
   background-color: #5bcbe3;
   color: #313131;
 }
 
-.hero a[rel~='external'],
-.hero-sml a[rel~='external'],
-.hero-med a[rel~='external'] {
+.hero a:not(.no-style)[rel~='external'],
+.hero-sml a:not(.no-style)[rel~='external'],
+.hero-med a:not(.no-style)[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-.hero a[rel~='external']:hover,
-.hero-sml a[rel~='external']:hover,
-.hero-med a[rel~='external']:hover {
+.hero a:not(.no-style)[rel~='external']:hover,
+.hero-sml a:not(.no-style)[rel~='external']:hover,
+.hero-med a:not(.no-style)[rel~='external']:hover {
   border-color: transparent;
 }
 
-.hero a[rel~='external']::after,
-.hero-sml a[rel~='external']::after,
-.hero-med a[rel~='external']::after {
+.hero a:not(.no-style)[rel~='external']::after,
+.hero-sml a:not(.no-style)[rel~='external']::after,
+.hero-med a:not(.no-style)[rel~='external']::after {
   background-size: 0.9em auto;
+}
+
+.hero a:not(.no-style).active,
+.hero-sml a:not(.no-style).active,
+.hero-med a:not(.no-style).active {
+  color: #313131;
+}
+
+.hero a:not(.no-style).active:hover, .hero a:not(.no-style).active:focus,
+.hero-sml a:not(.no-style).active:hover,
+.hero-sml a:not(.no-style).active:focus,
+.hero-med a:not(.no-style).active:hover,
+.hero-med a:not(.no-style).active:focus {
+  color: #313131;
 }
 
 .hero .see-more,
@@ -5417,7 +4535,7 @@ footer[role='contentinfo'] .footer-top nav li h4 {
   position: relative;
   margin-right: 1.6em;
   font-weight: 700;
-  color: transparent;
+  color: #18788d;
 }
 
 .hero .see-more::after,
@@ -5777,205 +4895,6 @@ Row and column headers should be set with the <a href="https://www.w3.org/TR/htm
 
 Style guide: Tables.3 Accessibility
 */
-/*
-Accordions
-
-Accordions help users find only the content they need.
-
-The **expand/collapse all** feature will be provided soon &mdash; this will be mandatory if using a series of accordion elements.
-
-***
-
-This guidance is in part adapted from <a href="https://standards.usa.gov/getting-started/" rel="external">18F Draft US Web Design Standards</a> under <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode" rel="external">CC0 1.0 Universal</a>.
-
-Style guide: Accordions
-*/
-/*
-Content accordion
-
-Use content accordions if the user only needs a selection of the information on a page.
-
-Don't use an accordion if the user needs to see all of the information.
-
-<details open data-label="accordions-accessibility" aria-expanded="false">
-  <summary>Accessibility &amp; browser testing</summary>
-  <div class="accordion-panel">
-  <strong>Passed</strong>:
-    <ul>
-      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-    </ul>
-  <strong>Untested</strong>:
-    <ul>
-      <li>WCAG:AA manual</li>
-      <li>Browser support &mdash; automated and manual</li>
-    </ul>
-  </div>
-</details>
-
-Markup: templates/content-accordion.hbs
-
-Style guide: Accordions.1 Content accordion
-*/
-/*
-Controls accordion
-
-Use controls accordions to make page controls easier to use.
-
-<details open data-label="controls-accordions-accessibility" aria-expanded="false">
-  <summary>Accessibility &amp; browser testing</summary>
-  <div class="accordion-panel">
-  <strong>Passed</strong>:
-    <ul>
-      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-    </ul>
-  <strong>Untested</strong>:
-    <ul>
-      <li>WCAG:AA manual</li>
-      <li>Browser support &mdash; automated and manual</li>
-    </ul>
-  </div>
-</details>
-
-Markup: templates/controls-accordion.hbs
-
-Style guide: Accordions.2 Controls accordion
-*/
-/*
-Usability
-
-Don't use an accordion if the user needs to see all of the information. Structure and rewrite your content instead.
-
-Use [definition or description lists](section-typography.html#guide-typography-6-lists) for glossaries instead of accordions.
-
-Building accordions
-- Keep accordion headings and labels short but descriptive.
-- Accordions can be set to open or closed initially using `aria-expanded` property set to `true` or `false`.
-- JavaScript behaviour is used to replace the browser default for `<details>`.
-- For multiple accordion elements each `details` element must have its own `data-label` attribute.
-- You can run a text/string search of accordion content, even when collapsed (the string stays hidden until the accordion is opened).
-
-Style guide: Accordions.3 Usability
-*/
-details,
-.accordion, .accordion--controls {
-  display: block;
-  margin: 1.6em 0 0;
-  overflow: hidden;
-}
-
-.accordion-button,
-summary, .accordion--controls summary {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: auto;
-  padding: 0.8em 3.2em 0.8em 0.8em;
-  border-radius: 1px 1px 0 0;
-  background-color: #f0f3f5;
-  cursor: pointer;
-  text-align: left;
-  font-weight: 700;
-  font-size: 1.25rem;
-  transition: background-color 0.1s ease-in-out;
-}
-
-.accordion-button:last-child,
-summary:last-child {
-  border-bottom-width: 1px;
-}
-
-.accordion-button:hover,
-summary:hover, .accordion-button:focus,
-summary:focus {
-  background-color: #bbbbbb;
-  outline: none;
-}
-
-.accordion-button::-webkit-details-marker,
-summary::-webkit-details-marker, .accordion--controls summary::-webkit-details-marker {
-  display: none;
-}
-
-.accordion-button::before,
-summary::before, .accordion--controls summary::before {
-  content: '';
-  position: absolute;
-  top: .5em;
-  bottom: .5em;
-  right: 0.8em;
-  width: 1.2em;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100% auto;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  transition: -webkit-transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-}
-
-[aria-expanded='true'] .accordion-button::before, [aria-expanded='true']
-summary::before {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.accordion-panel, .accordion--controls .accordion-panel {
-  display: block;
-  height: auto;
-  overflow: hidden;
-  padding: 1.6em 1.6em 0.8em;
-  border-radius: 1px 1px 0 0;
-}
-
-.accordion-panel :first-child {
-  margin-top: 0;
-}
-
-details,
-.accordion {
-  border-color: #bbbbbb;
-  border-width: 1px 0;
-  border-style: solid;
-}
-
-details + details,
-.accordion + details, details +
-.accordion,
-.accordion +
-.accordion {
-  margin-top: 0;
-  border-top: none;
-}
-
-[aria-expanded='true'] .accordion-button, [aria-expanded='true']
-summary {
-  border-bottom: 1px solid #bbbbbb;
-}
-
-.accordion--controls {
-  margin-top: 0.8em;
-  border: none;
-}
-
-.accordion--controls summary {
-  border: none;
-  background-color: #def4f9;
-  font-size: 87.5%;
-}
-
-.accordion--controls summary:hover, .accordion--controls summary:focus {
-  background-color: #5bcbe3;
-  color: #115361;
-}
-
-.accordion--controls .accordion-panel {
-  border: 0.8em solid #def4f9;
-  border-top: none;
-}
-
 /*
 Typography
 
@@ -6864,28 +5783,6 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   margin-top: 0;
 }
 
-.video {
-  margin-bottom: 1.6em;
-}
-
-.video .video-wrapper {
-  height: 0;
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-}
-
-.video .video-wrapper embed,
-.video .video-wrapper object,
-.video .video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border: none;
-}
-
 .header__inner {
   max-width: 73.125rem;
   margin-left: auto;
@@ -6903,120 +5800,13 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 
 @media (min-width: 768px) {
   .header__inner .header__secondary-menu {
-    color: #493267;
-    /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-    /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
     display: block;
     text-align: right;
   }
-  .header__inner .header__secondary-menu a {
-    color: #493267;
-    text-decoration: none;
-    outline: none;
-    border-bottom: solid 1px #7bb3ff;
-    transition-timing-function: ease-in-out;
-    transition-duration: 0.1s;
-    transition-property: background-color, border-color, color;
-  }
-  .header__inner .header__secondary-menu a:hover, .header__inner .header__secondary-menu a:focus {
-    background-color: #7bb3ff;
-    color: #313131;
-  }
-  .header__inner .header__secondary-menu a[rel~='external'] {
-    display: inline;
-    position: relative;
-    margin-right: 1.6em;
-  }
-  .header__inner .header__secondary-menu a[rel~='external']:hover {
-    border-color: transparent;
-  }
-  .header__inner .header__secondary-menu a[rel~='external']::after {
-    background-size: 0.9em auto;
-  }
-  .header__inner .header__secondary-menu .see-more {
-    display: inline-block;
-    position: relative;
-    margin-right: 1.6em;
-    font-weight: 700;
-    color: transparent;
-  }
-  .header__inner .header__secondary-menu .see-more::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -1.2em;
-    display: block;
-    width: 1.2em;
-    height: 1.2em;
-    background-repeat: no-repeat;
-    background-position: right 0.4em;
-    background-size: 0.64em auto;
-  }
-  .header__inner .header__secondary-menu .see-more:hover, .header__inner .header__secondary-menu .see-more:focus {
-    color: #313131;
-  }
-  .header__inner .header__secondary-menu span.placeholder-link {
-    color: rgba(73, 50, 103, 0.7);
-    border-bottom: none;
-    cursor: not-allowed;
-  }
-  .header__inner .header__secondary-menu span.placeholder-link:hover {
-    cursor: not-allowed;
-  }
+}
+
+.header__inner .header__secondary-menu a {
+  padding: 0 1px 0 1px;
 }
 
 .header__inner .header__secondary-menu ul.links li {
@@ -7238,8 +6028,8 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 .header__inner .region-header .block-search-api-page > .content > form > div .form-item input {
   margin: 0;
   height: 3.25rem;
-  background-color: #f0f3f5;
-  border: 1px solid #bbbbbb;
+  background-color: #F0F3F5;
+  border: 1px solid #BEBEBE;
   z-index: 1;
   position: relative;
   background-color: white;
@@ -7255,8 +6045,8 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   width: 3.25rem;
   height: 3.25rem;
   box-sizing: border-box;
-  background-color: #f0f3f5;
-  border: 1px solid #bbbbbb;
+  background-color: #F0F3F5;
+  border: 1px solid #BEBEBE;
   border-left: 0;
   border-radius: 0;
   background-repeat: no-repeat;
@@ -7487,7 +6277,7 @@ html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-p
 }
 
 .mobile-nav ul.links {
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #BEBEBE;
   padding-left: 0;
   padding-top: 1.375rem;
   padding-bottom: 1.375rem;
@@ -7506,6 +6296,7 @@ html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-p
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
+  border-bottom: 0;
   padding-top: 0.6875rem;
   padding-bottom: 0.6875rem;
   color: #313131;
@@ -7605,130 +6396,6 @@ body #content .content-header:before {
   margin-right: auto;
   margin-top: 1.375rem;
   margin-bottom: 1.375rem;
-}
-
-.content-body .content {
-  color: #493267;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
-}
-
-.content-body .content a {
-  color: #493267;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #7bb3ff;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
-}
-
-.content-body .content a:hover, .content-body .content a:focus {
-  background-color: #7bb3ff;
-  color: #313131;
-}
-
-.content-body .content a[rel~='external'] {
-  display: inline;
-  position: relative;
-  margin-right: 1.6em;
-}
-
-.content-body .content a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-.content-body .content a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-.content-body .content .see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: transparent;
-}
-
-.content-body .content .see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
-}
-
-.content-body .content .see-more:hover, .content-body .content .see-more:focus {
-  color: #313131;
-}
-
-.content-body .content span.placeholder-link {
-  color: rgba(73, 50, 103, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-.content-body .content span.placeholder-link:hover {
-  cursor: not-allowed;
 }
 
 .content-body-inner.has-sidebar {
@@ -8019,130 +6686,6 @@ body #content .content-header:before {
   background-color: #e6e6e6;
 }
 
-.more-link {
-  color: #493267;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
-}
-
-.more-link a {
-  color: #493267;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #7bb3ff;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
-}
-
-.more-link a:hover, .more-link a:focus {
-  background-color: #7bb3ff;
-  color: #313131;
-}
-
-.more-link a[rel~='external'] {
-  display: inline;
-  position: relative;
-  margin-right: 1.6em;
-}
-
-.more-link a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-.more-link a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-.more-link .see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: transparent;
-}
-
-.more-link .see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
-}
-
-.more-link .see-more:hover, .more-link .see-more:focus {
-  color: #313131;
-}
-
-.more-link span.placeholder-link {
-  color: rgba(73, 50, 103, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-.more-link span.placeholder-link:hover {
-  cursor: not-allowed;
-}
-
 @media (min-width: 768px) {
   ul, ol, dl, p, dt, dd {
     font-size: inherit;
@@ -8200,6 +6743,177 @@ a[rel~='external']::after {
 #content [type='button']:active {
   background-color: #0c3c47;
   border-color: #0c3c47;
+}
+
+a:not(.no-style) {
+  color: #9e379f;
+  text-decoration: none;
+  outline: none;
+  border-bottom: solid 1px #9e379f;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  transition-property: background-color, border-color, color;
+}
+
+a:not(.no-style):hover, a:not(.no-style):focus {
+  background-color: #9e379f;
+  color: white;
+}
+
+a:not(.no-style)[rel~='external'] {
+  display: inline;
+  position: relative;
+  margin-right: 1.6em;
+}
+
+a:not(.no-style)[rel~='external']:hover {
+  border-color: transparent;
+}
+
+a:not(.no-style)[rel~='external']::after {
+  background-size: 0.9em auto;
+}
+
+a:not(.no-style).active {
+  color: #9e379f;
+}
+
+a:not(.no-style).active:hover, a:not(.no-style).active:focus {
+  color: white;
+}
+
+.see-more {
+  display: inline-block;
+  position: relative;
+  margin-right: 1.6em;
+  font-weight: 700;
+  color: #18788d;
+}
+
+.see-more::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1.2em;
+  display: block;
+  width: 1.2em;
+  height: 1.2em;
+  background-repeat: no-repeat;
+  background-position: right 0.4em;
+  background-size: 0.64em auto;
+}
+
+.see-more:hover, .see-more:focus {
+  color: white;
+}
+
+span.placeholder-link {
+  color: rgba(158, 55, 159, 0.7);
+  border-bottom: none;
+  cursor: not-allowed;
+}
+
+span.placeholder-link:hover {
+  cursor: not-allowed;
+}
+
+.content-table th, .field-name-body table th, form.webform-client-form .webform-component-grid table.webform-grid th, .content-table thead, .field-name-body table thead, form.webform-client-form .webform-component-grid table.webform-grid thead, .content-table tfoot, .field-name-body table tfoot, form.webform-client-form .webform-component-grid table.webform-grid tfoot {
+  font-size: 1em;
+  font-weight: bold;
+  color: #373854;
+}
+
+.content-table th, .field-name-body table th, form.webform-client-form .webform-component-grid table.webform-grid th, .content-table thead, .field-name-body table thead, form.webform-client-form .webform-component-grid table.webform-grid thead {
+  border-bottom: solid 2px #6E6E6E;
+}
+
+.content-table tfoot, .field-name-body table tfoot, form.webform-client-form .webform-component-grid table.webform-grid tfoot {
+  border-top: solid 2px #6E6E6E;
+}
+
+.content-table tr, .field-name-body table tr, form.webform-client-form .webform-component-grid table.webform-grid tr {
+  border-top: 1px solid #CCCCCC;
+}
+
+h1, .hero .site-title,
+.hero-sml .site-title,
+.hero-med .site-title {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+h2, .display {
+  font-size: 2.5rem;
+  color: #373854;
+}
+
+.region-sidebar-first .block > h2, .region-sidebar-first .block > .display {
+  color: #373854;
+}
+
+h3 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #373854;
+}
+
+h4, h5, h6 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #373854;
+}
+
+html {
+  color: #373854;
+}
+
+blockquote {
+  background-color: transparent;
+  padding: .8em 0;
+  margin: 0;
+}
+
+blockquote::before {
+  content: none;
+}
+
+blockquote p {
+  border-left: 5px solid #717171;
+  padding: 0.6em 2.4em .6em 2.4em;
+  margin-bottom: 0em;
+}
+
+blockquote p:last-of-type:not(:only-of-type) {
+  font-size: .8em;
+}
+
+blockquote p:last-of-type:not(:only-of-type)::before {
+  content: '\2014 -';
+}
+
+blockquote p[style*="text-align: right"] {
+  border-left: none;
+  border-right: 5px solid #717171;
+}
+
+blockquote p[style*="text-align: right"]:last-of-type:not(:only-of-type)::before {
+  content: none;
+}
+
+blockquote p[style*="text-align: right"]:last-of-type:not(:only-of-type)::after {
+  content: ' \2014';
+}
+
+#content form input[type="text"], #content label {
+  color: #313131;
+}
+
+.region-navigation {
+  background-color: #373854;
+}
+
+.region-navigation .block-superfish ul.sf-menu > li > a:hover, .region-navigation .block-superfish ul.sf-menu > li > a:focus {
+  border-bottom-color: #9e379f;
 }
 
 .footer-inner-wrapper {
@@ -8267,63 +6981,6 @@ a[rel~='external']::after {
 }
 
 .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li {
-  color: #F0F1F5;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 1.375rem;
@@ -8332,33 +6989,41 @@ a[rel~='external']::after {
   margin-bottom: 0.75rem;
 }
 
-.footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a {
+.footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a:not(.no-style), .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a:not(.no-style) {
   color: #F0F1F5;
   text-decoration: none;
   outline: none;
-  border-bottom: solid 1px #f0f3f5;
+  border-bottom: solid 1px #F0F3F5;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
   transition-property: background-color, border-color, color;
 }
 
-.footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a:hover, .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a:focus, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a:hover, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a:focus {
-  background-color: #f0f3f5;
+.footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a:not(.no-style):hover, .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a:not(.no-style):focus, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a:not(.no-style):hover, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a:not(.no-style):focus {
+  background-color: #F0F3F5;
   color: #313131;
 }
 
-.footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a[rel~='external'], .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a[rel~='external'] {
+.footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a:not(.no-style)[rel~='external'], .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a:not(.no-style)[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-.footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a[rel~='external']:hover, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a[rel~='external']:hover {
+.footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a:not(.no-style)[rel~='external']:hover, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a:not(.no-style)[rel~='external']:hover {
   border-color: transparent;
 }
 
-.footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after {
+.footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a:not(.no-style)[rel~='external']::after, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a:not(.no-style)[rel~='external']::after {
   background-size: 0.9em auto;
+}
+
+.footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a:not(.no-style).active, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a:not(.no-style).active {
+  color: #F0F1F5;
+}
+
+.footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a:not(.no-style).active:hover, .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li a:not(.no-style).active:focus, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a:not(.no-style).active:hover, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li a:not(.no-style).active:focus {
+  color: #313131;
 }
 
 .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li .see-more, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li .see-more {
@@ -8366,7 +7031,7 @@ a[rel~='external']::after {
   position: relative;
   margin-right: 1.6em;
   font-weight: 700;
-  color: transparent;
+  color: #18788d;
 }
 
 .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li .see-more::after, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li .see-more::after {
@@ -8398,7 +7063,7 @@ a[rel~='external']::after {
 
 .footer-inner-wrapper .region-footer .block-menu .content ul.menu > li > a, .footer-inner-wrapper .region-footer .block-menu-block .content ul.menu > li > a {
   font-weight: 300;
-  border-bottom: 0;
+  border-bottom: 0 !important;
 }
 
 @media (min-width: 768px) {
@@ -8751,7 +7416,7 @@ form.webform-client-form .webform-component-file .form-managed-file input[type="
 }
 
 form.webform-client-form .webform-component-fieldset {
-  border: 1px solid #6e6e6e;
+  border: 1px solid #717171;
   padding: 1.375rem;
 }
 
@@ -8779,7 +7444,7 @@ form.webform-client-form .webform-next {
 
 .webform-progressbar .webform-progressbar-page {
   border-color: transparent;
-  background-color: #bbbbbb;
+  background-color: #BEBEBE;
   width: 1.4375rem;
   height: 1.4375rem;
   border-radius: 50%;
@@ -8797,7 +7462,7 @@ form.webform-client-form .webform-next {
 .webform-progressbar .webform-progressbar-outer {
   border-color: transparent;
   height: 0.75rem;
-  background-color: #f0f3f5;
+  background-color: #F0F3F5;
 }
 
 .webform-progressbar .webform-progressbar-inner {
@@ -8952,7 +7617,7 @@ ul.tabs.primary {
 }
 
 .front .gov-front-left {
-  background-color: #f0f3f5;
+  background-color: #F0F3F5;
 }
 
 .front .gov-front-left .panel-pane {
@@ -8965,7 +7630,7 @@ ul.tabs.primary {
 }
 
 .front .gov-front-right {
-  background-color: #f0f3f5;
+  background-color: #F0F3F5;
 }
 
 .front .gov-front-right .panel-pane {
@@ -9026,7 +7691,7 @@ ul.tabs.primary {
 }
 
 .bean-basic-content {
-  background-color: #f0f3f5;
+  background-color: #F0F3F5;
 }
 
 .bean-basic-content > .content {
@@ -9036,130 +7701,9 @@ ul.tabs.primary {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   box-sizing: content-box;
-  color: #493267;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   padding-top: 1.375rem;
   padding-bottom: 1.375rem;
   color: #313131;
-}
-
-.bean-basic-content > .content a {
-  color: #493267;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #7bb3ff;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
-}
-
-.bean-basic-content > .content a:hover, .bean-basic-content > .content a:focus {
-  background-color: #7bb3ff;
-  color: #313131;
-}
-
-.bean-basic-content > .content a[rel~='external'] {
-  display: inline;
-  position: relative;
-  margin-right: 1.6em;
-}
-
-.bean-basic-content > .content a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-.bean-basic-content > .content a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-.bean-basic-content > .content .see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: transparent;
-}
-
-.bean-basic-content > .content .see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
-}
-
-.bean-basic-content > .content .see-more:hover, .bean-basic-content > .content .see-more:focus {
-  color: #313131;
-}
-
-.bean-basic-content > .content span.placeholder-link {
-  color: rgba(73, 50, 103, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-.bean-basic-content > .content span.placeholder-link:hover {
-  cursor: not-allowed;
 }
 
 @media (min-width: 768px) {
@@ -9289,94 +7833,45 @@ ul.tabs.primary {
 }
 
 #block-views-slideshow-block .banner-description-holder h3 {
-  color: white;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   margin-top: 0;
   font-weight: 400;
 }
 
-#block-views-slideshow-block .banner-description-holder h3 a {
+#block-views-slideshow-block .banner-description-holder h3 a:not(.no-style) {
   color: white;
   text-decoration: none;
   outline: none;
-  border-bottom: solid 1px #f0f3f5;
+  border-bottom: solid 1px #F0F3F5;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
   transition-property: background-color, border-color, color;
 }
 
-#block-views-slideshow-block .banner-description-holder h3 a:hover, #block-views-slideshow-block .banner-description-holder h3 a:focus {
-  background-color: #f0f3f5;
+#block-views-slideshow-block .banner-description-holder h3 a:not(.no-style):hover, #block-views-slideshow-block .banner-description-holder h3 a:not(.no-style):focus {
+  background-color: #F0F3F5;
   color: #313131;
 }
 
-#block-views-slideshow-block .banner-description-holder h3 a[rel~='external'] {
+#block-views-slideshow-block .banner-description-holder h3 a:not(.no-style)[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-#block-views-slideshow-block .banner-description-holder h3 a[rel~='external']:hover {
+#block-views-slideshow-block .banner-description-holder h3 a:not(.no-style)[rel~='external']:hover {
   border-color: transparent;
 }
 
-#block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after {
+#block-views-slideshow-block .banner-description-holder h3 a:not(.no-style)[rel~='external']::after {
   background-size: 0.9em auto;
+}
+
+#block-views-slideshow-block .banner-description-holder h3 a:not(.no-style).active {
+  color: white;
+}
+
+#block-views-slideshow-block .banner-description-holder h3 a:not(.no-style).active:hover, #block-views-slideshow-block .banner-description-holder h3 a:not(.no-style).active:focus {
+  color: #313131;
 }
 
 #block-views-slideshow-block .banner-description-holder h3 .see-more {
@@ -9384,7 +7879,7 @@ ul.tabs.primary {
   position: relative;
   margin-right: 1.6em;
   font-weight: 700;
-  color: transparent;
+  color: #18788d;
 }
 
 #block-views-slideshow-block .banner-description-holder h3 .see-more::after {
@@ -9422,93 +7917,41 @@ ul.tabs.primary {
   }
 }
 
-#block-views-slideshow-block .banner-description-holder .field {
-  color: white;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
-}
-
-#block-views-slideshow-block .banner-description-holder .field a {
+#block-views-slideshow-block .banner-description-holder .field a:not(.no-style) {
   color: white;
   text-decoration: none;
   outline: none;
-  border-bottom: solid 1px #f0f3f5;
+  border-bottom: solid 1px #F0F3F5;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
   transition-property: background-color, border-color, color;
 }
 
-#block-views-slideshow-block .banner-description-holder .field a:hover, #block-views-slideshow-block .banner-description-holder .field a:focus {
-  background-color: #f0f3f5;
+#block-views-slideshow-block .banner-description-holder .field a:not(.no-style):hover, #block-views-slideshow-block .banner-description-holder .field a:not(.no-style):focus {
+  background-color: #F0F3F5;
   color: #313131;
 }
 
-#block-views-slideshow-block .banner-description-holder .field a[rel~='external'] {
+#block-views-slideshow-block .banner-description-holder .field a:not(.no-style)[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-#block-views-slideshow-block .banner-description-holder .field a[rel~='external']:hover {
+#block-views-slideshow-block .banner-description-holder .field a:not(.no-style)[rel~='external']:hover {
   border-color: transparent;
 }
 
-#block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after {
+#block-views-slideshow-block .banner-description-holder .field a:not(.no-style)[rel~='external']::after {
   background-size: 0.9em auto;
+}
+
+#block-views-slideshow-block .banner-description-holder .field a:not(.no-style).active {
+  color: white;
+}
+
+#block-views-slideshow-block .banner-description-holder .field a:not(.no-style).active:hover, #block-views-slideshow-block .banner-description-holder .field a:not(.no-style).active:focus {
+  color: #313131;
 }
 
 #block-views-slideshow-block .banner-description-holder .field .see-more {
@@ -9516,7 +7959,7 @@ ul.tabs.primary {
   position: relative;
   margin-right: 1.6em;
   font-weight: 700;
-  color: transparent;
+  color: #18788d;
 }
 
 #block-views-slideshow-block .banner-description-holder .field .see-more::after {
@@ -9753,133 +8196,12 @@ ul.tabs.primary {
 .view-home-page-blog-articles .view-content .views-row h2, .view-home-page-blog-articles .view-content .views-row .display, .view-latest-news .view-content .views-row h2, .view-latest-news .view-content .views-row .display {
   font-size: 1.5rem;
   line-height: 1.5em;
-  color: #373854;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   margin-top: 0;
-}
-
-.view-home-page-blog-articles .view-content .views-row h2 a, .view-home-page-blog-articles .view-content .views-row .display a, .view-latest-news .view-content .views-row h2 a, .view-latest-news .view-content .views-row .display a {
-  color: #373854;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #7bb3ff;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
-}
-
-.view-home-page-blog-articles .view-content .views-row h2 a:hover, .view-home-page-blog-articles .view-content .views-row .display a:hover, .view-home-page-blog-articles .view-content .views-row h2 a:focus, .view-home-page-blog-articles .view-content .views-row .display a:focus, .view-latest-news .view-content .views-row h2 a:hover, .view-latest-news .view-content .views-row .display a:hover, .view-latest-news .view-content .views-row h2 a:focus, .view-latest-news .view-content .views-row .display a:focus {
-  background-color: #7bb3ff;
-  color: #313131;
-}
-
-.view-home-page-blog-articles .view-content .views-row h2 a[rel~='external'], .view-home-page-blog-articles .view-content .views-row .display a[rel~='external'], .view-latest-news .view-content .views-row h2 a[rel~='external'], .view-latest-news .view-content .views-row .display a[rel~='external'] {
-  display: inline;
-  position: relative;
-  margin-right: 1.6em;
-}
-
-.view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']:hover, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']:hover, .view-latest-news .view-content .views-row h2 a[rel~='external']:hover, .view-latest-news .view-content .views-row .display a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-.view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-.view-home-page-blog-articles .view-content .views-row h2 .see-more, .view-home-page-blog-articles .view-content .views-row .display .see-more, .view-latest-news .view-content .views-row h2 .see-more, .view-latest-news .view-content .views-row .display .see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: transparent;
-}
-
-.view-home-page-blog-articles .view-content .views-row h2 .see-more::after, .view-home-page-blog-articles .view-content .views-row .display .see-more::after, .view-latest-news .view-content .views-row h2 .see-more::after, .view-latest-news .view-content .views-row .display .see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
-}
-
-.view-home-page-blog-articles .view-content .views-row h2 .see-more:hover, .view-home-page-blog-articles .view-content .views-row .display .see-more:hover, .view-home-page-blog-articles .view-content .views-row h2 .see-more:focus, .view-home-page-blog-articles .view-content .views-row .display .see-more:focus, .view-latest-news .view-content .views-row h2 .see-more:hover, .view-latest-news .view-content .views-row .display .see-more:hover, .view-latest-news .view-content .views-row h2 .see-more:focus, .view-latest-news .view-content .views-row .display .see-more:focus {
-  color: #313131;
-}
-
-.view-home-page-blog-articles .view-content .views-row h2 span.placeholder-link, .view-home-page-blog-articles .view-content .views-row .display span.placeholder-link, .view-latest-news .view-content .views-row h2 span.placeholder-link, .view-latest-news .view-content .views-row .display span.placeholder-link {
-  color: rgba(55, 56, 84, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-.view-home-page-blog-articles .view-content .views-row h2 span.placeholder-link:hover, .view-home-page-blog-articles .view-content .views-row .display span.placeholder-link:hover, .view-latest-news .view-content .views-row h2 span.placeholder-link:hover, .view-latest-news .view-content .views-row .display span.placeholder-link:hover {
-  cursor: not-allowed;
 }
 
 .view-home-page-blog-articles .view-content .views-row .field-type-datetime, .view-home-page-blog-articles .view-content .views-row .submitted, .view-latest-news .view-content .views-row .field-type-datetime, .view-latest-news .view-content .views-row .submitted {
   font-size: 0.875rem;
-  color: #6e6e6e;
+  color: #717171;
   text-transform: uppercase;
   margin-top: 1.375rem;
   margin-bottom: 1.375rem;
@@ -10017,133 +8339,12 @@ body.not-front #content .view .view-content .views-row .node > .links li {
 body.not-front #content .view .view-content .views-row h2, body.not-front #content .view .view-content .views-row .display {
   font-size: 1.5rem;
   line-height: 1.5em;
-  color: #373854;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   margin-top: 0;
-}
-
-body.not-front #content .view .view-content .views-row h2 a, body.not-front #content .view .view-content .views-row .display a {
-  color: #373854;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #7bb3ff;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
-}
-
-body.not-front #content .view .view-content .views-row h2 a:hover, body.not-front #content .view .view-content .views-row .display a:hover, body.not-front #content .view .view-content .views-row h2 a:focus, body.not-front #content .view .view-content .views-row .display a:focus {
-  background-color: #7bb3ff;
-  color: #313131;
-}
-
-body.not-front #content .view .view-content .views-row h2 a[rel~='external'], body.not-front #content .view .view-content .views-row .display a[rel~='external'] {
-  display: inline;
-  position: relative;
-  margin-right: 1.6em;
-}
-
-body.not-front #content .view .view-content .views-row h2 a[rel~='external']:hover, body.not-front #content .view .view-content .views-row .display a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-body.not-front #content .view .view-content .views-row h2 .see-more, body.not-front #content .view .view-content .views-row .display .see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: transparent;
-}
-
-body.not-front #content .view .view-content .views-row h2 .see-more::after, body.not-front #content .view .view-content .views-row .display .see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
-}
-
-body.not-front #content .view .view-content .views-row h2 .see-more:hover, body.not-front #content .view .view-content .views-row .display .see-more:hover, body.not-front #content .view .view-content .views-row h2 .see-more:focus, body.not-front #content .view .view-content .views-row .display .see-more:focus {
-  color: #313131;
-}
-
-body.not-front #content .view .view-content .views-row h2 span.placeholder-link, body.not-front #content .view .view-content .views-row .display span.placeholder-link {
-  color: rgba(55, 56, 84, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-body.not-front #content .view .view-content .views-row h2 span.placeholder-link:hover, body.not-front #content .view .view-content .views-row .display span.placeholder-link:hover {
-  cursor: not-allowed;
 }
 
 body.not-front #content .view .view-content .views-row .field-name-field-date, body.not-front #content .view .view-content .views-row .submitted, body.not-front #content .view .view-content .views-row .field-type-datetime {
   font-size: 0.875rem;
-  color: #6e6e6e;
+  color: #717171;
   text-transform: uppercase;
   margin-top: 1.375rem;
   margin-bottom: 1.375rem;
@@ -10189,7 +8390,7 @@ body.not-front #content .view .pager {
 }
 
 .views-exposed-form select {
-  border: 1px solid #bbbbbb;
+  border: 1px solid #BEBEBE;
 }
 
 @media (max-width: 420px) {
@@ -10221,7 +8422,7 @@ body.not-front #content .view .pager {
 
 .view-members .views-exposed-form select {
   width: 100%;
-  border: 1px solid #bbbbbb;
+  border: 1px solid #BEBEBE;
 }
 
 @media (min-width: 768px) {
@@ -10281,7 +8482,7 @@ body.not-front #content .view .pager {
   margin: 0;
   box-sizing: border-box;
   font-weight: 400;
-  border: 1px solid #bbbbbb;
+  border: 1px solid #BEBEBE;
   text-align: left;
   background-color: #F4F4F4;
   color: #313131;
@@ -10289,7 +8490,7 @@ body.not-front #content .view .pager {
 
 #block-menu-block-govcms-menu-block-sidebar h2 button:hover, #block-menu-block-govcms-menu-block-sidebar .display button:hover, #block-menu-block-govcms-menu-block-sidebar h2 button:focus, #block-menu-block-govcms-menu-block-sidebar .display button:focus {
   color: #313131;
-  background-color: #bbbbbb;
+  background-color: #BEBEBE;
 }
 
 #block-menu-block-govcms-menu-block-sidebar h2 button:after, #block-menu-block-govcms-menu-block-sidebar .display button:after {
@@ -10510,63 +8711,6 @@ body.not-front #content .view .pager {
   padding: 1.875rem;
   box-sizing: border-box;
   margin-bottom: 1.375rem;
-  color: white;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
 }
 
 @media (min-width: 768px) {
@@ -10611,33 +8755,41 @@ body.not-front #content .view .pager {
   }
 }
 
-#block-menu-menu-quick-links ul.menu li a, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a {
+#block-menu-menu-quick-links ul.menu li a:not(.no-style), .gov-front-layout .pane-menu-menu-quick-links ul.menu li a:not(.no-style) {
   color: white;
   text-decoration: none;
   outline: none;
-  border-bottom: solid 1px #f0f3f5;
+  border-bottom: solid 1px #F0F3F5;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
   transition-property: background-color, border-color, color;
 }
 
-#block-menu-menu-quick-links ul.menu li a:hover, #block-menu-menu-quick-links ul.menu li a:focus, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a:hover, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a:focus {
-  background-color: #f0f3f5;
+#block-menu-menu-quick-links ul.menu li a:not(.no-style):hover, #block-menu-menu-quick-links ul.menu li a:not(.no-style):focus, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a:not(.no-style):hover, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a:not(.no-style):focus {
+  background-color: #F0F3F5;
   color: #313131;
 }
 
-#block-menu-menu-quick-links ul.menu li a[rel~='external'], .gov-front-layout .pane-menu-menu-quick-links ul.menu li a[rel~='external'] {
+#block-menu-menu-quick-links ul.menu li a:not(.no-style)[rel~='external'], .gov-front-layout .pane-menu-menu-quick-links ul.menu li a:not(.no-style)[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-#block-menu-menu-quick-links ul.menu li a[rel~='external']:hover, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a[rel~='external']:hover {
+#block-menu-menu-quick-links ul.menu li a:not(.no-style)[rel~='external']:hover, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a:not(.no-style)[rel~='external']:hover {
   border-color: transparent;
 }
 
-#block-menu-menu-quick-links ul.menu li a[rel~='external']::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a[rel~='external']::after {
+#block-menu-menu-quick-links ul.menu li a:not(.no-style)[rel~='external']::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a:not(.no-style)[rel~='external']::after {
   background-size: 0.9em auto;
+}
+
+#block-menu-menu-quick-links ul.menu li a:not(.no-style).active, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a:not(.no-style).active {
+  color: white;
+}
+
+#block-menu-menu-quick-links ul.menu li a:not(.no-style).active:hover, #block-menu-menu-quick-links ul.menu li a:not(.no-style).active:focus, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a:not(.no-style).active:hover, .gov-front-layout .pane-menu-menu-quick-links ul.menu li a:not(.no-style).active:focus {
+  color: #313131;
 }
 
 #block-menu-menu-quick-links ul.menu li .see-more, .gov-front-layout .pane-menu-menu-quick-links ul.menu li .see-more {
@@ -10645,7 +8797,7 @@ body.not-front #content .view .pager {
   position: relative;
   margin-right: 1.6em;
   font-weight: 700;
-  color: transparent;
+  color: #18788d;
 }
 
 #block-menu-menu-quick-links ul.menu li .see-more::after, .gov-front-layout .pane-menu-menu-quick-links ul.menu li .see-more::after {
@@ -10751,128 +8903,7 @@ body.not-front #content .view .pager {
 #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display {
   font-size: 1.5rem;
   line-height: 1.5em;
-  color: #373854;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   margin-top: 0;
-}
-
-#block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a {
-  color: #373854;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #7bb3ff;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
-}
-
-#block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a:hover, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a:hover, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a:focus, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a:focus {
-  background-color: #7bb3ff;
-  color: #313131;
-}
-
-#block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external'], #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external'] {
-  display: inline;
-  position: relative;
-  margin-right: 1.6em;
-}
-
-#block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']:hover, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-#block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-#block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 .see-more, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display .see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: transparent;
-}
-
-#block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display .see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
-}
-
-#block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 .see-more:hover, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display .see-more:hover, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 .see-more:focus, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display .see-more:focus {
-  color: #313131;
-}
-
-#block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 span.placeholder-link, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display span.placeholder-link {
-  color: rgba(55, 56, 84, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-#block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 span.placeholder-link:hover, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display span.placeholder-link:hover {
-  cursor: not-allowed;
 }
 
 #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .field-name-field-description {
@@ -11017,128 +9048,7 @@ body.not-front #content .view .pager {
 .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display {
   font-size: 1.5rem;
   line-height: 1.5em;
-  color: #373854;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
   margin-top: 0;
-}
-
-.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a {
-  color: #373854;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #7bb3ff;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
-}
-
-.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a:hover, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a:hover, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a:focus, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a:focus {
-  background-color: #7bb3ff;
-  color: #313131;
-}
-
-.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a[rel~='external'], .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a[rel~='external'] {
-  display: inline;
-  position: relative;
-  margin-right: 1.6em;
-}
-
-.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a[rel~='external']:hover, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 .see-more, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display .see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: transparent;
-}
-
-.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 .see-more::after, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display .see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
-}
-
-.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 .see-more:hover, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display .see-more:hover, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 .see-more:focus, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display .see-more:focus {
-  color: #313131;
-}
-
-.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 span.placeholder-link, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display span.placeholder-link {
-  color: rgba(55, 56, 84, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-.gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2 span.placeholder-link:hover, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display span.placeholder-link:hover {
-  cursor: not-allowed;
 }
 
 .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .field-name-field-description {
@@ -11195,8 +9105,8 @@ body.not-front #content .view .pager {
 #content .search-form input.form-text {
   margin: 0;
   height: 3.25rem;
-  background-color: #f0f3f5;
-  border: 1px solid #bbbbbb;
+  background-color: #F0F3F5;
+  border: 1px solid #BEBEBE;
   z-index: 1;
   position: relative;
 }
@@ -11211,8 +9121,8 @@ body.not-front #content .view .pager {
   width: 3.25rem;
   height: 3.25rem;
   box-sizing: border-box;
-  background-color: #f0f3f5;
-  border: 1px solid #bbbbbb;
+  background-color: #F0F3F5;
+  border: 1px solid #BEBEBE;
   border-left: 0;
   border-radius: 0;
   background-repeat: no-repeat;
@@ -11234,7 +9144,7 @@ body.not-front #content .view .pager {
 
 .search-results .search-result .search-info {
   font-size: 0.875rem;
-  color: #6e6e6e;
+  color: #717171;
   text-transform: uppercase;
 }
 
@@ -11303,790 +9213,5 @@ body.not-front #content .view .pager {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   box-sizing: content-box;
-}
-
-h1, .hero .site-title,
-.hero-sml .site-title,
-.hero-med .site-title {
-  font-size: 3rem;
-  color: #ffffff;
-}
-
-h2, .display {
-  font-size: 2.5rem;
-  color: #373854;
-}
-
-.region-sidebar-first .block > h2, .region-sidebar-first .block > .display {
-  color: #373854;
-}
-
-h3 {
-  font-size: 1.625rem;
-  font-weight: 700;
-  color: #373854;
-}
-
-h4, h5, h6 {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: #373854;
-}
-
-html {
-  color: #373854;
-}
-
-blockquote {
-  background-color: transparent;
-  padding: .8em 0;
-  margin: 0;
-}
-
-blockquote::before {
-  content: none;
-}
-
-blockquote p {
-  border-left: 5px solid #6e6e6e;
-  padding: 0.6em 2.4em .6em 2.4em;
-  margin-bottom: 0em;
-}
-
-blockquote p:last-of-type:not(:only-of-type) {
-  font-size: .8em;
-}
-
-blockquote p:last-of-type:not(:only-of-type)::before {
-  content: '\2014 -';
-}
-
-blockquote p[style*="text-align: right"] {
-  border-left: none;
-  border-right: 5px solid #6e6e6e;
-}
-
-blockquote p[style*="text-align: right"]:last-of-type:not(:only-of-type)::before {
-  content: none;
-}
-
-blockquote p[style*="text-align: right"]:last-of-type:not(:only-of-type)::after {
-  content: ' \2014';
-}
-
-.content-table th, .field-name-body table th, form.webform-client-form .webform-component-grid table.webform-grid th, .content-table thead, .field-name-body table thead, form.webform-client-form .webform-component-grid table.webform-grid thead, .content-table tfoot, .field-name-body table tfoot, form.webform-client-form .webform-component-grid table.webform-grid tfoot {
-  font-size: 1em;
-  font-weight: bold;
-  color: #373854;
-}
-
-.content-table th, .field-name-body table th, form.webform-client-form .webform-component-grid table.webform-grid th, .content-table thead, .field-name-body table thead, form.webform-client-form .webform-component-grid table.webform-grid thead {
-  border-bottom: solid 2px #6E6E6E;
-}
-
-.content-table tfoot, .field-name-body table tfoot, form.webform-client-form .webform-component-grid table.webform-grid tfoot {
-  border-top: solid 2px #6E6E6E;
-}
-
-.content-table tr, .field-name-body table tr, form.webform-client-form .webform-component-grid table.webform-grid tr {
-  border-top: 1px solid #CCCCCC;
-}
-
-color: #373854;
-a {
-  color: #373854;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #9e379f;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
-}
-
-a:hover, a:focus {
-  background-color: #9e379f;
-  color: white;
-}
-
-a[rel~='external'] {
-  display: inline;
-  position: relative;
-  margin-right: 1.6em;
-}
-
-a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-/*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-.see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: transparent;
-}
-
-.see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
-}
-
-.see-more:hover, .see-more:focus {
-  color: white;
-}
-
-/*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
-span.placeholder-link {
-  color: rgba(55, 56, 84, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-span.placeholder-link:hover {
-  cursor: not-allowed;
-}
-
-main > article {
-  color: #373854;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
-}
-
-main > article a {
-  color: #373854;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #9e379f;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
-}
-
-main > article a:hover, main > article a:focus {
-  background-color: #9e379f;
-  color: white;
-}
-
-main > article a[rel~='external'] {
-  display: inline;
-  position: relative;
-  margin-right: 1.6em;
-}
-
-main > article a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-main > article a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-main > article .see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: transparent;
-}
-
-main > article .see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
-}
-
-main > article .see-more:hover, main > article .see-more:focus {
-  color: white;
-}
-
-main > article span.placeholder-link {
-  color: rgba(55, 56, 84, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-main > article span.placeholder-link:hover {
-  cursor: not-allowed;
-}
-
-main > article button,
-main > article .button,
-main > article [role='button'],
-main > article [type='submit'],
-main > article [type='reset'],
-main > article [type='button'] {
-  background-color: transparent;
-  color: #fff;
-  border-color: transparent;
-}
-
-main > article button:hover, main > article button:focus,
-main > article .button:hover,
-main > article .button:focus,
-main > article [role='button']:hover,
-main > article [role='button']:focus,
-main > article [type='submit']:hover,
-main > article [type='submit']:focus,
-main > article [type='reset']:hover,
-main > article [type='reset']:focus,
-main > article [type='button']:hover,
-main > article [type='button']:focus {
-  background-color: transparent;
-  color: #fff;
-  border-color: transparent;
-}
-
-main > article button:active,
-main > article .button:active,
-main > article [role='button']:active,
-main > article [type='submit']:active,
-main > article [type='reset']:active,
-main > article [type='button']:active {
-  background-color: transparent;
-  border-color: transparent;
-}
-
-footer[role='contentinfo'] {
-  color: #373854;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
-}
-
-footer[role='contentinfo'] a {
-  color: #373854;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #9e379f;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
-}
-
-footer[role='contentinfo'] a:hover, footer[role='contentinfo'] a:focus {
-  background-color: #9e379f;
-  color: white;
-}
-
-footer[role='contentinfo'] a[rel~='external'] {
-  display: inline;
-  position: relative;
-  margin-right: 1.6em;
-}
-
-footer[role='contentinfo'] a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-footer[role='contentinfo'] a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-footer[role='contentinfo'] .see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: transparent;
-}
-
-footer[role='contentinfo'] .see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
-}
-
-footer[role='contentinfo'] .see-more:hover, footer[role='contentinfo'] .see-more:focus {
-  color: white;
-}
-
-footer[role='contentinfo'] span.placeholder-link {
-  color: rgba(55, 56, 84, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-footer[role='contentinfo'] span.placeholder-link:hover {
-  cursor: not-allowed;
-}
-
-footer[role='contentinfo'] button,
-footer[role='contentinfo'] .button,
-footer[role='contentinfo'] [role='button'],
-footer[role='contentinfo'] [type='submit'],
-footer[role='contentinfo'] [type='reset'],
-footer[role='contentinfo'] [type='button'] {
-  background-color: #493267;
-  color: transparent;
-  border-color: #493267;
-}
-
-footer[role='contentinfo'] button:hover, footer[role='contentinfo'] button:focus,
-footer[role='contentinfo'] .button:hover,
-footer[role='contentinfo'] .button:focus,
-footer[role='contentinfo'] [role='button']:hover,
-footer[role='contentinfo'] [role='button']:focus,
-footer[role='contentinfo'] [type='submit']:hover,
-footer[role='contentinfo'] [type='submit']:focus,
-footer[role='contentinfo'] [type='reset']:hover,
-footer[role='contentinfo'] [type='reset']:focus,
-footer[role='contentinfo'] [type='button']:hover,
-footer[role='contentinfo'] [type='button']:focus {
-  background-color: transparent;
-  color: #fff;
-  border-color: transparent;
-}
-
-footer[role='contentinfo'] button:active,
-footer[role='contentinfo'] .button:active,
-footer[role='contentinfo'] [role='button']:active,
-footer[role='contentinfo'] [type='submit']:active,
-footer[role='contentinfo'] [type='reset']:active,
-footer[role='contentinfo'] [type='button']:active {
-  background-color: transparent;
-  border-color: transparent;
-}
-
-@media (min-width: 768px) {
-  .header__inner .header__secondary-menu {
-    color: #9e379f;
-    /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-    /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
-  }
-  .header__inner .header__secondary-menu a {
-    color: #9e379f;
-    text-decoration: none;
-    outline: none;
-    border-bottom: solid 1px #9e379f;
-    transition-timing-function: ease-in-out;
-    transition-duration: 0.1s;
-    transition-property: background-color, border-color, color;
-  }
-  .header__inner .header__secondary-menu a:hover, .header__inner .header__secondary-menu a:focus {
-    background-color: #9e379f;
-    color: white;
-  }
-  .header__inner .header__secondary-menu a[rel~='external'] {
-    display: inline;
-    position: relative;
-    margin-right: 1.6em;
-  }
-  .header__inner .header__secondary-menu a[rel~='external']:hover {
-    border-color: transparent;
-  }
-  .header__inner .header__secondary-menu a[rel~='external']::after {
-    background-size: 0.9em auto;
-  }
-  .header__inner .header__secondary-menu .see-more {
-    display: inline-block;
-    position: relative;
-    margin-right: 1.6em;
-    font-weight: 700;
-    color: transparent;
-  }
-  .header__inner .header__secondary-menu .see-more::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -1.2em;
-    display: block;
-    width: 1.2em;
-    height: 1.2em;
-    background-repeat: no-repeat;
-    background-position: right 0.4em;
-    background-size: 0.64em auto;
-  }
-  .header__inner .header__secondary-menu .see-more:hover, .header__inner .header__secondary-menu .see-more:focus {
-    color: white;
-  }
-  .header__inner .header__secondary-menu span.placeholder-link {
-    color: rgba(158, 55, 159, 0.7);
-    border-bottom: none;
-    cursor: not-allowed;
-  }
-  .header__inner .header__secondary-menu span.placeholder-link:hover {
-    cursor: not-allowed;
-  }
-  .header__inner .header__secondary-menu a {
-    padding: 0 1px 0 1px;
-  }
-}
-
-.content-body .content {
-  color: #373854;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
-}
-
-.content-body .content a {
-  color: #373854;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #373854;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
-}
-
-.content-body .content a:hover, .content-body .content a:focus {
-  background-color: #373854;
-  color: white;
-}
-
-.content-body .content a[rel~='external'] {
-  display: inline;
-  position: relative;
-  margin-right: 1.6em;
-}
-
-.content-body .content a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-.content-body .content a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-.content-body .content .see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: transparent;
-}
-
-.content-body .content .see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
-}
-
-.content-body .content .see-more:hover, .content-body .content .see-more:focus {
-  color: white;
-}
-
-.content-body .content span.placeholder-link {
-  color: rgba(55, 56, 84, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-.content-body .content span.placeholder-link:hover {
-  cursor: not-allowed;
-}
-
-#content form input[type="text"], #content label {
-  color: #313131;
-}
-
-.region-navigation {
-  background-color: #373854;
-}
-
-.region-navigation .block-superfish ul.sf-menu > li > a:hover, .region-navigation .block-superfish ul.sf-menu > li > a:focus {
-  border-bottom-color: #9e379f;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -23,6 +23,9 @@
       // Find all links and apply a rel if external.
       $('a', context).each(function() {
         var $this = $(this);
+        if ($this.children('img').length > 0 || $this.children('picture').length > 0) {
+          $this.addClass('no-style');
+        }
         if (isExternalRegexClosure($this.attr('href'))) {
           $this.attr('rel', 'external');
           $this.attr('target', '_blank');

@@ -79,7 +79,7 @@ body {
     margin-bottom: $default_padding;
   }
   .content {
-    @include link-colours($primary_1, $secondary_3, $neutral_1);
+    // @include link-colours($primary_1, $secondary_3, $neutral_1);
   }
 }
 
@@ -195,10 +195,6 @@ body {
 // =========================================================
 // MISC ELEMENT STYLING
 // =========================================================
-.more-link {
-  @include link-colours($primary_1, $secondary_3, $neutral_1);
-}
-
 ul, ol, dl, p, dt, dd {
   // Global override for 16px font-size on tablet.
   @include breakpoint(tablet) {
@@ -226,4 +222,113 @@ a[rel~='external']::after {
 
 #content {
   @include button-colours($secondary_3, $secondary_2, #0c3c47, white);
+}
+
+// =========================================================
+// LINKS
+// =========================================================
+@include link-colours($secondary_2, $secondary_2, white);
+// =========================================================
+// TABLES
+// =========================================================
+.content-table {
+  th, thead, tfoot {
+    font-size: 1em;
+    font-weight: bold;
+    color: $secondary_1;
+  }
+  th, thead {
+    border-bottom: solid 2px #6E6E6E;
+  }
+  tfoot {
+    border-top: solid 2px #6E6E6E;
+  }
+  tr {
+    border-top: 1px solid #CCCCCC;
+  }
+}
+
+// =========================================================
+// TYPOGRAPHY
+// =========================================================
+h1 {
+  font-size: rem(48);
+  color: #ffffff;
+}
+
+h2 {
+  font-size: rem(40);
+  color: $secondary_1;
+}
+
+.region-sidebar-first .block>h2 {
+  color: $secondary_1;
+}
+
+h3 {
+  font-size: rem(26);
+  font-weight: $heading-font-weight;
+  color: $secondary_1;
+}
+
+h4, h5, h6 {
+  font-size: rem(18);
+  font-weight: $heading-font-weight;
+  color: $secondary_1;
+}
+
+html {
+  color: $secondary_1;
+}
+
+blockquote {
+  background-color: transparent;
+  padding: .8em 0;
+  margin: 0;
+  &::before {
+    content: none;
+  }
+  p {
+    border-left: 5px solid $neutral_2;
+    // Replace the bottom margin with padding so the borders blend.
+    padding: 0.6em 2.4em .6em 2.4em;
+    margin-bottom: 0em;
+    &:last-of-type:not(:only-of-type) {
+      font-size: .8em;
+      &::before {
+        content: '\2014 -';
+      }
+    }
+  }
+  p[style*="text-align: right"] {
+    border-left: none;
+    border-right: 5px solid $neutral_2;
+    &:last-of-type:not(:only-of-type) {
+      &::before {
+        content: none;
+      }
+      &::after {
+        content: ' \2014';
+      }
+    }
+  }
+}
+
+// =========================================================
+// FORMS
+// =========================================================
+#content {
+  form input[type="text"], label {
+    color: $neutral_1;
+  }
+}
+
+// =========================================================
+// NAVIGATION
+// =========================================================
+.region-navigation {
+  background-color: $secondary_1;
+  .block-superfish ul.sf-menu>li>a:hover, .block-superfish ul.sf-menu>li>a:focus {
+    border-bottom-color: $secondary_2;
+  }
 }
