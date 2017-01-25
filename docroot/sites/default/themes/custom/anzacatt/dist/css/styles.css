@@ -7056,12 +7056,13 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 
 .header__inner .logo-and-search .logo-wrapper a img {
   float: left;
-  max-height: 3.125rem;
+  max-height: 4.0625rem;
 }
 
 @media (min-width: 768px) {
   .header__inner .logo-and-search .logo-wrapper a img {
     max-height: 100%;
+    width: auto;
   }
 }
 
@@ -7174,49 +7175,49 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   }
 }
 
-.header__inner .region-header .search-form-widget {
+.header__inner .region-header .block-search-api-page {
   margin-right: 0;
   height: 3.25rem;
 }
 
 @media (min-width: 768px) {
-  .header__inner .region-header .search-form-widget {
+  .header__inner .region-header .block-search-api-page {
     width: 15.625rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .header__inner .region-header .search-form-widget {
+  .header__inner .region-header .block-search-api-page {
     width: 23.125rem;
   }
 }
 
-.js .header__inner .region-header .search-form-widget {
+.js .header__inner .region-header .block-search-api-page {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .js .header__inner .region-header .search-form-widget {
+  .js .header__inner .region-header .block-search-api-page {
     display: block;
   }
 }
 
-.header__inner .region-header .search-form-widget.search-toggle {
+.header__inner .region-header .block-search-api-page.search-toggle {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .header__inner .region-header .search-form-widget.search-toggle {
+  .header__inner .region-header .block-search-api-page.search-toggle {
     display: block;
   }
 }
 
-.header__inner .region-header .search-form-widget.search-toggle.search-open {
+.header__inner .region-header .block-search-api-page.search-toggle.search-open {
   display: block;
   margin-top: 1.375rem;
 }
 
-.header__inner .region-header .search-form-widget > div {
+.header__inner .region-header .block-search-api-page > .content > form > div {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -7225,7 +7226,7 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
           justify-content: flex-start;
 }
 
-.header__inner .region-header .search-form-widget > div .form-item {
+.header__inner .region-header .block-search-api-page > .content > form > div .form-item {
   margin: 0;
   width: 100%;
   box-sizing: border-box;
@@ -7234,16 +7235,17 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
           flex: 1;
 }
 
-.header__inner .region-header .search-form-widget > div .form-item input {
+.header__inner .region-header .block-search-api-page > .content > form > div .form-item input {
   margin: 0;
   height: 3.25rem;
   background-color: #f0f3f5;
   border: 1px solid #bbbbbb;
   z-index: 1;
   position: relative;
+  background-color: white;
 }
 
-.header__inner .region-header .search-form-widget > div input[type="submit"] {
+.header__inner .region-header .block-search-api-page > .content > form > div input[type="submit"] {
   overflow: hidden;
   text-indent: 101%;
   white-space: nowrap;
@@ -7260,9 +7262,10 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../images/svg/magnifying_glass.svg);
+  background-color: white;
 }
 
-.header__inner .region-header .search-form-widget > div input[type="submit"]:hover, .header__inner .region-header .search-form-widget > div input[type="submit"]:focus {
+.header__inner .region-header .block-search-api-page > .content > form > div input[type="submit"]:hover, .header__inner .region-header .block-search-api-page > .content > form > div input[type="submit"]:focus {
   background-image: url(../images/svg/magnifying_glass_hover.svg);
 }
 
@@ -7310,7 +7313,17 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   position: absolute;
   z-index: 1;
   right: 1.25rem;
-  top: 1rem;
+  top: 1.375rem;
+}
+
+body.navbar-administration .mobile-expand-menu {
+  margin-top: 39px;
+}
+
+@media (min-width: 768px) {
+  body.navbar-administration .mobile-expand-menu {
+    margin-top: 0;
+  }
 }
 
 .mobile-expand-menu:hover, .mobile-expand-menu:focus {
@@ -7737,7 +7750,7 @@ body #content .content-header:before {
   }
 }
 
-.sidebar-first {
+.content-sidebar-first {
   -webkit-order: -1;
       -ms-flex-order: -1;
           order: -1;
@@ -7745,7 +7758,7 @@ body #content .content-header:before {
 }
 
 @media (min-width: 1024px) {
-  .sidebar-first {
+  .content-sidebar-first {
     width: 20.625rem;
     min-width: 20.625rem;
     padding-right: 3.75rem;
@@ -8940,9 +8953,8 @@ ul.tabs.primary {
   color: white;
   background-color: #373854;
   margin-bottom: 1.5625rem;
-  background-position-x: 50%;
-  background-position-y: 50%;
-  background-size: 100%;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -12010,46 +12022,6 @@ footer[role='contentinfo'] [type='button']:active {
 
 #content form input[type="text"], #content label {
   color: #313131;
-}
-
-#search-api-page-search-form-site-search > div {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#search-api-page-search-form-site-search div.form-type-textfield input {
-  placeholder: '';
-  width: 16.625rem;
-  height: 50px;
-  border: 1px solid #bbbbbb;
-  border-right: 0px;
-}
-
-@media (min-width: 768px) {
-  #search-api-page-search-form-site-search div.form-type-textfield input {
-    width: 19.375rem;
-  }
-}
-
-#search-api-page-search-form-site-search input[type="submit"] {
-  margin-top: 1.375rem;
-  height: 3.125rem;
-  background: url(../images/svg/magnifying_glass.svg) no-repeat center;
-  width: 3.125rem;
-  text-indent: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  color: transparent;
-  border: 1px solid #bbbbbb;
-  position: absolute;
-  left: 16.5625rem;
-}
-
-@media (min-width: 768px) {
-  #search-api-page-search-form-site-search input[type="submit"] {
-    left: 16.25rem;
-  }
 }
 
 .region-navigation {

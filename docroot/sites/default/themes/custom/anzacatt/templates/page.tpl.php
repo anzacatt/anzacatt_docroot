@@ -111,7 +111,7 @@
           <?php print render($page['content']); ?>
           <?php print $feed_icons; ?>
           <?php if ($sidebar_first): ?>
-            <aside class="sidebar-first">
+            <aside class="content-sidebar-first">
               <?php print $sidebar_first; ?>
             </aside>
           <?php endif; ?>
