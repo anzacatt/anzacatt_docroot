@@ -76,6 +76,7 @@ var desktop_column = 1170;
         var $this = $(this);
         if (isExternalRegexClosure($this.attr('href'))) {
           $this.attr('rel', 'external');
+          $this.attr('target', '_blank');
         }
       })
     }
