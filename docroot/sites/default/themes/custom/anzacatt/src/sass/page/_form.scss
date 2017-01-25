@@ -287,6 +287,7 @@ form.webform-client-form {
     text-indent: 0.01px;
     text-overflow: '';
     padding-left: 5px;
+    padding-right: 35px;
   }
 }
 
@@ -312,4 +313,10 @@ form.webform-client-form {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid #FFFFFF;
+}
+
+div.workbench-info-block {
+  .form-type-select:after {
+    border-top: 10px solid #FFFBD9;
+  }
 }

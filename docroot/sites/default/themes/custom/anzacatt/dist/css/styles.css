@@ -8798,6 +8798,7 @@ form.webform-client-form .webform-next {
   text-indent: 0.01px;
   text-overflow: '';
   padding-left: 5px;
+  padding-right: 35px;
 }
 
 .form-type-select:before {
@@ -8822,6 +8823,10 @@ form.webform-client-form .webform-next {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid #FFFFFF;
+}
+
+div.workbench-info-block .form-type-select:after {
+  border-top: 10px solid #FFFBD9;
 }
 
 @media screen and (min-width: 768px) {
@@ -10194,6 +10199,22 @@ body.not-front #content .view .pager {
 @media (min-width: 768px) {
   .view-members .views-exposed-form select {
     min-width: 500px;
+  }
+}
+
+.page-node .region-content .node-member-profile h1, .page-node .region-content .node-member-profile .hero .site-title, .hero .page-node .region-content .node-member-profile .site-title, .page-node .region-content .node-member-profile
+.hero-sml .site-title,
+.hero-sml .page-node .region-content .node-member-profile .site-title, .page-node .region-content .node-member-profile
+.hero-med .site-title,
+.hero-med .page-node .region-content .node-member-profile .site-title {
+  color: #373854;
+}
+
+@media (min-width: 768px) {
+  .page-node .region-content .node-member-profile .field-name-field-image {
+    float: right;
+    margin-left: 20px;
+    margin-top: 0;
   }
 }
 
