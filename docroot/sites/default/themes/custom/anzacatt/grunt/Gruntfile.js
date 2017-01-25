@@ -359,24 +359,24 @@ module.exports = function(grunt) {
   }
 
   // Strip comments
-  GRUNT_CONFIG['strip_code'] = {
-    options: {
-      blocks: [
-        {
-          start_block: "/*** test-code ***/",
-          end_block: "/*** end-test-code ***/"
-        }
-      ],
-      parityCheck: true,
-      intersectionCheck: true
-    },
-    your_target: {
-      src: THEME_DIR + 'src/js/script.js',
-      dest: THEME_DIR + 'dist/js/script.js',
-    },
-  };
-  grunt.loadNpmTasks('grunt-strip-code');
-  REGISTERED_TASKS = REGISTERED_TASKS.concat(['strip_code']);
+  // GRUNT_CONFIG['strip_code'] = {
+  //   options: {
+  //     blocks: [
+  //       {
+  //         start_block: "/*** test-code ***/",
+  //         end_block: "/*** end-test-code ***/"
+  //       }
+  //     ],
+  //     parityCheck: true,
+  //     intersectionCheck: true
+  //   },
+  //   your_target: {
+  //     src: THEME_DIR + 'src/js/script.js',
+  //     dest: THEME_DIR + 'dist/js/script.js',
+  //   },
+  // };
+  // grunt.loadNpmTasks('grunt-strip-code');
+  // REGISTERED_TASKS = REGISTERED_TASKS.concat(['strip_code']);
 
   // =========================================================
   // GRUNT SETUP

@@ -50,6 +50,10 @@
         $button.unbind('click', toggle_menu).bind('click', toggle_menu);
         $(window).unbind('resize', menu_bar_resize).bind('resize', menu_bar_resize);
         menu_bar_resize();
+
+        // Add secondary menu (above header) into mobile menu.
+        var $list_items = $('.header__secondary-menu').children('ul').children('li').clone();
+        $widget.children('ul').append($list_items);
       }
     }
   };
