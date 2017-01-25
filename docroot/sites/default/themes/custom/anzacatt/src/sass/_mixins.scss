@@ -68,7 +68,7 @@
   clip: auto;
   height: auto;
   width: auto;
-  overflow: auto;
+  overflow: initial;
 }
 
 @mixin transition-fade() {

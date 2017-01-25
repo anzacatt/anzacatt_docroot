@@ -4,6 +4,9 @@
 .footer-inner-wrapper {
   background-color: $secondary_1;
   padding-top: rem(20px);
+  a[rel~='external']::after {
+    background-image: url(../images/svg/external-link--white.svg) !important;
+  }
   .region-footer {
     padding-left: rem(20px);
     padding-right: rem(20px);
@@ -13,9 +16,6 @@
       margin-right: auto;
     }
     .block-menu, .block-menu-block {
-      &>h2 {
-        @include visually-hidden;
-      }
       .content {
         @include center-column($desktop_column);
         padding-left: 0 !important;
@@ -52,9 +52,10 @@
             margin-bottom: $default_padding;
             padding: 0;
             list-style: none;
-            margin-bottom: rem(15px);
+            margin-bottom: rem(12px);
             &>a {
               font-weight: 300;
+              border-bottom: 0;
               @include breakpoint(tablet) {
                 font-weight: 400;
               }
@@ -80,19 +81,34 @@
         }
       }
     }
+    #block-menu-menu-footer-sub-menu {
+      &>h2 {
+        @include visually-hidden;
+      }
+    }
     #block-menu-menu-footer-left-menu, #block-menu-menu-footer-right-menu {
       vertical-align: top;
-      padding-top: rem(80px);
+      padding-top: rem(22px);
+      @include breakpoint(tablet) {
+        padding-top: rem(80px);
+      }
       &>h2 {
-        @include visually-hidden-off;
+        // @include visually-hidden-off;
         @include block-heading;
         color: $background !important;
         font-size: rem(18px) !important;
         font-weight: 600 !important;
+        margin-top: 0;
+      }
+      .content {
+        padding-top: 4px;
       }
       @include breakpoint(tablet) {
         width: 49%;
         display: inline-block;
+        @include breakpoint(tablet) {
+          padding-right: rem(22px);
+        }
         .content {
           &>ul.menu, &>.menu-block-wrapper>ul.menu {
             &>li {

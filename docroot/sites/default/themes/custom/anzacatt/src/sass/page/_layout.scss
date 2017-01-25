@@ -5,6 +5,9 @@ html {
   &.large-fonts {
     font-size: $large-font-size;
   }
+  &.video {
+    margin-bottom: 0;
+  }
 }
 
 // =========================================================
