@@ -82,26 +82,23 @@ body.not-front #content {
   }
 }
 
-.view-content {
-  overflow-x: auto;
-  .views-table {
-    min-width: 600px;
-    th {
-      border: none;
-      white-space: nowrap;
-    }
-    tr.odd {
-      background-color: $background;
-    }
-    tr.even {
-      background-color: transparent;
-    }
-    tr.even, tr.odd {
-      border-bottom: $light-grey;
-    }
-    th, td {
-      padding: 10px 20px;
-    }
+.views-table {
+  width: 100%;
+  th {
+    border: none;
+    white-space: nowrap;
+  }
+  tr.odd {
+    background-color: $background;
+  }
+  tr.even {
+    background-color: transparent;
+  }
+  tr.even, tr.odd {
+    border-bottom: $light-grey;
+  }
+  th, td {
+    padding: 10px 20px;
   }
 }
 
@@ -118,6 +115,18 @@ body.not-front #content {
     .views-exposed-widget {
       float: none;
       width: 100%;
+    }
+  }
+}
+
+// =========================================================
+// VIEWS MEMEBERS
+// =========================================================
+.view-members {
+  .view-content {
+    overflow-x: auto;
+    .views-table {
+      min-width: 600px;
     }
   }
 }
