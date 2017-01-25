@@ -1,11 +1,11 @@
-#block-menu-menu-quick-links {
+#block-menu-menu-quick-links, .gov-front-layout .pane-menu-menu-quick-links {
   padding-top: $default_padding * 2;
   padding-bottom: $default_padding * 2;
   h2 {
     @include center-column($desktop_column);
     @include medium-title;
   }
-  &>.content {
+  &>.content, &>.pane-content {
     @include center-column($desktop_column);
   }
   ul.menu {

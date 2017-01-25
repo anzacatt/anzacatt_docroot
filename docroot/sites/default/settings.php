@@ -16,20 +16,24 @@ if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
 
   switch ($_ENV['AH_SITE_ENVIRONMENT']) {
     case 'dev':
-      $conf['googleanalytics_account'] = 'UA-';
+      $conf['googleanalytics_account'] = 'UA-90532529-1';
       $conf['shield_enabled'] = 1;
       $conf['shield_user'] = 'anzacatt';
       $conf['shield_pass'] = 'anzacatt';
       break;
 
     case 'test':
-      $conf['googleanalytics_account'] = 'UA-';
+      $conf['googleanalytics_account'] = 'UA-90532529-1';
       $conf['shield_enabled'] = 1;
       $conf['shield_user'] = 'anzacatt';
       $conf['shield_pass'] = 'anzacatt';
       break;
 
     case 'prod':
+      $conf['googleanalytics_account'] = 'UA-90532529-1';
+      $conf['shield_enabled'] = 0;
+      $conf['shield_user'] = '';
+      $conf['shield_pass'] = '';
       break;
   }
 }

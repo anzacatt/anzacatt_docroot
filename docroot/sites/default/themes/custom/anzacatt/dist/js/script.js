@@ -42,7 +42,7 @@ var desktop_column = 1170;
       var randomParliament = randomFrom(parliaments);
       // Get random image for the selected parliament.
       var selectedImage = randomFrom(parliamentaryImages[randomParliament]);
-      var element = $('#page .content-header');
+      var element = $('#page .content-header, .front .gov-front-layout .pane-bean-panels .pane-content');
       element.attr('style', 'background-image: url(' + selectedImage + ')');
     }
   }
@@ -76,6 +76,7 @@ var desktop_column = 1170;
         var $this = $(this);
         if (isExternalRegexClosure($this.attr('href'))) {
           $this.attr('rel', 'external');
+          $this.attr('target', '_blank');
         }
       })
     }
@@ -514,23 +515,25 @@ var desktop_column = 1170;
       // Wait for twitter to load, then apply a custom style.
       var url = settings.basePath + settings.pathToTheme + "/dist/css/custom_twitter_theme.css";
 
-      twttr.ready(function() {
-        twttr.events.bind('loaded', function(event) {
-          // Inject a custom stylesheet into the twitter frame.
-          for (var i = 0; i < frames.length; i++) {
-            var frame = frames[i];
-            try {
-              if (frame.frameElement.id.indexOf('twitter-widget') >= 0) {
-                embedCss(frame, frame.document, url);
+      if (typeof twttr != 'undefined') {
+        twttr.ready(function() {
+          twttr.events.bind('loaded', function(event) {
+            // Inject a custom stylesheet into the twitter frame.
+            for (var i = 0; i < frames.length; i++) {
+              var frame = frames[i];
+              try {
+                if (frame.frameElement.id.indexOf('twitter-widget') >= 0) {
+                  embedCss(frame, frame.document, url);
+                }
+              }
+              catch (e) {
+                console.log("caught an error");
+                console.log(e);
               }
             }
-            catch (e) {
-              console.log("caught an error");
-              console.log(e);
-            }
-          }
+          });
         });
-      });
+      }
     }
   };
 

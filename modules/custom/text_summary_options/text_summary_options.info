@@ -1,4 +1,0 @@
-name = Text Summary Options
-description = Provide additional options for "Long text with summary" widget.
-core = 7.x
-package = govCMS core

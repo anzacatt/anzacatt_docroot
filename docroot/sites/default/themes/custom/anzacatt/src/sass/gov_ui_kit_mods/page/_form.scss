@@ -2,33 +2,4 @@
   form input[type="text"], label {
     color: $neutral_1;
   }
-  input[type="submit"] {
-    font-size: rem(16);
-    color: #ffffff;
-    background-color: $secondary_1;
-    &:hover {
-      background-color: $secondary_2;
-    }
-  }
-}
-
-#search-api-page-search-form-site-search {
-  &>div {
-    display: flex;
-  }
-  div.form-type-textfield input {
-    placeholder: '';
-  }
-  input[type="submit"] {
-    margin-top: 1.375rem;
-    height: 2.4rem;
-    background: url(../images/svg/magnifying_glass.svg) no-repeat center;
-    width: 2.5rem;
-    text-indent: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    color: transparent;
-    border: 2px solid #bbbbbb;
-    border-left-width: 0;
-  }
 }

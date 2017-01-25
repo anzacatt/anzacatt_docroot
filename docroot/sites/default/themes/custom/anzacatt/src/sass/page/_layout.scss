@@ -11,7 +11,7 @@ html {
 // GENERAL HEADING LAYOUT
 // =========================================================
 #content {
-  @include button-colours($secondary_1, darken($secondary_1, 20%), #fff, darken($secondary_1, 40%), darken($secondary_1, 40%));
+  //@include button-colours($secondary_3, darken($secondary_1, 20%), #ffffff, darken($secondary_1, 40%), darken($secondary_1, 40%));
   body.not-front & {
     .content-header {
       background-color: $secondary_1;
@@ -35,6 +35,31 @@ html {
           }
         }
       }
+    }
+  }
+}
+
+body {
+  #content {
+    .content-header, .content-header * {
+      position: relative;
+      color: white;
+    }
+    .content-header:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: -moz-linear-gradient(left, rgba(73, 48, 104, 0.67) 0%, rgba(159, 49, 161, 0.67) 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, rgba(73, 48, 104, 0.67) 0%, rgba(159, 49, 161, 0.67) 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, rgba(73, 48, 104, 0.67) 0%, rgba(159, 49, 161, 0.67) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54493068', endColorstr='#549f31a1', GradientType=1);
+      /* IE6-9 */
     }
   }
 }
@@ -64,7 +89,7 @@ html {
   }
 }
 
-.sidebar-first {
+.content-sidebar-first {
   order: -1;
   width: 100%;
   @include breakpoint(large_tablet) {
@@ -151,7 +176,7 @@ html {
 // =========================================================
 .region-sidebar-second {
   &>.block {
-    border-top: 1px solid #9B9B9B;
+    border-top: 1px solid #9b9b9b;
     &:nth-child(3n+1) {
       background-color: white;
     }
@@ -159,7 +184,7 @@ html {
       background-color: $non-white;
     }
     &:nth-child(3n+3) {
-      background-color: #E6E6E6;
+      background-color: #e6e6e6;
     }
   }
 }
@@ -197,5 +222,5 @@ a[rel~='external']::after {
 }
 
 #content {
-  @include button-colours($secondary_1, #10505F, #0C3C47, white);
+  @include button-colours($secondary_3, $secondary_2, #0c3c47, white);
 }

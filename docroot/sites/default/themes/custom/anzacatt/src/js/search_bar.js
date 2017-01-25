@@ -43,10 +43,10 @@
 
   Drupal.behaviors.anzacatt_search = {
     attach: function(context, settings) {
-      $widget = $('header .search-form-widget', context);
+      $widget = $('header .block-search-api-page', context);
       if ($widget.length > 0) {
         $button = $('<button class="mobile-expand-search" aria-controls="' + $widget.attr('id') + '" aria-expanded="false">Toggle search form</button>');
-        $logo_wrapper = $('.logo-wrapper .header-title');
+        $logo_wrapper = $('.logo-wrapper .header__logo');
         $button.unbind('click', toggle_search).bind('click', toggle_search);
         $(window).unbind('resize', search_bar_resize).bind('resize', search_bar_resize);
         search_bar_resize();

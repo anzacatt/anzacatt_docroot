@@ -1,69 +1,102 @@
 // =========================================================
 // GENERAL FOOTER MENUS
 // =========================================================
-.region-footer {
-  background-color: $primary_1;
-  .block-menu, .block-menu-block {
-    &>h2 {
-      @include visually-hidden;
+.footer-inner-wrapper {
+  background-color: $secondary_1;
+  padding-top: rem(20px);
+  .region-footer {
+    padding-left: rem(20px);
+    padding-right: rem(20px);
+    @include breakpoint(tablet) {
+      max-width: rem(1170px);
+      margin-left: auto;
+      margin-right: auto;
     }
-    .content {
-      @include center-column($desktop_column);
-      padding-top: rem(17px);
-      padding-bottom: rem(17px);
-      color: white;
-      @include breakpoint(tablet) {
-        padding-top: rem(64px);
-        padding-bottom: rem(64px);
+    .block-menu, .block-menu-block {
+      &>h2 {
+        @include visually-hidden;
       }
-      // First level of nav should be horizontal.
-      &>ul.menu, &>.menu-block-wrapper>ul.menu {
+      .content {
+        @include center-column($desktop_column);
+        padding-left: 0 !important;
+        padding-top: rem(17px);
+        padding-bottom: rem(17px);
+        color: white;
         @include breakpoint(tablet) {
-          display: table;
-          width: 100%;
-          table-layout: fixed;
-          margin-bottom: 0;
+          padding-top: rem(64px);
+          padding-bottom: rem(64px);
         }
-        &>li {
+        // First level of nav should be horizontal.
+        &>ul.menu, &>.menu-block-wrapper>ul.menu {
           @include breakpoint(tablet) {
-            display: table-cell;
+            display: table;
+            width: 100%;
+            table-layout: fixed;
             margin-bottom: 0;
-            margin-bottom: $default_padding;
+          }
+          &>li {
+            @include breakpoint(tablet) {
+              display: table-cell;
+              margin-bottom: 0;
+              margin-bottom: $default_padding;
+            }
           }
         }
-      }
-      ul.menu {
-        padding-left: 0;
-        margin-bottom: 0;
-        &>li {
-          @include link-colours(white, $neutral_4, $neutral_1);
-          margin-left: 0;
-          margin-right: 0;
-          margin-bottom: $default_padding;
-          padding: 0;
-          list-style: none;
-          margin-bottom: rem(15px);
-          &>a {
-            font-weight: 600;
-            @include breakpoint(tablet) {
-              font-weight: 700;
-            }
-          }
-          &>ul {
-            display: none;
-            @include breakpoint(tablet) {
-              display: block;
-              padding-left: 0;
-              margin-top: rem(35px);
-            }
-            li {
-              a {
+        ul.menu {
+          padding-left: 0;
+          margin-bottom: 0;
+          &>li {
+            @include link-colours($background, $neutral_4, $neutral_1);
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: $default_padding;
+            padding: 0;
+            list-style: none;
+            margin-bottom: rem(15px);
+            &>a {
+              font-weight: 300;
+              @include breakpoint(tablet) {
                 font-weight: 400;
               }
             }
-            ul {
-              padding-left: $default_padding;
-              margin-top: $default_padding;
+            &>ul {
+              display: none;
+              @include breakpoint(tablet) {
+                display: block;
+                padding-left: 0;
+                margin-top: rem(35px);
+              }
+              li {
+                a {
+                  font-weight: 300;
+                }
+              }
+              ul {
+                padding-left: $default_padding;
+                margin-top: $default_padding;
+              }
+            }
+          }
+        }
+      }
+    }
+    #block-menu-menu-footer-left-menu, #block-menu-menu-footer-right-menu {
+      vertical-align: top;
+      padding-top: rem(80px);
+      &>h2 {
+        @include visually-hidden-off;
+        @include block-heading;
+        color: $background !important;
+        font-size: rem(18px) !important;
+        font-weight: 600 !important;
+      }
+      @include breakpoint(tablet) {
+        width: 49%;
+        display: inline-block;
+        .content {
+          &>ul.menu, &>.menu-block-wrapper>ul.menu {
+            &>li {
+              display: block;
             }
           }
         }

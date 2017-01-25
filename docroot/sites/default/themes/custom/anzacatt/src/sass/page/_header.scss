@@ -32,9 +32,11 @@
         vertical-align: middle;
         img {
           float: left;
-          max-height: rem(50px);
+          max-height: rem(65px);
+          // width: 200px;
           @include breakpoint(tablet) {
             max-height: 100%;
+            width: auto;
           }
         }
       }
@@ -116,7 +118,7 @@
         width: auto;
       }
     }
-    .search-form-widget {
+    .block-search-api-page {
       margin-right: 0;
       height: rem(52px);
       @include breakpoint(tablet) {
@@ -141,7 +143,7 @@
           margin-top: $default_padding;
         }
       }
-      &>div {
+      &>.content>form>div {
         display: flex;
         justify-content: flex-start;
         .form-item {
@@ -151,10 +153,12 @@
           flex: 1;
           input {
             @include search-text-field;
+            background-color: white;
           }
         }
         input[type="submit"] {
           @include search-submit-button;
+          background-color: white;
         }
       }
     }
@@ -201,7 +205,13 @@
   position: absolute;
   z-index: 1;
   right: $mobile_column_padding;
-  top: rem(16px);
+  top: rem(22px);
+  body.navbar-administration & {
+    margin-top: 39px;
+    @include breakpoint(tablet) {
+      margin-top: 0;
+    }
+  }
   &:hover, &:focus {
     background-image: url(../images/svg/mobile_menu_open_hover.svg);
   }
@@ -211,4 +221,11 @@
       background-image: url(../images/svg/mobile_search_close_hover.svg);
     }
   }
+}
+
+.content-header {
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
