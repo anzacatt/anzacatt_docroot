@@ -6370,9 +6370,13 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
   }
 }
 
-body #content .content-header, body #content .content-header * {
+body #content .content-header {
   position: relative;
   color: white;
+}
+
+body #content .content-header-inner {
+  position: relative;
 }
 
 body #content .content-header:before {
@@ -6906,14 +6910,6 @@ blockquote p[style*="text-align: right"]:last-of-type:not(:only-of-type)::after 
 
 #content form input[type="text"], #content label {
   color: #313131;
-}
-
-.region-navigation {
-  background-color: #373854;
-}
-
-.region-navigation .block-superfish ul.sf-menu > li > a:hover, .region-navigation .block-superfish ul.sf-menu > li > a:focus {
-  border-bottom-color: #9e379f;
 }
 
 .footer-inner-wrapper {

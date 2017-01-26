@@ -43,9 +43,12 @@ html {
 
 body {
   #content {
-    .content-header, .content-header * {
+    .content-header {
       position: relative;
       color: white;
+    }
+    .content-header-inner {
+      position: relative;
     }
     .content-header:before {
       content: "";
@@ -319,15 +322,5 @@ blockquote {
 #content {
   form input[type="text"], label {
     color: $neutral_1;
-  }
-}
-
-// =========================================================
-// NAVIGATION
-// =========================================================
-.region-navigation {
-  background-color: $secondary_1;
-  .block-superfish ul.sf-menu>li>a:hover, .block-superfish ul.sf-menu>li>a:focus {
-    border-bottom-color: $secondary_2;
   }
 }
