@@ -6714,9 +6714,9 @@ a[rel~='external']::after {
 #content [type='submit'],
 #content [type='reset'],
 #content [type='button'] {
-  background-color: #7bb3ff;
+  background-color: #373854;
   color: white;
-  border-color: #7bb3ff;
+  border-color: #373854;
 }
 
 #content button:hover, #content button:focus,
@@ -6741,8 +6741,8 @@ a[rel~='external']::after {
 #content [type='submit']:active,
 #content [type='reset']:active,
 #content [type='button']:active {
-  background-color: #0c3c47;
-  border-color: #0c3c47;
+  background-color: #9e379f;
+  border-color: #9e379f;
 }
 
 a:not(.no-style) {

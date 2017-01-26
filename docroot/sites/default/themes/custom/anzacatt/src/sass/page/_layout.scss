@@ -14,7 +14,6 @@ html {
 // GENERAL HEADING LAYOUT
 // =========================================================
 #content {
-  //@include button-colours($secondary_3, darken($secondary_1, 20%), #ffffff, darken($secondary_1, 40%), darken($secondary_1, 40%));
   body.not-front & {
     .content-header {
       background-color: $secondary_1;
@@ -221,7 +220,7 @@ a[rel~='external']::after {
 }
 
 #content {
-  @include button-colours($secondary_3, $secondary_2, #0c3c47, white);
+  @include button-colours($secondary_1, $secondary_2, $secondary_2, white);
 }
 
 // =========================================================
