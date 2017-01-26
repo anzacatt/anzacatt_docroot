@@ -34,12 +34,8 @@
       });
       // If admin - remove style off admin based link elements.
       if (document.querySelector('body').classList.contains('logged-in')) {
-        document.querySelectorAll('.contextual-links-wrapper a').forEach(function(elem) {
-          elem.classList.add('no-style');
-        });
-        document.querySelectorAll('#panels-ipe-control-container a').forEach(function(elem) {
-          elem.classList.add('no-style');
-        });
+        $('a', '.contextual-links-wrapper').addClass('no-style');
+        $('a', '#panels-ipe-control-container').addClass('no-style');
       }
     }
   };
