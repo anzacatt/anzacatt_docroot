@@ -6172,7 +6172,7 @@ html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-p
 }
 
 .region-navigation .block-superfish ul.sf-menu li.sfHover > a {
-  background-color: transparent;
+  background-color: #373854;
 }
 
 .region-navigation .block-superfish ul.sf-menu > li {
@@ -6212,8 +6212,8 @@ html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-p
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > a:hover, .region-navigation .block-superfish ul.sf-menu > li > a:focus {
-  background-color: transparent;
-  border-bottom-color: white;
+  background-color: #373854;
+  border-bottom-color: #9e379f;
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > ul {
@@ -6240,8 +6240,8 @@ html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-p
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > ul li a:hover, .region-navigation .block-superfish ul.sf-menu > li > ul li a:focus {
-  background-color: transparent;
-  border-bottom-color: white;
+  background-color: #373854;
+  border-bottom-color: #9e379f;
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > ul li.active-trail > a {
@@ -6249,7 +6249,7 @@ html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-p
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > ul li.active-trail > a:hover, .region-navigation .block-superfish ul.sf-menu > li > ul li.active-trail > a:focus {
-  background-color: transparent;
+  background-color: #373854;
 }
 
 .mobile-nav {

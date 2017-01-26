@@ -23,6 +23,7 @@
       // Find all links and apply a rel if external.
       $('a', context).each(function() {
         var $this = $(this);
+        // No styling on links that directly wrap images.
         if ($this.children('img').length > 0 || $this.children('picture').length > 0) {
           $this.addClass('no-style');
         }
@@ -30,7 +31,16 @@
           $this.attr('rel', 'external');
           $this.attr('target', '_blank');
         }
-      })
+      });
+      // If admin - remove style off admin based link elements.
+      if (document.querySelector('body').classList.contains('logged-in')) {
+        document.querySelectorAll('.contextual-links-wrapper a').forEach(function(elem) {
+          elem.classList.add('no-style');
+        });
+        document.querySelectorAll('#panels-ipe-control-container a').forEach(function(elem) {
+          elem.classList.add('no-style');
+        });
+      }
     }
   };
 
