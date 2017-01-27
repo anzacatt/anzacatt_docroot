@@ -14,6 +14,23 @@ ul.contextual-links {
 
 ul.tabs.primary {
   @include center-column($desktop_column);
+  border-color: $primary_1;
+  a {
+    border-color: $primary_1;
+    background-color: $neutral_4;
+    &.active {
+      border-color: $primary_1;
+      border-bottom-color: transparent;
+      &:hover {
+        background-color: $secondary_2;
+        border-bottom-color: transparent;
+      }
+    }
+    &:hover, &:focus {
+      border-color: $primary_1;
+      background-color: $secondary_2;
+    }
+  }
 }
 
 .content .profile {

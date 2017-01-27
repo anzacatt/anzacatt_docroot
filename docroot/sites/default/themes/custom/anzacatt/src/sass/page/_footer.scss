@@ -8,6 +8,7 @@
     background-image: url(../images/svg/external-link--white.svg) !important;
   }
   .region-footer {
+    box-sizing: content-box;
     padding-left: rem(20px);
     padding-right: rem(20px);
     @include breakpoint(tablet) {
@@ -91,6 +92,7 @@
       padding-top: rem(22px);
       @include breakpoint(tablet) {
         padding-top: rem(46px);
+        box-sizing: border-box;
       }
       &>h2 {
         // @include visually-hidden-off;
