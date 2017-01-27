@@ -209,6 +209,10 @@ ul, ol, dl, p, dt, dd {
   @include wysiwyg;
 }
 
+img {
+  height: auto;
+}
+
 a[rel~='external']::after {
   background-image: ui-kit-icon("external-link--aqua.svg") !important;
 }

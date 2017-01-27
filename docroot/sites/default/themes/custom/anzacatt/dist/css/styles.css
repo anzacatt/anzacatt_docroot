@@ -6703,6 +6703,10 @@ body #content .content-header:before {
   line-height: 2.25rem;
 }
 
+img {
+  height: auto;
+}
+
 a[rel~='external']::after {
   background-image: url("../../vendor/gov-au-ui-kit/assets/img/icons/external-link--aqua.svg") !important;
 }
