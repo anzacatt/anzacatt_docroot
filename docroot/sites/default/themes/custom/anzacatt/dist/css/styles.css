@@ -7107,7 +7107,7 @@ blockquote p[style*="text-align: right"]:last-of-type:not(:only-of-type)::after 
 
 @media (min-width: 768px) {
   .footer-inner-wrapper .region-footer #block-menu-menu-footer-left-menu, .footer-inner-wrapper .region-footer #block-menu-menu-footer-right-menu {
-    padding-top: 5rem;
+    padding-top: 2.875rem;
   }
 }
 
@@ -7124,7 +7124,7 @@ blockquote p[style*="text-align: right"]:last-of-type:not(:only-of-type)::after 
 @media (min-width: 1024px) {
   .footer-inner-wrapper .region-footer #block-menu-menu-footer-left-menu > h2, .footer-inner-wrapper .region-footer #block-menu-menu-footer-left-menu > .display, .footer-inner-wrapper .region-footer #block-menu-menu-footer-right-menu > h2, .footer-inner-wrapper .region-footer #block-menu-menu-footer-right-menu > .display {
     color: #493267;
-    font-size: 1.875rem;
+    font-size: 1.6875rem;
     font-weight: 300;
     margin-top: 0;
   }
@@ -7177,7 +7177,7 @@ form > div {
 @media (min-width: 1024px) {
   .block-webform > h2, .block-webform > .display {
     color: #493267;
-    font-size: 1.875rem;
+    font-size: 1.6875rem;
     font-weight: 300;
     margin-top: 0;
   }
@@ -7651,7 +7651,7 @@ ul.tabs.primary {
 @media (min-width: 768px) {
   .front .gov-front-layout .pane-bean-panels .pane-content {
     height: 14.6875rem;
-    margin-bottom: 5rem;
+    margin-bottom: 0.625rem;
   }
 }
 
@@ -7666,9 +7666,22 @@ ul.tabs.primary {
   background-color: transparent;
 }
 
-.front .gov-front-layout .pane-bean-panels .pane-content * {
+.front .gov-front-layout .pane-bean-panels .pane-content {
   position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.front .gov-front-layout .pane-bean-panels .pane-content .field-name-field-bean-body {
+  position: relative;
+  font-size: 1.3125rem;
+}
+
+.front .gov-front-layout .pane-bean-panels .pane-content .field-name-field-bean-body p {
   color: white;
+  line-height: 1.8em;
 }
 
 .front .gov-front-layout .pane-bean-panels .pane-content:before {
@@ -8458,7 +8471,7 @@ body.not-front #content .view .pager {
 @media (min-width: 1024px) {
   .region-sidebar-first .block > h2, .region-sidebar-first .block > .display {
     color: #493267;
-    font-size: 1.875rem;
+    font-size: 1.6875rem;
     font-weight: 300;
     margin-top: 0;
   }
@@ -8631,7 +8644,7 @@ body.not-front #content .view .pager {
   padding-right: 1.25rem;
   box-sizing: content-box;
   color: #493267;
-  font-size: 1.875rem;
+  font-size: 1.6875rem;
   font-weight: 300;
   margin-top: 0;
 }
@@ -8668,7 +8681,7 @@ body.not-front #content .view .pager {
   padding-right: 1.25rem;
   box-sizing: content-box;
   color: #493267;
-  font-size: 1.875rem;
+  font-size: 1.6875rem;
   font-weight: 300;
   margin-top: 0;
 }
@@ -8703,10 +8716,11 @@ body.not-front #content .view .pager {
 #block-menu-menu-quick-links ul.menu li, .gov-front-layout .pane-menu-menu-quick-links ul.menu li {
   list-style: none;
   margin: 0;
-  background-color: #373854;
+  background-color: #493267;
   padding: 1.875rem;
   box-sizing: border-box;
   margin-bottom: 1.375rem;
+  min-height: 125px;
 }
 
 @media (min-width: 768px) {
@@ -8840,7 +8854,7 @@ body.not-front #content .view .pager {
   padding-right: 1.25rem;
   box-sizing: content-box;
   color: #493267;
-  font-size: 1.875rem;
+  font-size: 1.6875rem;
   font-weight: 300;
   margin-top: 0;
 }
@@ -8985,7 +8999,7 @@ body.not-front #content .view .pager {
   padding-right: 1.25rem;
   box-sizing: content-box;
   color: #493267;
-  font-size: 1.875rem;
+  font-size: 1.6875rem;
   font-weight: 300;
   margin-top: 0;
 }

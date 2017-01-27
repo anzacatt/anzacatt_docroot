@@ -17,10 +17,11 @@
     li {
       list-style: none;
       margin: 0;
-      background-color: $secondary_1;
+      background-color: $primary_1;
       padding: rem(30px);
       box-sizing: border-box;
       margin-bottom: $default_padding;
+      min-height: 125px;
       @include breakpoint(tablet) {
         @include span-columns(4 of 12);
       }

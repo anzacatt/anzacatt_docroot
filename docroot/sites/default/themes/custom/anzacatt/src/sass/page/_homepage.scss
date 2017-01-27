@@ -29,7 +29,7 @@
         background-repeat: no-repeat;
         @include breakpoint(tablet) {
           height: rem(235px);
-          margin-bottom: rem(80px);
+          margin-bottom: rem(10px);
         }
         .entity-bean {
           @include center-column($desktop_column);
@@ -37,9 +37,18 @@
           background-color: transparent;
         }
       }
-      .pane-content * {
+      .pane-content {
         position: relative;
-        color: white;
+        display: flex;
+        height: 100%;
+        .field-name-field-bean-body {
+          position: relative;
+          font-size: rem(21px);
+          p {
+            color: white;
+            line-height: 1.8em;
+          }
+        }
       }
       .pane-content:before {
         content: "";

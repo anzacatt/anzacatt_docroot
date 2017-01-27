@@ -55,7 +55,7 @@ function anzacatt_preprocess_html(&$variables) {
       $menu_object_alias = explode("/", $menu_object->path['alias']);
     }
 
-    if (in_array(arg(0), $restrict_url) || in_array($menu_object_alias[0], $restrict_url)) {
+    if (in_array(arg(0), $restrict_url) || (!empty($menu_object_alias[0]) && in_array($menu_object_alias[0], $restrict_url))) {
       $access = FALSE;
     }
 
