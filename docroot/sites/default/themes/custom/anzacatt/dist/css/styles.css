@@ -8483,6 +8483,18 @@ body.not-front #content .view .pager {
   }
 }
 
+.page-node .region-content .node-member-profile .field-name-body {
+  white-space: pre-line;
+}
+
+.page-node .region-content .node-member-profile .field-name-field-member-educate-qualificate {
+  white-space: pre-line;
+}
+
+.page-node .region-content .node-member-profile .field-name-field-member-address {
+  white-space: pre-line;
+}
+
 .region-sidebar-first .block {
   margin-bottom: 1.375rem;
 }

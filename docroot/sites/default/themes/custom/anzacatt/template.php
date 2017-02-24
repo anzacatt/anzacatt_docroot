@@ -97,6 +97,16 @@ function _anzacatt_prepare_parliament_images_array() {
  * Implements hook_preprocess_field().
  */
 function anzacatt_preprocess_field(&$variables) {
+  // Member email addresses converted to links.
+  if ($variables['element']['#field_name'] === 'field_member_email_address') {
+    if (!empty($variables['items'][0]['#markup'])) {
+      $address = $variables['items'][0]['#markup'];
+      // Test email is valid.
+      if (valid_email_address($address)) {
+        $variables['items'][0]['#markup'] = l($address, 'mailto:' . $address);
+      }
+    }
+  }
   // Bean 'Image and Text' field 'Link To' to show 'Read [title]' text.
   if ($variables['element']['#field_name'] === 'field_link_to' && $variables['element']['#bundle'] === 'image_and_text') {
     if (!empty($variables['items'][0]) && !empty($variables['element']['#object']->title)) {
