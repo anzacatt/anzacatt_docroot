@@ -131,10 +131,10 @@ body {
         // Node Webforms
         .node-webform {
           &>.submitted {
-            max-width: $form_width;
+            @include center-column($desktop_content_column);
           }
           &>.content {
-            max-width: $form_width;
+            @include center-column($desktop_content_column);
           }
         }
       }
