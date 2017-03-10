@@ -135,8 +135,9 @@
 }
 
 @mixin listing-component-heading() {
-  font-size: rem(24px);
+  font-size: rem(23px);
   line-height: 1.5em;
+  letter-spacing: -0.6px;
   // @include link-colours($secondary_1, $secondary_3, $neutral_1);
 }
 

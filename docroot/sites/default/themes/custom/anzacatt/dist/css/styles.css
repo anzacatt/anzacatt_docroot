@@ -8230,8 +8230,9 @@ ul.tabs.primary a:hover, ul.tabs.primary a:focus {
 }
 
 .view-home-page-blog-articles .view-content .views-row h2, .view-home-page-blog-articles .view-content .views-row .display, .view-latest-news .view-content .views-row h2, .view-latest-news .view-content .views-row .display {
-  font-size: 1.5rem;
+  font-size: 1.4375rem;
   line-height: 1.5em;
+  letter-spacing: -0.6px;
   margin-top: 0;
 }
 
@@ -8373,8 +8374,9 @@ body.not-front #content .view .view-content .views-row .node > .links li {
 }
 
 body.not-front #content .view .view-content .views-row h2, body.not-front #content .view .view-content .views-row .display {
-  font-size: 1.5rem;
+  font-size: 1.4375rem;
   line-height: 1.5em;
+  letter-spacing: -0.6px;
   margin-top: 0;
 }
 
@@ -8950,8 +8952,9 @@ body.not-front #content .view .pager {
 }
 
 #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display {
-  font-size: 1.5rem;
+  font-size: 1.4375rem;
   line-height: 1.5em;
+  letter-spacing: -0.6px;
   margin-top: 0;
 }
 
@@ -9027,7 +9030,6 @@ body.not-front #content .view .pager {
 
 .gov-front-layout .pane-footer-teaser {
   padding-top: 2.75rem;
-  padding-bottom: 2.75rem;
 }
 
 .gov-front-layout .pane-footer-teaser > h2, .gov-front-layout .pane-footer-teaser > .display {
@@ -9095,8 +9097,9 @@ body.not-front #content .view .pager {
 }
 
 .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row h2, .gov-front-layout .pane-footer-teaser .view-footer-teaser .view-content .views-row .display {
-  font-size: 1.5rem;
+  font-size: 1.4375rem;
   line-height: 1.5em;
+  letter-spacing: -0.6px;
   margin-top: 0;
 }
 
