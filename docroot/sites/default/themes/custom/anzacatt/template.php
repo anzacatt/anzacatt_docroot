@@ -5,8 +5,6 @@
  * template.php
  */
 
-define('ANZACATT_MEMBERSONLY_VALUE', 'membersonly');
-
 /**
  * Implements hook_html_head_alter().
  */
@@ -45,7 +43,6 @@ function anzacatt_preprocess_html(&$variables) {
   // Use the HTML hook to deny access to non-members.
   $restrict_url = array(
     'search',
-    'membersonly',
   );
 
   if (user_is_anonymous()) {
@@ -61,7 +58,7 @@ function anzacatt_preprocess_html(&$variables) {
 
     // Fallback if nothing matched by URL, check if the field members only
     // requires private access.
-    if (!empty($menu_object->field_member_only_access) && $menu_object->field_member_only_access[$menu_object->language][0]['value'] == ANZACATT_MEMBERSONLY_VALUE) {
+    if (!empty($menu_object->field_member_only_access) && $menu_object->field_member_only_access[$menu_object->language][0]['value'] == 'membersonly') {
       $access = FALSE;
     }
 
