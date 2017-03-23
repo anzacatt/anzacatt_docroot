@@ -1,0 +1,17 @@
+// =========================================================
+// MEMBERS
+// The default style for members listing and member profiles.
+// =========================================================
+body.not-front #content .no-sidebar .views-row {
+  width: 100%;
+  margin-bottom: 30px;
+  .views-field-title {
+    margin-bottom: 5px;
+  }
+  .views-field-body {
+    margin-bottom: 5px;
+    p {
+      margin-bottom: 0px;
+    }
+  }
+}
