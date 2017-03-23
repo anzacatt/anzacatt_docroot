@@ -128,15 +128,6 @@ body {
             @include center-column($desktop_content_column);
           }
         }
-        // Node Webforms
-        .node-webform {
-          &>.submitted {
-            @include center-column($desktop_content_column);
-          }
-          &>.content {
-            @include center-column($desktop_content_column);
-          }
-        }
       }
     }
     .panel-display {
