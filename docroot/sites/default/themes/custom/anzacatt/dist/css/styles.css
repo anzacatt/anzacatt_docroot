@@ -8479,24 +8479,29 @@ body.not-front #content .view .pager {
   white-space: pre-line;
 }
 
-body.not-front #content .no-sidebar .view-publications .views-row {
+body.not-front #content .no-sidebar .view-publications .views-row, body.not-front #content .has-sidebar .view-publications .views-row {
+  width: 100%;
   margin-bottom: 30px;
 }
 
-body.not-front #content .no-sidebar .view-publications .views-row .views-field-title {
+body.not-front #content .no-sidebar .view-publications .views-row .views-field-title, body.not-front #content .has-sidebar .view-publications .views-row .views-field-title {
   margin-bottom: 5px;
 }
 
-body.not-front #content .no-sidebar .view-publications .views-row .views-field-title h2, body.not-front #content .no-sidebar .view-publications .views-row .views-field-title .display {
+body.not-front #content .no-sidebar .view-publications .views-row .views-field-title h2, body.not-front #content .no-sidebar .view-publications .views-row .views-field-title .display, body.not-front #content .has-sidebar .view-publications .views-row .views-field-title h2, body.not-front #content .has-sidebar .view-publications .views-row .views-field-title .display {
   font-size: 1.625rem;
 }
 
-body.not-front #content .no-sidebar .view-publications .views-row .views-field-body {
+body.not-front #content .no-sidebar .view-publications .views-row .views-field-body, body.not-front #content .has-sidebar .view-publications .views-row .views-field-body {
   margin-bottom: 5px;
 }
 
-body.not-front #content .no-sidebar .view-publications .views-row .views-field-body p {
+body.not-front #content .no-sidebar .view-publications .views-row .views-field-body p, body.not-front #content .has-sidebar .view-publications .views-row .views-field-body p {
   margin-bottom: 0px;
+}
+
+body.not-front #content .no-sidebar .view-publications .views-row .more-documents-link, body.not-front #content .has-sidebar .view-publications .views-row .more-documents-link {
+  margin-top: -10px;
 }
 
 .region-sidebar-first .block {
@@ -9300,7 +9305,7 @@ body.not-front #content .no-sidebar .view-case-digest .views-row {
 }
 
 .view-case-digest .views-row .case-law-digest-item-title a {
-  font-size: 26px;
+  font-size: 1.625rem;
 }
 
 .page-user .block-system {
