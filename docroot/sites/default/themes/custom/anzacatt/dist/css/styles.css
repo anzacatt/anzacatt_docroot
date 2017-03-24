@@ -9294,6 +9294,15 @@ body.not-front #content .no-sidebar .view-case-digest .views-row {
   margin-bottom: 30px;
 }
 
+.view-case-digest .views-row {
+  width: 100%;
+  float: none;
+}
+
+.view-case-digest .views-row .case-law-digest-item-title a {
+  font-size: 26px;
+}
+
 .page-user .block-system {
   max-width: 73.125rem;
   margin-left: auto;
