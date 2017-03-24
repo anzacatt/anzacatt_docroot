@@ -13,3 +13,15 @@ body.not-front {
     }
   }
 }
+
+.view-case-digest {
+  .views-row {
+    width: 100%;
+    float: none;
+    .case-law-digest-item-title {
+      a {
+        font-size: rem(26px);
+      }
+    }
+  }
+}
