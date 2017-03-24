@@ -128,15 +128,6 @@ body {
             @include center-column($desktop_content_column);
           }
         }
-        // Node Webforms
-        .node-webform {
-          &>.submitted {
-            max-width: $form_width;
-          }
-          &>.content {
-            max-width: $form_width;
-          }
-        }
       }
     }
     .panel-display {
