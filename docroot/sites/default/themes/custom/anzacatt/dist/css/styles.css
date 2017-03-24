@@ -8257,26 +8257,16 @@ body.not-front #content .no-sidebar .view {
   box-sizing: content-box;
 }
 
-@media (min-width: 768px) {
-  body.not-front #content .no-sidebar .views-row {
-    float: left;
-    display: block;
-    margin-right: 2.7461357194%;
-    width: 31.502576187%;
-  }
-  body.not-front #content .no-sidebar .views-row:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 768px) {
-  body.not-front #content .no-sidebar .views-row:nth-child(3n) {
-    margin-right: 0;
-  }
+body.not-front #content .no-sidebar .view .views-row {
+  width: 100%;
 }
 
 body.not-front #content .has-sidebar .view {
   max-width: 48.75rem;
+}
+
+body.not-front #content .has-sidebar .views-row {
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -8495,6 +8485,26 @@ body.not-front #content .view .pager {
 
 .page-node .region-content .node-member-profile .field-name-field-member-address {
   white-space: pre-line;
+}
+
+body.not-front #content .no-sidebar .view-publications .views-row {
+  margin-bottom: 30px;
+}
+
+body.not-front #content .no-sidebar .view-publications .views-row .views-field-title {
+  margin-bottom: 5px;
+}
+
+body.not-front #content .no-sidebar .view-publications .views-row .views-field-title h2, body.not-front #content .no-sidebar .view-publications .views-row .views-field-title .display {
+  font-size: 1.625rem;
+}
+
+body.not-front #content .no-sidebar .view-publications .views-row .views-field-body {
+  margin-bottom: 5px;
+}
+
+body.not-front #content .no-sidebar .view-publications .views-row .views-field-body p {
+  margin-bottom: 0px;
 }
 
 .region-sidebar-first .block {
@@ -9286,6 +9296,10 @@ body.not-front #content .view .pager {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   box-sizing: content-box;
+}
+
+body.not-front #content .no-sidebar .view-case-digest .views-row {
+  margin-bottom: 30px;
 }
 
 .page-user .block-system {
