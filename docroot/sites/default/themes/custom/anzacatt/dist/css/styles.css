@@ -6531,14 +6531,6 @@ body #content .content-header:before {
   box-sizing: content-box;
 }
 
-.page-node .content-body-inner.no-sidebar .region-content .node-webform > .submitted {
-  max-width: 33.75rem;
-}
-
-.page-node .content-body-inner.no-sidebar .region-content .node-webform > .content {
-  max-width: 33.75rem;
-}
-
 .content-body-inner.no-sidebar .panel-display {
   max-width: 73.125rem;
   margin-left: auto;
