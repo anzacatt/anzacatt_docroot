@@ -6,15 +6,8 @@ body.not-front #content {
   .no-sidebar {
     .view {
       @include center-column($desktop_column);
-    }
-    .views-row {
-      @include breakpoint(tablet) {
-        @include span-columns(4 of 12);
-      }
-      &:nth-child(3n) {
-        @include breakpoint(tablet) {
-          @include omega();
-        }
+      .views-row {
+        width: 100%;
       }
     }
   }
@@ -23,6 +16,7 @@ body.not-front #content {
       max-width: $desktop_content_column;
     }
     .views-row {
+      width: 100%;
       @include breakpoint(tablet) {
         @include span-columns(6 of 12);
       }

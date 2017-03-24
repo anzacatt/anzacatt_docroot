@@ -1,3 +1,15 @@
 #block-views-exp-case-digest-page {
   @include center-column($desktop_column);
 }
+
+body.not-front {
+  #content {
+    .no-sidebar {
+      .view-case-digest {
+        .views-row {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
