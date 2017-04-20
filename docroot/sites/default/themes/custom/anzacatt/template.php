@@ -40,6 +40,33 @@ function anzacatt_js_alter(&$javascript) {
  * Implements hook_preprocess_html().
  */
 function anzacatt_preprocess_html(&$variables) {
+  // Adding rotating images to all pages.
+  $parliament_images = _anzacatt_prepare_parliament_images_array();
+  drupal_add_js($parliament_images, array('type' => 'setting'));
+
+  drupal_add_js("(function(h) {h.className = h.className.replace('no-js', '') })(document.documentElement);", array(
+    'type' => 'inline',
+    'scope' => 'header',
+  ));
+  drupal_add_js('jQuery.extend(Drupal.settings, { "pathToTheme": "' . path_to_theme() . '" });', 'inline');
+  // Drupal forms.js does not support new jQuery. Migrate library needed.
+  drupal_add_js(drupal_get_path('theme', 'anzacatt') . '/vendor/jquery/jquery-migrate-1.2.1.min.js');
+}
+
+function _anzacatt_prepare_parliament_images_array() {
+  $images = ['anzacatt' => ['parliament_images' => []]];
+  $results = views_get_view_result('parliamentary_image_urls', 'block');
+  foreach ($results as $result) {
+    $images['anzacatt']['parliament_images'][$result->field_field_parliament[0]['rendered']['#markup']][] = image_style_url('govcms_ui_kit_banner', $result->file_managed_uri);
+  }
+
+  return $images;
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function anzacatt_preprocess_page(&$variables) {
   // Use the HTML hook to deny access to non-members.
   $restrict_url = array(
     'search',
@@ -64,30 +91,49 @@ function anzacatt_preprocess_html(&$variables) {
 
     if (!$access) {
       drupal_access_denied();
+      module_invoke_all('exit');
+      drupal_exit();
+    }
+    
+  }
+  
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function anzacatt_preprocess_node(&$variables) {
+  // Adding theme suggestions for various view modes and content types.
+  $view_mode = $variables['view_mode'];
+  $content_type = $variables['type'];
+  $variables['theme_hook_suggestions'][] = 'node__' . $view_mode;
+  $variables['theme_hook_suggestions'][] = 'node__' . $view_mode . '_' . $content_type;
+
+  // Adding preprocess function suggestions for view mode and content type.
+  $view_mode_preprocess = 'anzacatt_preprocess_node_' . $view_mode . '_' . $content_type;
+  if (function_exists($view_mode_preprocess)) {
+    $view_mode_preprocess($variables);
+  }
+
+  $view_mode_preprocess = 'anzacatt_preprocess_node_' . $view_mode;
+  if (function_exists($view_mode_preprocess)) {
+    $view_mode_preprocess($variables);
+  }
+
+  if ($variables['view_mode'] === 'teaser' || $variables['view_mode'] === 'compact') {
+    // Apply thumbnail class to node teaser view if image exists.
+    $has_thumb = !empty($variables['content']['field_thumbnail']);
+    $has_image = !empty($variables['content']['field_image']);
+    $has_featured_image = !empty($variables['content']['field_feature_image']);
+    if ($has_thumb || $has_image || $has_featured_image) {
+      $variables['classes_array'][] = 'has-thumbnail';
     }
   }
 
-  // Adding rotating images to all pages.
-  $parliament_images = _anzacatt_prepare_parliament_images_array();
-  drupal_add_js($parliament_images, array('type' => 'setting'));
-
-  drupal_add_js("(function(h) {h.className = h.className.replace('no-js', '') })(document.documentElement);", array(
-    'type' => 'inline',
-    'scope' => 'header',
-  ));
-  drupal_add_js('jQuery.extend(Drupal.settings, { "pathToTheme": "' . path_to_theme() . '" });', 'inline');
-  // Drupal forms.js does not support new jQuery. Migrate library needed.
-  drupal_add_js(drupal_get_path('theme', 'anzacatt') . '/vendor/jquery/jquery-migrate-1.2.1.min.js');
-}
-
-function _anzacatt_prepare_parliament_images_array() {
-  $images = ['anzacatt' => ['parliament_images' => []]];
-  $results = views_get_view_result('parliamentary_image_urls', 'block');
-  foreach ($results as $result) {
-    $images['anzacatt']['parliament_images'][$result->field_field_parliament[0]['rendered']['#markup']][] = image_style_url('govcms_ui_kit_banner', $result->file_managed_uri);
+  if ($variables['type'] === 'webform') {
+    // Hide submitted date on webforms.
+    $variables['display_submitted'] = FALSE;
   }
-
-  return $images;
 }
 
 /**
@@ -206,43 +252,6 @@ function anzacatt_image_styles_alter(&$styles) {
     );
   }
   return $styles;
-}
-
-/**
- * Implements hook_preprocess_node().
- */
-function anzacatt_preprocess_node(&$variables) {
-  // Adding theme suggestions for various view modes and content types.
-  $view_mode = $variables['view_mode'];
-  $content_type = $variables['type'];
-  $variables['theme_hook_suggestions'][] = 'node__' . $view_mode;
-  $variables['theme_hook_suggestions'][] = 'node__' . $view_mode . '_' . $content_type;
-
-  // Adding preprocess function suggestions for view mode and content type.
-  $view_mode_preprocess = 'anzacatt_preprocess_node_' . $view_mode . '_' . $content_type;
-  if (function_exists($view_mode_preprocess)) {
-    $view_mode_preprocess($variables);
-  }
-
-  $view_mode_preprocess = 'anzacatt_preprocess_node_' . $view_mode;
-  if (function_exists($view_mode_preprocess)) {
-    $view_mode_preprocess($variables);
-  }
-
-  if ($variables['view_mode'] === 'teaser' || $variables['view_mode'] === 'compact') {
-    // Apply thumbnail class to node teaser view if image exists.
-    $has_thumb = !empty($variables['content']['field_thumbnail']);
-    $has_image = !empty($variables['content']['field_image']);
-    $has_featured_image = !empty($variables['content']['field_feature_image']);
-    if ($has_thumb || $has_image || $has_featured_image) {
-      $variables['classes_array'][] = 'has-thumbnail';
-    }
-  }
-
-  if ($variables['type'] === 'webform') {
-    // Hide submitted date on webforms.
-    $variables['display_submitted'] = FALSE;
-  }
 }
 
 /**
