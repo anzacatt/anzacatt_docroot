@@ -63,7 +63,7 @@ function anzacatt_preprocess_html(&$variables) {
     }
 
     if (!$access) {
-      drupal_access_denied();
+      drupal_goto('member-only');
     }
   }
 
