@@ -7510,6 +7510,11 @@ form.webform-client-form .webform-next {
   padding-right: 35px;
 }
 
+.form-type-select select::-ms-expand {
+  display: none;
+  /* hide the default arrow in ie10 and ie11 */
+}
+
 .form-type-select:before {
   content: "";
   position: absolute;
