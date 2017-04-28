@@ -7191,6 +7191,32 @@ form .form-actions {
   margin-bottom: 1.375rem;
 }
 
+.views-exposed-form .views-exposed-widgets .views-exposed-widget .form-type-textfield input {
+  line-height: 1.9em;
+  border-radius: 0.3125rem;
+  border-width: 0.0625rem;
+  padding-left: 0.625rem;
+}
+
+.views-exposed-form .views-exposed-widgets .views-exposed-widget .form-type-select:before {
+  pointer-events: none;
+  top: 1.25rem;
+}
+
+.views-exposed-form .views-exposed-widgets .views-exposed-widget .form-type-select:after {
+  pointer-events: none;
+  top: 0.9375rem;
+}
+
+.views-exposed-form .views-exposed-widgets .views-exposed-widget .form-type-select select {
+  padding-left: 0.625rem;
+  min-height: 2.875rem;
+}
+
+.views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button {
+  padding-top: 1.25rem;
+}
+
 form.webform-client-form .form-item {
   color: #313131;
 }

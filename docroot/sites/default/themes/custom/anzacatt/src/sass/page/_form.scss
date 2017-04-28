@@ -28,6 +28,41 @@ form {
 }
 
 // =========================================================
+// VIEWS EXPOSED FORMS
+// =========================================================
+.views-exposed-form {
+  .views-exposed-widgets {
+    .views-exposed-widget {
+      .form-type-textfield {
+        input {
+          line-height: 1.9em;
+          border-radius: rem(5px);
+          border-width: rem(1px);
+          padding-left: rem(10px);
+        }
+      }
+      .form-type-select {
+        &:before {
+          pointer-events: none;
+          top: rem(20px);
+        }
+        &:after {
+          pointer-events: none;
+          top: rem(15px);
+        }
+        select {
+          padding-left: rem(10px);
+          min-height: rem(46px);
+        }
+      }
+      &.views-submit-button {
+        padding-top: rem(20px);
+      }
+    }
+  }
+}
+
+// =========================================================
 // WEBFORMS
 // =========================================================
 form.webform-client-form {
