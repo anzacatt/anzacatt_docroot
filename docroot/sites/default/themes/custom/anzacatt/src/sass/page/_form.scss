@@ -35,6 +35,7 @@ form {
     .views-exposed-widget {
       .form-type-textfield {
         input {
+          height: rem(45px);
           line-height: 1.9em;
           border-radius: rem(5px);
           border-width: rem(1px);

@@ -7192,6 +7192,7 @@ form .form-actions {
 }
 
 .views-exposed-form .views-exposed-widgets .views-exposed-widget .form-type-textfield input {
+  height: 2.8125rem;
   line-height: 1.9em;
   border-radius: 0.3125rem;
   border-width: 0.0625rem;
