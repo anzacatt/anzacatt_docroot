@@ -14,7 +14,7 @@
 @import '../../vendor/gov-au-ui-kit/assets/sass/utils/accessibility';
 @import '../../vendor/gov-au-ui-kit/assets/sass/utils/grid-settings';
 @import '../../vendor/gov-au-ui-kit/assets/sass/utils/icons';
-@import '../../vendor/gov-au-ui-kit/assets/sass/utils/print';
+//@import '../../vendor/gov-au-ui-kit/assets/sass/utils/print';
 // COMPONENTS
 @import '../../vendor/gov-au-ui-kit/assets/sass/components/accordions';
 @import '../../vendor/gov-au-ui-kit/assets/sass/components/buttons';
@@ -54,3 +54,4 @@
 @import 'page/contact_form';
 @import 'page/case_digest';
 @import 'page/user';
+@import 'page/print';
