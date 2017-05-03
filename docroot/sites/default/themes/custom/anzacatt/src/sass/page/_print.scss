@@ -8,6 +8,9 @@
 //   ==========================================================================
 // scss-lint:disable QualifyingElement
 @media print {
+  body {
+    display: block;
+  }
   // Hide certain elements (navigation, header, footer excluding copyright notice etc.)
   .region-page-top, #nav, #secondary-menu, #block-search-api-page-site-search, .footer-inner-wrapper .region-footer #block-menu-menu-footer-left-menu, .footer-inner-wrapper .region-footer #block-menu-menu-footer-right-menu, #block-menu-menu-footer-sub-menu .content ul.menu, .tabs.primary {
     display: none;

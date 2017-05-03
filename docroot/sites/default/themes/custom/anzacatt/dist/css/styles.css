@@ -9335,6 +9335,9 @@ body.not-front #content .no-sidebar .view-case-digest .views-row {
 }
 
 @media print {
+  body {
+    display: block;
+  }
   .region-page-top, #nav, #secondary-menu, #block-search-api-page-site-search, .footer-inner-wrapper .region-footer #block-menu-menu-footer-left-menu, .footer-inner-wrapper .region-footer #block-menu-menu-footer-right-menu, #block-menu-menu-footer-sub-menu .content ul.menu, .tabs.primary {
     display: none;
   }
